@@ -27,3 +27,100 @@ vim
 ```
 
 ###04 install YCM
+
+```
+cd ~/.vim/bundle/YouCompleteMe
+git submodule update --init --recursive
+
+```
+
+download libclang
+
+ - http://llvm.org/releases/download.html#3.7.1
+
+```
+tar -xvf clang+llvm-3.7.0-x86_64-linux-gnu-ubuntu-14.04.tar.xz
+cd clang+llvm-3.7.0-x86_64-linux-gnu-ubuntu-14.04
+sudo cp -r * /usr/local
+```
+
+download libc++ libc++abi
+
+```
+tar -xvf libcxx
+cd libcxx
+cd lib
+./buildit
+
+cd ..
+mkir /usr/include/c++/v1/
+sudo cp -r ./include/ /usr/include/c++/v1/
+cd lib
+sudo cp ./libc++.so.1.0 /usr/lib/
+cd /usr/lib/
+sudo ln -s ./libc++.so.1.0 ./libc++.so.1
+sudo ln -s ./libc++.so.1.0 ./libc++.so
+```
+
+libc++abi
+
+```
+tar -xvf libcxxabi
+cd libcxxabi
+cd lib
+./buildit
+
+cd ..
+sudo cp -r include/ /usr/include/c++/v1/
+cd lib
+sudo cp libc++abi.so.1.0 /usr/lib/
+cd /usr/lib
+sudo ln -s ./libc++abi.so.1.0 ./libc++abi.so.1
+sudo ln -s ./libc++abi.so.1.0 ./libc++abi.so
+
+```
+
+ - http://blog.csdn.net/firebird321/article/details/48528569
+
+cd ~/.vim/bundle/YouCompleteMe
+git submodule update --init --recursive
+cd ~
+mkdir ycm_build
+cd ycm_build
+cmake -G "Unix Makefiles" -DPATH_TO_LLVM_ROOT=llvmpath ~/.vim/bundle/YouCompleteMe/third_party/ycm/cpp
+cmake --build . --target ycm_core
+
+
+###YCM错误解决
+vim 1.cpp 打开后 提醒有一个错误的 third_party里的syntax-parse.py：
+UnicodeDecodeError:'ascii' codec can't decode byte ......
+
+打开syntax-parse.py:
+import re
+import vim
+import sys
+reload(sys)
+sys.setdefaultencoding('utf-8')
+from ycm import vimsupport
+
+
+
+缺少 .ycm_extra_conf.py
+
+
+###wmctrl 控制gvim 全屏
+
+```
+sudo apt-get install wmctrl
+```
+
+
+###vimshell
+
+vimproc
+```
+cd vimproc.vim
+make
+```
+
+###添加GVIM application

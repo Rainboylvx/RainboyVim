@@ -1,0 +1,15 @@
+#pelican文件分类设置
+snippet category "pelican目录" b
+Title:${1:title}
+Date:${2:`!v strftime("%Y-%m-%d %H:%M")`}
+Modified:${3:`!v strftime("%Y-%m-%d %H:%M")`}
+Category:${4:category} 
+Tags:${5:tag1,tag2}
+Slug: ${6:short-net-link}
+Authors: ${7:`!v g:global_author`}
+Summary: ${8:summary} 
+comment:${9:ON}
+
+${0:}
+endsnippet
+

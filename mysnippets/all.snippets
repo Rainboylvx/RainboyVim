@@ -1,0 +1,51 @@
+snippet cprt "版权信息"
+`!v &enc[:2] == "utf" ? "©" : "(c)"` Copyright ${1:`!v strftime("%Y")`} `!v g:global_author`. All Rights Reserved.${0}
+endsnippet
+
+#作者
+snippet author "作者"
+Author:Rainboy
+endsnippet
+
+#作者short
+snippet au "作者简写"
+Author:Rainboy
+endsnippet
+
+
+#插入当前日期
+snippet date "插入当前日期"
+`!v strftime("%Y-%m-%d")`${0}
+endsnippet
+
+#插入当前时间
+snippet time "插入当前时间"
+`!v strftime("%Y-%m-%d %H:%M")`${0}
+endsnippet
+#插入我想要的时间
+snippet itime "得到本地时间格式" i
+`!v strftime('%c')`
+endsnippet
+
+#添加者
+snippet adby "添加者"
+addedy `!v g:global_author` `!v strftime("%Y-%m-%d %H:%M")`${0}
+endsnippet
+
+#更新者
+snippet upby "更新者"
+updatedy `!v g:snips_author` `!v strftime("%Y-%m-%d %H:%M")`${0}
+endsnippet
+
+#c,cpp 文件的个人信息
+snippet personal "c,cpp个人信息"
+/*==================================
+*Title :${1:title}
+*Author:${2:`!v g:global_author`}
+*Time  :${3:`!v strftime('%Y-%m-%d %H:%M')`}
+*update:${4:`!v strftime('%Y-%m-%d %H:%M')`}
+*`!v &enc[:2] == "utf" ? "©" : "(c)"` Copyright ${5:`!v strftime("%Y")`} `!v g:global_author`. All Rights Reserved.
+*=================================*/
+
+${0}
+endsnippet

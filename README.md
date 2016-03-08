@@ -124,3 +124,24 @@ make
 ```
 
 ###添加GVIM application
+```
+cdd /usr/share/applications
+sudo vim gvim.desktop
+
+[Desktop Entry]
+Encoding=UTF-8
+Name=gvim
+Comment=Eclipse IDE
+Exec=/usr/bin/gvim
+Icon=/home/rainboy/RainboyVim/vimico/vim48.png
+Terminal=false
+starttupNotify=true
+Type=Application
+Categories=Application;Development;
+```
+
+###加入Ultisnip 脚本
+
+```
+cp -r ~/Rainboyvim/mysnippets  ~/.vim/bundle/ultisnips/
+```

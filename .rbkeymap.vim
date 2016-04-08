@@ -162,7 +162,7 @@ nmap <leader>html <esc>:se ft=html<cr>
 "http://abruzzi.iteye.com/blog/1323064
 autocmd BufRead *.dot nmap <F8> :w<CR>:!dot -Tpng -o %<.png % && start %<.png && exit<CR><CR>
 
-autocmd BufRead *.dot nmap <F9> :w<CR>:!dot -Tpng -o %<.png %<CR><CR>
+autocmd BufRead *.dot nmap <F9> :w<CR>:!neato -Tpng -o %<.png && start %<.png %<CR><CR>
 " 快捷键
 
 autocmd BufRead *.dot imap ii <esc>oarrow<leader><Tab>

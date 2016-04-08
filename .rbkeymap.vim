@@ -25,6 +25,9 @@ endf
 
 " ======= 自定义快捷键 ======= "
 
+" Ctrl +;			行尾加;
+imap <a-i> <c-l>;
+
 " Ctrl + ]            多选择跳转
 nmap <c-]> g<c-]>
 vmap <c-]> g<c-]>
@@ -154,3 +157,13 @@ nmap <leader>css <esc>:se ft=css<cr>
 " \html               一键切换到HTML语法高亮
 imap <leader>html <esc>:se ft=html<cr>li
 nmap <leader>html <esc>:se ft=html<cr>
+
+"========== 有关Graphviz 的快捷键
+"http://abruzzi.iteye.com/blog/1323064
+autocmd BufRead *.dot nmap <F8> :w<CR>:!dot -Tpng -o %<.png % && start %<.png && exit<CR><CR>
+
+autocmd BufRead *.dot nmap <F9> :w<CR>:!dot -Tpng -o %<.png %<CR><CR>
+" 快捷键
+
+autocmd BufRead *.dot imap ii <esc>oarrow<leader><Tab>
+autocmd BufRead *.dot imap ij <esc>o-<leader><Tab>

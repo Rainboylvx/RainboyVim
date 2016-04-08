@@ -8,13 +8,13 @@ snippet /// "多行注释" b
 *-------------------------------------------------*/
 endsnippet
 
-snippet in "#include" i
+snippet in "#include" b
 #include <${1:cstdio}>
 ${0}
 endsnippet
 
-snippet main "main()" i
-int main(int argc,char **argv)
+snippet main "main()" b
+int main()
 {
     ${0}
     return 0;
@@ -22,8 +22,7 @@ int main(int argc,char **argv)
 endsnippet
 
 snippet for "for loop"
-for (${2:i}=1;$2<=${1:count};$2${3:++})
-{
-	${VISUAL}${0}
+for (${2:i}=1;$2<=${1:count};$2${3:++}){
+    ${VISUAL}${0}
 }
 endsnippet

@@ -1,0 +1,34 @@
+snippet gra "" b
+graph ${1:title} {
+	${2:a--b;}
+}
+endsnippet
+
+snippet digra "有向图" b
+digraph ${1:title} {
+	${2:a->b};
+}
+endsnippet
+
+snippet sub "子图" b
+subgraph cluster_${1:name}{
+	label="${3}";
+	${4}
+}
+endsnippet
+
+snippet node "点性质" b
+node [shape=${1:circle},style=${2:filled},fillcolor="${3:white}"];
+endsnippet
+
+snippet edge "边性质" b 
+edge [style="${1:solid}",color="${2:black}",arrowhead="${3:forward}"];
+endsnippet
+
+snippet arrow "->" b
+${1:a}->${2:b};
+endsnippet
+
+snippet - "->" b
+${1:a}--${2:b};
+endsnippet

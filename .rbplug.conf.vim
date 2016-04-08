@@ -1,20 +1,36 @@
+"================== Default setting =====
+"定义dictionary
+if(has('win32'))
+    let path=$VIM.'/RainboyVim'
+else
+    let path=~.'/RainboyVim'
+endif
+
 "=================== airline ================
 let g:airline#extensions#tabline#enabled = 1
-let g:airline_theme = 'badwolf'                " 设置主题
+let g:airline#extensions#tabline#buffer_nr_show = 1
 if !exists('g:airline_symbols')
   let g:airline_symbols = {}
 endif
-let g:airline_left_sep = ''
-let g:airline_left_alt_sep = ''
-let g:airline_right_sep = ''
-let g:airline_right_alt_sep = ''
-let g:airline_symbols.branch = ''
-let g:airline_symbols.readonly = ''
-let g:airline_symbols.linenr = ''
-let g:airline_symbols.paste = 'ρ'
-let g:airline_symbols.whitespace = 'Ξ'
+let g:airline_theme="badwolf" 
 
+if(has('win32'))
+set encoding=utf-8
+"let g:Powerline_symbols="fancy"
 
+let g:airline_symbols = {} 
+let g:airline_left_sep = "\u2b80" 
+let g:airline_left_alt_sep = "\u2b81" 
+let g:airline_right_sep = "\u2b82" 
+let g:airline_right_alt_sep = "\u2b83" 
+let g:airline_symbols.branch = "\u2b60" 
+let g:airline_symbols.readonly = "\u2b64" 
+let g:airline_symbols.linenr = "\u2b61"
+
+"设置顶部tabline栏符号显示"
+let g:airline#extensions#tabline#left_sep = "\u2b80" 
+let g:airline#extensions#tabline#left_alt_sep = "\u2b81"
+endif
 "=============== WMctrl全屏 ==============
 " 将外部命令 wmctrl 控制窗口最大化的命令行参数封装成一个 vim 的函数
 fun! ToggleFullscreen()
@@ -42,14 +58,11 @@ let NERDTreeMinimalUI=1
 
 "============= YouCompleteMe ============
 if(has('win32'))
-    let g:ycm_global_ycm_extra_conf=$VIM."/vimfiles/bundle/YouCompleteMe/third_party/ycmd/.ycm_extra_conf.py"
-    " 引入 C++ 标准库tags
     set tags+="E:/HackTools/MinGW/include/sys.tags"
 else
     let g:ycm_global_ycm_extra_conf="~/.vim/bundle/YouCompleteMe/third_party/ycmd/.ycm_extra_conf.py"
-    set tags+="/usr/local/include/SDL2/tags"
     " 引入 C++ 标准库tags
-endif
+
 
 " 开启 YCM 标签引擎
 let g:ycm_collect_identifiers_from_tags_files=1
@@ -77,7 +90,7 @@ let g:ycm_cache_omnifunc=1
 " 语法关键字补全         
 let g:ycm_seed_identifiers_with_syntax=1
 
-
+endif
 
 
 "================= vim-signature
@@ -106,7 +119,7 @@ let g:SignatureMap = {
         \ }
 
 "============= ultisnipptes ==========
-let g:UltiSnipsSnippetDirectories=["mysnippets"]
+let g:UltiSnipsSnippetDirectories=[path.'/mysnippets']
 " UltiSnips 的 tab 键与 YCM 冲突，重新设定
 let g:UltiSnipsExpandTrigger="<leader><tab>"
 let g:UltiSnipsJumpForwardTrigger="<tab>"
@@ -188,25 +201,28 @@ map <C-S-Tab> :MBEbp<cr>
 
 
 "----------nerdtree-git-plugin
-let g:NERDTreeIndicatorMapCustom = {
-    \ "Modified"  : "✹",
-    \ "Staged"    : "✚",
-    \ "Untracked" : "✭",
-    \ "Renamed"   : "➜",
-    \ "Unmerged"  : "═",
-    \ "Deleted"   : "✖",
-    \ "Dirty"     : "✗",
-    \ "Clean"     : "✔︎",
-    \ "Unknown"   : "?"
-    \ }
 
 
-"===========
-let g:syntastic_error_symbol = '✗'
-let g:syntastic_warning_symbol = '⚠'
+
+"===========syntastic===========
+let g:syntastic_error_symbol = 'e'
+let g:syntastic_warning_symbol = 'w'
+
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 0
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+
+let g:syntastic_cpp_compiler = 'g++' 
+
+"let g:syntastic_cpp_compiler_options = '-Wall'
 
 "============ vim - table
-"let g:table_mode_corner="|"     "兼容Markdown Table
+let g:table_mode_corner="|"     "兼容Markdown Table
 
 "============ easymotion
 nmap s <Plug>(easymotion-s)
@@ -230,6 +246,11 @@ let g:wildfire_objects = ["i'", 'i"', "i)", "i]", "i}", "i>", "ip"]
 "============ Vim markdown =========
 let g:vim_markdown_frontmatter=1
 let g:vim_markdown_math=1
+
+
+
+"============ wmgraphiz.vim
+let g:WMGraphviz_outpt = 'png'
 
 "============ Rainbow 括号
 let g:rainbow_conf = {
@@ -260,8 +281,77 @@ let g:rainbow_active = 1
 "Pyclewn
 let g:pyclewn_terminal = "xterm, -e"
 
-"==========nerd font
-let g:WebDevIconsUnicodeDecorateFolderNodes=1
-let WebDevIconsUnicodeDecorateFolderNodesExactMatches = 1
+
+"============ neocomplete ===============
+"Note: This option must set it in .vimrc(_vimrc).  NOT IN .gvimrc(_gvimrc)!
+" 开启 AutoComplPop.
+let g:acp_enableAtStartup = 1
+" Use neocomplete.
+let g:neocomplete#enable_at_startup = 1
+" Use smartcase.
+let g:neocomplete#enable_smart_case = 1
+" Set minimum syntax keyword length. 最小 keyword 匹配长度
+let g:neocomplete#sources#syntax#min_keyword_length = 2
+let g:neocomplete#lock_buffer_name_pattern = '\*ku\*'
 
 
+let g:neocomplete#sources#dictionary#dictionaries = {
+    \ 'default' : '',
+    \ 'vimshell' : $HOME.'/.vimshell_hist',
+    \ 'scheme' : $HOME.'/.gosh_completions',
+    \ 'javascript' : path.'/dict/js.dict'
+        \ }
+
+" Define keyword.
+if !exists('g:neocomplete#keyword_patterns')
+    let g:neocomplete#keyword_patterns = {}
+endif
+let g:neocomplete#keyword_patterns['default'] = '\h\w*'
+
+" Plugin key-mappings.
+inoremap <expr><C-g>     neocomplete#undo_completion()
+inoremap <expr><C-l>     neocomplete#complete_common_string()
+
+" Recommended key-mappings.
+" <CR>: close popup and save indent.
+inoremap <silent> <CR> <C-r>=<SID>my_cr_function()<CR>
+function! s:my_cr_function()
+  return (pumvisible() ? "\<C-y>" : "" ) . "\<CR>"
+  " For no inserting <CR> key.
+  "return pumvisible() ? "\<C-y>" : "\<CR>"
+endfunction
+" <TAB>: completion.
+inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
+" <C-h>, <BS>: close popup and delete backword char.
+inoremap <expr><C-h> neocomplete#smart_close_popup()."\<C-h>"
+inoremap <expr><BS> neocomplete#smart_close_popup()."\<C-h>"
+" Close popup by <Space>.
+"inoremap <expr><Space> pumvisible() ? "\<C-y>" : "\<Space>"
+
+" AutoComplPop like behavior.
+"let g:neocomplete#enable_auto_select = 1
+
+" Shell like behavior(not recommended).
+"set completeopt+=longest
+"let g:neocomplete#enable_auto_select = 1
+"let g:neocomplete#disable_auto_complete = 1
+"inoremap <expr><TAB>  pumvisible() ? "\<Down>" : "\<C-x>\<C-u>"
+
+" Enable omni completion.
+autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS
+autocmd FileType html,markdown setlocal omnifunc=htmlcomplete#CompleteTags
+autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
+autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
+autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
+
+" Enable heavy omni completion.
+if !exists('g:neocomplete#sources#omni#input_patterns')
+  let g:neocomplete#sources#omni#input_patterns = {}
+endif
+"let g:neocomplete#sources#omni#input_patterns.php = '[^. \t]->\h\w*\|\h\w*::'
+"let g:neocomplete#sources#omni#input_patterns.c = '[^.[:digit:] *\t]\%(\.\|->\)'
+"let g:neocomplete#sources#omni#input_patterns.cpp = '[^.[:digit:] *\t]\%(\.\|->\)\|\h\w*::'
+
+" For perlomni.vim setting.
+" https://github.com/c9s/perlomni.vim
+let g:neocomplete#sources#omni#input_patterns.perl = '\h\w*->\h\w*\|\h\w*::'

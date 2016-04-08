@@ -35,7 +35,7 @@ au FileType ruby,eruby,slim,coffee,jade,sh set tabstop=2
 set autowrite                 " 档案一有更动就会自动存盘
 set display=lastline          " 解决自动换行格式下, 如高度在折行之后超过窗口高度结果这一行看不到的问题  
 set cursorline                 " 高亮当前 行/列
-set cursorcolumn             " 高亮当前 行/列
+"set cursorcolumn             " 高亮当前 行/列
 set ruler                     " 显示光标当前位置,逗号分隔
 set noshowmode                 " 不显示当前操作模式
 
@@ -209,7 +209,7 @@ if has("gui_running")
     if has('win32')         " 启动时自动最大化窗口
         "au GUIEnter * simalt ~x    
     endif
-    winpos 1000 5           " 指定窗口出现的位置，坐标原点在屏幕左上角
+    winpos 300 5           " 指定窗口出现的位置，坐标原点在屏幕左上角
     set lines=45 columns=85 " 指定窗口大小，lines为高度，columns为宽度
     set guioptions+=c       " 使用字符提示框
     set guioptions-=e        " 标签
@@ -228,11 +228,12 @@ if has("gui_running")
 
     " 字体设定
     if(has('win32'))                         "字体设定 win  and ubuntu
-        set guifont=DejaVu\ Sans\ Mono\ for\ Powerline:h14
-        "set guifont=Anonymice\ Powerline:h14
+		"set guifont =Monaco:h14
+		set guifont=Consolas_for_Powerline_FixedD:h14
+		"set guifont=Anonymice\ Powerline:h14
     else
         set guifont=DejaVu\ Sans\ Mono\ for\ Powerline\ 13
-    endif
+    endif	
 
     map <silent> <F1> :if &guioptions =~# 'T' <Bar>
                 \set guioptions-=T <Bar>

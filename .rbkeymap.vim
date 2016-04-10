@@ -1,3 +1,7 @@
+" ctrl +s 保存
+imap <c-s> <esc>:w<enter>a
+
+
 " ======= 引号 && 括号自动匹配 ======= "
 
 :inoremap ( ()<esc>i
@@ -162,8 +166,17 @@ nmap <leader>html <esc>:se ft=html<cr>
 "http://abruzzi.iteye.com/blog/1323064
 autocmd BufRead *.dot nmap <F8> :w<CR>:!dot -Tpng -o %<.png % && start %<.png && exit<CR><CR>
 
-autocmd BufRead *.dot nmap <F9> :w<CR>:!neato -Tpng -o %<.png && start %<.png %<CR><CR>
+autocmd BufRead *.dot nmap <F9> :w<CR>:!neato -n -Tpng -o %<.png % && start %<.png <CR><CR>
 " 快捷键
 
 autocmd BufRead *.dot imap ii <esc>oarrow<leader><Tab>
 autocmd BufRead *.dot imap ij <esc>o-<leader><Tab>
+
+
+"========== markdown 文件下的快捷键
+
+" 加粗
+autocmd BufRead *.md imap <c-b> ****<esc>hi
+
+" code
+autocmd BufRead *.md imap <c-c> ```<enter><esc>O

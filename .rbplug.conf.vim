@@ -122,7 +122,7 @@ let g:SignatureMap = {
 let g:UltiSnipsSnippetDirectories=[path.'/mysnippets']
 " UltiSnips 的 tab 键与 YCM 冲突，重新设定
 let g:UltiSnipsExpandTrigger="<leader><tab>"
-let g:UltiSnipsJumpForwardTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger="<leader><tab>"
 let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
 
 "   let g:ulti_expand_or_jump_res = 0 "default value, just set once

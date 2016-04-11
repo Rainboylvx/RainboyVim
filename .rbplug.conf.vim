@@ -299,7 +299,8 @@ let g:neocomplete#sources#dictionary#dictionaries = {
     \ 'default' : '',
     \ 'vimshell' : $HOME.'/.vimshell_hist',
     \ 'scheme' : $HOME.'/.gosh_completions',
-    \ 'javascript' : path.'/dict/js.dict'
+    \ 'javascript' : path.'/dict/js.dict',
+	\ 'cpp'	: path.'/dict/cpp.dict'
         \ }
 
 " Define keyword.

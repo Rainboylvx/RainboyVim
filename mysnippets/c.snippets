@@ -25,3 +25,15 @@ for (${2:i}=1;$2<=${1:count};$2${3:++}){
     ${VISUAL}${0}
 }
 endsnippet
+
+#freopen stdin
+snippet fr "freopen" b
+freopen("${1}.in","r",stdin);
+${0}
+endsnippet
+
+#freopen stdout
+snippet fw "freopen stdout" b
+freopen("${1}.out","w",stdout);
+${0}
+endsnippet

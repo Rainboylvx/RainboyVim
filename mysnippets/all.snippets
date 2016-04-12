@@ -23,7 +23,7 @@ snippet time "插入当前时间"
 `!v strftime("%Y-%m-%d %H:%M")`${0}
 endsnippet
 #插入我想要的时间
-snippet itime "得到本地时间格式" i
+snippet ltime "local time" i
 `!v strftime('%c')`
 endsnippet
 
@@ -39,13 +39,13 @@ endsnippet
 
 #c,cpp 文件的个人信息
 snippet personal "c,cpp个人信息"
-/*==================================
-*Title :${1:title}
-*Author:${2:`!v g:global_author`}
-*Time  :${3:`!v strftime('%Y-%m-%d %H:%M')`}
-*update:${4:`!v strftime('%Y-%m-%d %H:%M')`}
-*`!v &enc[:2] == "utf" ? "©" : "(c)"` Copyright ${5:`!v strftime("%Y")`} `!v g:global_author`. All Rights Reserved.
-*=================================*/
+/*============================================================================
+* Title : ${1:title}
+* Author: `!v g:global_author`
+* Time  : ${2:`!v strftime('%Y-%m-%d %H:%M')`}
+* update: ${3:`!v strftime('%Y-%m-%d %H:%M')`}
+* `!v &enc[:2] == "utf" ? "©" : "(c)"` Copyright ${4:`!v strftime("%Y")`} `!v g:global_author`. All Rights Reserved.
+*=============================================================================*/
 
 ${0}
 endsnippet

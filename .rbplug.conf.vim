@@ -94,13 +94,13 @@ endif
 
 
 "================= vim-signature
-let g:SignatureMap = {
+      let g:SignatureMap = {
         \ 'Leader'             :  "m",
         \ 'PlaceNextMark'      :  "m,",
         \ 'ToggleMarkAtLine'   :  "m.",
         \ 'PurgeMarksAtLine'   :  "m-",
         \ 'DeleteMark'         :  "dm",
-        \ 'PurgeMarks'         :  "mda",
+        \ 'PurgeMarks'         :  "m<Space>",
         \ 'PurgeMarkers'       :  "m<BS>",
         \ 'GotoNextLineAlpha'  :  "']",
         \ 'GotoPrevLineAlpha'  :  "'[",
@@ -108,14 +108,14 @@ let g:SignatureMap = {
         \ 'GotoPrevSpotAlpha'  :  "`[",
         \ 'GotoNextLineByPos'  :  "]'",
         \ 'GotoPrevLineByPos'  :  "['",
-        \ 'GotoNextSpotByPos'  :  "mn",
-        \ 'GotoPrevSpotByPos'  :  "mp",
+        \ 'GotoNextSpotByPos'  :  "]`",
+        \ 'GotoPrevSpotByPos'  :  "[`",
         \ 'GotoNextMarker'     :  "[+",
         \ 'GotoPrevMarker'     :  "[-",
         \ 'GotoNextMarkerAny'  :  "]=",
         \ 'GotoPrevMarkerAny'  :  "[=",
-        \ 'ListLocalMarks'     :  "ms",
-        \ 'ListLocalMarkers'   :  "m?"
+        \ 'ListBufferMarks'    :  "m/",
+        \ 'ListBufferMarkers'  :  "m?"
         \ }
 
 "============= ultisnipptes ==========

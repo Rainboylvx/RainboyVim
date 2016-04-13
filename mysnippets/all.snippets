@@ -42,9 +42,9 @@ snippet personal "c,cpp个人信息"
 /*============================================================================
 * Title : ${1:title}
 * Author: `!v g:global_author`
-* Time  : ${2:`!v strftime('%Y-%m-%d %H:%M')`}
-* update: ${3:`!v strftime('%Y-%m-%d %H:%M')`}
-* `!v &enc[:2] == "utf" ? "©" : "(c)"` Copyright ${4:`!v strftime("%Y")`} `!v g:global_author`. All Rights Reserved.
+* Time  : `!v strftime('%Y-%m-%d %H:%M')`
+* update: `!v strftime('%Y-%m-%d %H:%M')`
+* `!v &enc[:2] == "utf" ? "©" : "(c)"` Copyright `!v strftime("%Y")` `!v g:global_author`. All Rights Reserved.
 *=============================================================================*/
 
 ${0}

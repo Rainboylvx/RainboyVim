@@ -145,3 +145,19 @@ Categories=Application;Development;
 ```
 cp -r ~/Rainboyvim/mysnippets  ~/.vim/bundle/ultisnips/
 ```
+
+<center># 快捷键 </center>
+
+## 书签
+
+有两种书签,这里只使用独立书签,减少记忆负担
+
+| 名字     | 作用                         |
+|----------|------------------------------|
+| m        | m=mark 设定/取消当前行的书签 |
+| mm       | 自动命名                     |
+| ms       | ListLocalMarks               |
+| mn       | GotoNextSpotByPos            |
+| mp       | GotoPrevSpotByPos            |
+| dm       | DeleteMar                    |
+| m<space> | PurgeMarks                   |

@@ -221,6 +221,8 @@ let g:syntastic_cpp_compiler = 'g++'
 
 "let g:syntastic_cpp_compiler_options = '-Wall'
 
+let g:syntastic_javascript_checkers = ['jshint']
+
 "============ vim - table
 let g:table_mode_corner="|"     "兼容Markdown Table
 

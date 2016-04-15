@@ -63,6 +63,8 @@ Plugin 'vim-scripts/DrawIt'                 "Ascii 画图
 
 Plugin 'larrupingpig/vimgdb-for-vim7.4'     "vimgdb
 
+Plugin 'othree/html5.vim'                   "html5 complete
+
 if(!has("win32"))
 Plugin 'ryanoasis/vim-devicons'                "nerd-font
 endif

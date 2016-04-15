@@ -146,6 +146,22 @@ Categories=Application;Development;
 cp -r ~/Rainboyvim/mysnippets  ~/.vim/bundle/ultisnips/
 ```
 
+### syntastic
+
+javascript
+
+```
+npm install -g jshint
+let g:syntastic_javascript_checkers = ['jshint']
+```
+
+` .jshintrc` 配置文件,可以放到vim的home下,应该自己设置一个路径来让vim检测
+
+具体看:
+
+http://www.tuicool.com/articles/AzIRviR
+
+
 <center># 快捷键 </center>
 
 ## 书签
@@ -161,3 +177,4 @@ cp -r ~/Rainboyvim/mysnippets  ~/.vim/bundle/ultisnips/
 | mp       | GotoPrevSpotByPos            |
 | dm       | DeleteMar                    |
 | m<space> | PurgeMarks                   |
+

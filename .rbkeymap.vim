@@ -180,3 +180,7 @@ autocmd BufRead *.md imap <c-b> ****<esc>hi
 
 " code
 autocmd BufRead *.md imap <c-c> ```<enter><esc>O
+
+"=========== JavaScript下nodejs 编译
+autocmd BufRead *.js inoremap <F8> <esc>:w<CR>:!node % <CR><CR>
+autocmd BufRead *.js nnoremap <F8> :w<CR>:!node % <CR><CR>

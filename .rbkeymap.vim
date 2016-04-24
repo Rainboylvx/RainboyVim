@@ -184,3 +184,171 @@ autocmd BufRead *.md imap <c-c> ```<enter><esc>O
 "=========== JavaScript下nodejs 编译
 autocmd BufRead *.js inoremap <F8> <esc>:w<CR>:!node % <CR><CR>
 autocmd BufRead *.js nnoremap <F8> :w<CR>:!node % <CR><CR>
+
+"========================= cpp c 一键编译
+"------------------------------------------------------------------------------
+"  < 判断操作系统是否是 Windows 还是 Linux >
+"------------------------------------------------------------------------------
+if(has("win32") || has("win64") || has("win95") || has("win16"))
+    let g:iswindows = 1
+else
+    let g:iswindows = 0
+endif
+ 
+"------------------------------------------------------------------------------
+"  < 判断是终端还是 Gvim >
+"------------------------------------------------------------------------------
+if has("gui_running")
+    let g:isGUI = 1
+else
+    let g:isGUI = 0
+endif
+ 
+"------------------------------------------------------------------------------
+"  < 编译、连接、运行配置 >
+"------------------------------------------------------------------------------
+" F9 一键保存、编译、连接存并运行
+map <F8> :call Run()<CR>
+imap <F8> <ESC>:call Run()<CR>
+ 
+" Ctrl + F9 一键保存并编译
+map <c-F8> :call Compile()<CR>
+imap <c-F8> <ESC>:call Compile()<CR>
+ 
+" Ctrl + F10  编译并调试
+map <c-F10> :call Gdb()<CR>
+imap <c-F10> <ESC>:call Gdb()<CR>
+
+let s:LastShellReturn_C = 0
+let s:ShowWarning = 1
+
+func! Compile()
+    "保存
+    exe ":w"
+    
+    "关闭cope
+    exe ":ccl"
+    exe ":update"
+
+    "判断当前路径
+    if expand("%:p:h")!=getcwd()
+        echohl WarningMsg | echo "Fail to make! This file is not in the current dir! Press <F7> to redirect to the dir of this file." | echohl None
+        return
+    endif
+    
+    "文件后缀判断
+    let sourcefileename=expand("%:t")
+    if (sourcefileename=="" || (&filetype!="cpp" && &filetype!="c"))
+        echohl WarningMsg | echo "Fail to make! Please select the right file!" | echohl None
+        return
+    endif
+
+    "文件名中的空格
+    let deletedspacefilename=substitute(sourcefileename,' ','','g')
+    if strlen(deletedspacefilename)!=strlen(sourcefileename)
+        echohl WarningMsg | echo "Fail to make! Please delete the spaces in the filename!" | echohl None
+        return
+    endif
+
+    if &filetype=="c"
+        if g:iswindows==1
+            set makeprg=gcc\ -g\ -o\ %<.exe\ %
+        else
+            set makeprg=gcc\ -g\ -o\ %<\ %
+        endif
+    elseif &filetype=="cpp"
+        if g:iswindows==1
+            set makeprg=g++\ -g\ -o\ %<.exe\ %
+        else
+            set makeprg=g++\ -g\ -o\ %<\ %
+        endif
+        "elseif &filetype=="cs"
+        "set makeprg=csc\ \/nologo\ \/out:%<.exe\ %
+    endif
+
+    
+    "得到 应该生成的 filename 
+    if(g:iswindows==1)
+        let outfilename=substitute(sourcefileename,'\(\.[^.]*\)' ,'.exe','g')
+        let toexename=outfilename
+    else
+        let outfilename=substitute(sourcefileename,'\(\.[^.]*\)' ,'','g')
+        let toexename=outfilename
+    endif
+
+    "删除已经生成的 filename.exe 
+    if filereadable(outfilename)
+        if(g:iswindows==1)
+            let outdeletedsuccess=delete(getcwd()."\\".outfilename)
+        else
+            let outdeletedsuccess=delete("./".outfilename)
+        endif
+        if(outdeletedsuccess!=0)
+            set makeprg=make
+            echohl WarningMsg | echo "Fail to make! I cannot delete the ".outfilename | echohl None
+            return
+        endif
+    endif
+
+    echohl WarningMsg | echo " compiling..." | echohl None
+    silent make
+    redraw!
+    set makeprg=make
+    "有没有编译错误
+    if v:shell_error != 0
+        let s:LastShellReturn_C = v:shell_error
+    endif
+    if g:iswindows
+        if s:LastShellReturn_C != 0
+            exe ":bo cope"
+            echohl WarningMsg | echo " compilation failed" | echohl None
+        else
+            if s:ShowWarning
+                exe ":bo cw"
+            endif
+            echohl WarningMsg | echo " compilation successful" | echohl None
+        endif
+    else
+        if empty(v:statusmsg)
+            echohl WarningMsg | echo " compilation successful" | echohl None
+        else
+            exe ":bo cope"
+        endif
+    endif
+endfunc
+
+
+func! Run()
+    call Compile()
+    if s:LastShellReturn_C != 0
+        return
+    endif
+    execute "normal :"
+
+
+    let sourcefileename=expand("%:t")
+    if(g:iswindows==1)
+        let outfilename=substitute(sourcefileename,'\(\.[^.]*\)' ,'.exe','g')
+        let toexename=outfilename
+    else
+        let outfilename=substitute(sourcefileename,'\(\.[^.]*\)' ,'','g')
+        let toexename=outfilename
+    endif
+    if filereadable(outfilename)
+        if(g:iswindows==1)
+            execute "!".toexename
+        else
+            execute "!./".toexename
+        endif
+    endif
+    execute "copen"
+endfunc
+
+func! Gdb()
+    call Compile()
+    if s:LastShellReturn_C != 0
+        return
+    endif
+
+    set makeprg = gdb
+endfunc

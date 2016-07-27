@@ -12,7 +12,7 @@ else
 endif
 
 "----------管理插件----------
-Plugin 'gmarik/Vundle.vim'                    " 让vundle管理插件版本,必须
+Plugin 'VundleVim/Vundle.vim'                    " 让vundle管理插件版本,必须
     
 Plugin 'thinca/vim-quickrun'                   " 运行 Run commands quickly 更快
 
@@ -51,7 +51,6 @@ Plugin 'plasticboy/vim-markdown'            "markdown 语法高亮
 
 Plugin 'Shougo/vimproc.vim'                 "vim shell
 Plugin 'Shougo/vimshell.vim'
-Plugin 'Shougo/neocomplete.vim'             "neocomplete
 
 "Plugin 'vim-scripts/AutoComplPop'           "自动弹出 del!
 

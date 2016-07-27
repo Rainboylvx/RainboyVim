@@ -13,7 +13,23 @@ ${0}
 endsnippet
 
 
+# ojtm 也就是我写的题目+解析
+snippet ojtm "文章信息" b
+---
+title: ${1: 文章标题 }
+date: ${2: `!v strftime("%Y-%m-%d %H:%M")`}
+update: `!v strftime("%Y-%m-%d %H:%M")`
+oj: ${3:cojs}
+URL: ${4:URL}
+categories:
+	- ${5: 分类}
+tags:
+	- ${6: tag}
+level: ${7:}
+---
 
+${0}
+endsnippet
 
 
 snippet center "居中" b

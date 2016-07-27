@@ -1,5 +1,5 @@
 " ctrl +s 保存
-imap <c-s> <esc>:w<enter>a
+"imap <c-s> <esc>:w<enter>a
 
 
 " ======= 引号 && 括号自动匹配 ======= "

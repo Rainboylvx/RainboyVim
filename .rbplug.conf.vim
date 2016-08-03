@@ -15,21 +15,29 @@ endif
 let g:airline_theme="badwolf" 
 
 if(has('win32'))
-set encoding=utf-8
-"let g:Powerline_symbols="fancy"
+    set encoding=utf-8
+    "let g:Powerline_symbols="fancy"
 
-let g:airline_symbols = {} 
-let g:airline_left_sep = "\u2b80" 
-let g:airline_left_alt_sep = "\u2b81" 
-let g:airline_right_sep = "\u2b82" 
-let g:airline_right_alt_sep = "\u2b83" 
-let g:airline_symbols.branch = "\u2b60" 
-let g:airline_symbols.readonly = "\u2b64" 
-let g:airline_symbols.linenr = "\u2b61"
-
-"设置顶部tabline栏符号显示"
-let g:airline#extensions#tabline#left_sep = "\u2b80" 
-let g:airline#extensions#tabline#left_alt_sep = "\u2b81"
+    let g:airline_symbols = {} 
+    let g:airline_left_sep = "\u2b80" 
+    let g:airline_left_alt_sep = "\u2b81" 
+    let g:airline_right_sep = "\u2b82" 
+    let g:airline_right_alt_sep = "\u2b83" 
+    let g:airline_symbols.branch = "\u2b60" 
+    let g:airline_symbols.readonly = "\u2b64" 
+    let g:airline_symbols.linenr = "\u2b61"
+    "设置顶部tabline栏符号显示"
+    let g:airline#extensions#tabline#left_sep = "\u2b80" 
+    let g:airline#extensions#tabline#left_alt_sep = "\u2b81"
+else
+    set encoding=utf-8
+    let g:airline_left_sep = ''
+    let g:airline_left_alt_sep = ''
+    let g:airline_right_sep = ''
+    let g:airline_right_alt_sep = ''
+    let g:airline_symbols.branch = ''
+    let g:airline_symbols.readonly = ''
+    let g:airline_symbols.linenr = ''
 endif
 "=============== WMctrl全屏 ==============
 " 将外部命令 wmctrl 控制窗口最大化的命令行参数封装成一个 vim 的函数

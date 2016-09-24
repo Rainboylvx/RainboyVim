@@ -27,7 +27,7 @@ Plugin 'SirVer/ultisnips'                   "ultisnips
 Plugin 'iamcco/markdown-preview.vim'        "md preview
 
 
-"Plugin 'Valloric/YouCompleteMe'                "YCM
+Plugin 'Valloric/YouCompleteMe'                "YCM
 Plugin    'scrooloose/syntastic'                "syntastic
 "Plugin 'Shougo/neocomplete.vim'            "YCM 对我来说太复杂了，相对简单的neo就好了
 Plugin 'vim-scripts/a.vim'                    ".h .c 快速切换
@@ -63,6 +63,8 @@ Plugin 'vim-scripts/DrawIt'                 "Ascii 画图
 Plugin 'larrupingpig/vimgdb-for-vim7.4'     "vimgdb
 
 Plugin 'othree/html5.vim'                   "html5 complete
+Plugin 'posva/vim-vue'                   "vue高亮
+Plugin 'Yggdroot/indentLine'                   "对齐
 
 if(!has("win32"))
 Plugin 'ryanoasis/vim-devicons'                "nerd-font

@@ -178,3 +178,15 @@ http://www.tuicool.com/articles/AzIRviR
 | dm       | DeleteMar                    |
 | m<space> | PurgeMarks                   |
 
+##  Archlinux 下安装YCM
+
+http://www.tuicool.com/articles/RZRJJbf
+
+```
+yaourt -S clang (编译会得到/usr/lib/libclang.so)
+cd ~
+mkdir ycm_build
+cd ycm_build
+cmake -G "Unix Makefiles" -DEXTERNAL_LIBCLANG_PATH=/usr/lib/libclang.so . ~/.vim/bundle/YouCompleteMe/third_party/ycmd/cpp
+cmake --build . --target ycm_core
+```

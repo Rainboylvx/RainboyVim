@@ -68,7 +68,8 @@ let NERDTreeMinimalUI=1
 if(has('win32'))
     set tags+="E:/HackTools/MinGW/include/sys.tags"
 else
-    let g:ycm_global_ycm_extra_conf="~/.vim/bundle/YouCompleteMe/third_party/ycmd/.ycm_extra_conf.py"
+    "let g:ycm_global_ycm_extra_conf="~/.vim/bundle/YouCompleteMe/third_party/ycmd/.ycm_extra_conf.py"
+    let g:ycm_global_ycm_extra_conf="~/RainboyVim/extra/.ycm_extra_conf.py"
     " 引入 C++ 标准库tags
 
 

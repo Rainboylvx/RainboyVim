@@ -82,13 +82,16 @@ sudo ln -s ./libc++abi.so.1.0 ./libc++abi.so
 
  - http://blog.csdn.net/firebird321/article/details/48528569
 
+```
 cd ~/.vim/bundle/YouCompleteMe
 git submodule update --init --recursive
+在YouCompleteMe目录下 ./install.sh --clang-completer
 cd ~
 mkdir ycm_build
 cd ycm_build
 cmake -G "Unix Makefiles" -DPATH_TO_LLVM_ROOT=llvmpath ~/.vim/bundle/YouCompleteMe/third_party/ycm/cpp
 cmake --build . --target ycm_core
+```
 
 
 ###YCM错误解决
@@ -190,3 +193,13 @@ cd ycm_build
 cmake -G "Unix Makefiles" -DEXTERNAL_LIBCLANG_PATH=/usr/lib/libclang.so . ~/.vim/bundle/YouCompleteMe/third_party/ycmd/cpp
 cmake --build . --target ycm_core
 ```
+
+## 解决fcitx.vim不能使用的的问题
+
+http://blog.chinaunix.net/uid-20147410-id-3618967.html
+
+ - 设置(Fcitx配置>>全局配置>>程序>>在窗口间共享状态）为否
+ - 使用命令在外部设置的方法：（之所以我的机器需要这步是因为在一些java软件里输入法的状态不能自动保持）
+ - 打开配置文件 ~/.config/fcitx/config文件，首先备份一下。
+ - 找到 [Program] 段，把 ShareStateAmongWindow=PerProgram 改成 ShareStateAmongWindow=No
+ - 运行命令 fcitx-remote -t 使新配置文件生效。

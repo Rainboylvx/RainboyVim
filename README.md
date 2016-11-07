@@ -4,6 +4,14 @@
 
  - http://my.oschina.net/kutengshe/blog/464159?fromerr=jjjnpTiJ
 
+
+```
+git clone https://github.com/vim/vim
+cd vim
+./configure
+
+```
+
 ###02 
 
 ```
@@ -16,12 +24,7 @@ install font: DejaVu Sans Mono for Powerline Nerd Font Plus Font Awesome Plus Oc
 
 ###03
 ```
-cd ~
-mkdir .vim
-cd .vim
-mkdir bundle
-cd bundle
-git clone https://github.com/VundleVim/Vundle.vim.git
+git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 vim
 :PluginInstall
 ```
@@ -92,7 +95,13 @@ cd ycm_build
 cmake -G "Unix Makefiles" -DPATH_TO_LLVM_ROOT=llvmpath ~/.vim/bundle/YouCompleteMe/third_party/ycm/cpp
 cmake --build . --target ycm_core
 ```
+ 
+超快速的安装方法
 
+```
+cd ~/.vim/bundle/YouCompleteMe
+/install.sh --clang-completer
+```
 
 ###YCM错误解决
 vim 1.cpp 打开后 提醒有一个错误的 third_party里的syntax-parse.py：
@@ -203,3 +212,10 @@ http://blog.chinaunix.net/uid-20147410-id-3618967.html
  - 打开配置文件 ~/.config/fcitx/config文件，首先备份一下。
  - 找到 [Program] 段，把 ShareStateAmongWindow=PerProgram 改成 ShareStateAmongWindow=No
  - 运行命令 fcitx-remote -t 使新配置文件生效。
+
+-----------------
+
+
+# 未来的
+
+ - 抄一遍[K-VIM](https://github.com/wklken/k-vimhttps://github.com/wklken/k-vim)

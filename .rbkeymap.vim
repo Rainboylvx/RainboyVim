@@ -207,13 +207,13 @@ endif
 "------------------------------------------------------------------------------
 "  < 编译、连接、运行配置 >
 "------------------------------------------------------------------------------
-" F8 一键保存、编译、连接存并运行
-map <F8> :call Run()<CR>
-imap <F8> <ESC>:call Run()<CR>
- 
 " Ctrl + F8 一键保存并编译
-map <c-F8> :call Compile()<CR>
-imap <c-F8> <ESC>:call Compile()<CR>
+map <c-F8> :call Run()<CR>
+imap <c-F8> <ESC>:call Run()<CR>
+
+" F8 一键保存、编译、连接存并运行
+map <F8> :call Compile()<CR>
+imap <F8> <ESC>:call Compile()<CR>
  
 " Ctrl + F10  编译并调试
 map <c-F10> :call Gdb()<CR>
@@ -312,7 +312,7 @@ func! Compile()
         if empty(v:statusmsg)
             echohl WarningMsg | echo " compilation successful" | echohl None
         else
-            exe ":bo cope"
+            "exe ":bo cope"
         endif
     endif
 endfunc

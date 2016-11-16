@@ -47,7 +47,7 @@ endf
 " 全屏开/关快捷键
 map <silent> <F11> :call ToggleFullscreen()<CR>
 " 启动 vim 时自动全屏
-autocmd VimEnter * call ToggleFullscreen()
+"autocmd VimEnter * call ToggleFullscreen()
 
 
 
@@ -55,9 +55,9 @@ autocmd VimEnter * call ToggleFullscreen()
 " 使用 NERDTree 插件查看工程文件。设置快捷键，速记：file list
 nmap <Leader>fl :NERDTreeToggle<CR>
 " 设置NERDTree子窗口宽度
-let NERDTreeWinSize=32
+let NERDTreeWinSize=50
 " 设置NERDTree子窗口位置
-let NERDTreeWinPos="right"
+let NERDTreeWinPos="left"
 " 显示隐藏文件
 let NERDTreeShowHidden=1
 " NERDTree 子窗口中不显示冗余帮助信息
@@ -256,7 +256,7 @@ let g:wildfire_objects = ["i'", 'i"', "i)", "i]", "i}", "i>", "ip"]
 
 "============ Vim markdown =========
 let g:vim_markdown_frontmatter=1
-let g:vim_markdown_math=1
+let g:vim_markdown_math=0
 let g:vim_markdown_conceal = 0
 let g:vim_markdown_toc_autofit = 1
 let g:vim_markdown_new_list_item_indent = 2

@@ -12,7 +12,7 @@ imap <F2> <esc>:w<enter>a
 :inoremap ] <c-r>=ClosePair(']')<cr>
 :inoremap " ""<esc>i
 :inoremap ' ''<esc>i
-:inoremap ` ``<esc>i
+":inoremap ` ``<esc>i
 au FileType scheme,racket,lisp,clojure :inoremap ' '
 au FileType scheme,racket,lisp,clojure :inoremap ` `
 au FileType scheme,racket,lisp,clojure :inoremap * **<esc>i
@@ -29,7 +29,7 @@ endf
 
 " ======= 自定义快捷键 ======= "
 
-" Ctrl +;			行尾加;
+" Ctrl +;            行尾加;
 imap <a-i> <c-l>;
 
 " Ctrl + ]            多选择跳转
@@ -55,6 +55,37 @@ map <c-k> <c-w><c-k>
 imap <c-l> <esc>A
 map <c-l> <c-w><c-l>
 
+
+"================== 窗口操作快捷键 ==================
+
+" shift + K                窗口向上增加一行
+map <s-k> <c-w>+
+
+" shift + J              窗口向下增加一行
+map <s-j> <c-w>-
+
+" shift + h              窗口向左增加一行
+map <s-h> <c-w><
+
+" shift + l              窗口向右增加一行
+map <s-l> <c-w>>
+
+
+" ctrl + right        向右或向下方交换窗口
+map <c-right> <c-w>r
+
+" ctrl + left         向左或向上方交换窗口
+map <c-left> <c-w>R
+
+" ctrl + up           让所有窗口调整至相同尺寸(平均划分)
+map <c-up> <c-w>=
+
+" ctrl + down         将当前窗口的宽度调到最大
+map <c-down> <c-w>|
+
+" ctrl + t             向左或向上方交换窗口
+map <c-left> <c-w>T
+
 " Alt  + H            光标左移一格
 imap <m-h> <left>
 
@@ -78,14 +109,127 @@ imap <leader>v <esc>"+p
 nmap <leader>v "+p
 vmap <leader>v "+p
 
+
+" ================ tab标签页面 快捷键 ================
+"作者：韦易笑
+"链接：https://zhuanlan.zhihu.com/p/20902166
+"来源：知乎
+"著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。
+
+noremap <tab>e :tabnew<cr>              "
+noremap <tab>w :tabclose<cr>            "
+noremap <tab>n :tabn<cr>                "
+noremap <tab>p :tabp<cr>                "
+noremap <leader>t :tabnew<cr>           "
+noremap <leader>c :tabclose<cr>         "
+noremap <leader>1 :tabn 1<cr>           "
+noremap <leader>2 :tabn 2<cr>           "
+noremap <leader>3 :tabn 3<cr>           "
+noremap <leader>4 :tabn 4<cr>           "
+noremap <leader>5 :tabn 5<cr>           "
+noremap <leader>6 :tabn 6<cr>           "
+noremap <leader>7 :tabn 7<cr>           "
+noremap <leader>8 :tabn 8<cr>           "
+noremap <leader>9 :tabn 9<cr>           "
+noremap <leader>0 :tabn 10<cr>          "
+noremap <s-tab> :tabnext<CR>            "
+inoremap <s-tab> <ESC>:tabnext<CR>      "
+
+
+" make tabline in terminal mode
+function! Vim_NeatTabLine()
+    let s = ''
+    for i in range(tabpagenr('$'))
+        " select the highlighting
+        if i + 1 == tabpagenr()
+            let s .= '%#TabLineSel#'
+        else
+            let s .= '%#TabLine#'
+        endif
+        " set the tab page number (for mouse clicks)
+        let s .= '%' . (i + 1) . 'T'
+        " the label is made by MyTabLabel()
+        let s .= ' %{Vim_NeatTabLabel(' . (i + 1) . ')} '
+    endfor
+    " after the last tab fill with TabLineFill and reset tab page nr
+    let s .= '%#TabLineFill#%T'
+    " right-align the label to close the current tab page
+    if tabpagenr('$') > 1
+        let s .= '%=%#TabLine#%999XX'
+    endif
+    return s
+endfunc
+ 
+" get a single tab name 
+function! Vim_NeatBuffer(bufnr, fullname)
+    let l:name = bufname(a:bufnr)
+    if getbufvar(a:bufnr, '&modifiable')
+        if l:name == ''
+            return '[No Name]'
+        else
+            if a:fullname 
+                return fnamemodify(l:name, ':p')
+            else
+                return fnamemodify(l:name, ':t')
+            endif
+        endif
+    else
+        let l:buftype = getbufvar(a:bufnr, '&buftype')
+        if l:buftype == 'quickfix'
+            return '[Quickfix]'
+        elseif l:name != ''
+            if a:fullname 
+                return '-'.fnamemodify(l:name, ':p')
+            else
+                return '-'.fnamemodify(l:name, ':t')
+            endif
+        else
+        endif
+        return '[No Name]'
+    endif
+endfunc
+ 
+" get a single tab label
+function! Vim_NeatTabLabel(n)
+    let l:buflist = tabpagebuflist(a:n)
+    let l:winnr = tabpagewinnr(a:n)
+    let l:bufnr = l:buflist[l:winnr - 1]
+    return Vim_NeatBuffer(l:bufnr, 0)
+endfunc
+ 
+" get a single tab label in gui
+function! Vim_NeatGuiTabLabel()
+    let l:num = v:lnum
+    let l:buflist = tabpagebuflist(l:num)
+    let l:winnr = tabpagewinnr(l:num)
+    let l:bufnr = l:buflist[l:winnr - 1]
+    return Vim_NeatBuffer(l:bufnr, 0)
+endfunc
+ 
+" setup new tabline, just like %M%t in macvim
+set tabline=%!Vim_NeatTabLine()
+set guitablabel=%{Vim_NeatGuiTabLabel()}
+
+
+
+
+
+
+
+
+
+
+
+
+
 " \bb                 按=号对齐代码 [Tabular插件]
 nmap <leader>bb :Tab /=<cr>
 
 " \bn                 自定义对齐    [Tabular插件]
 nmap <leader>bn :Tab /
 
-" \nt                 打开/关闭文件树窗口，在左侧栏显示 [NERDTree插件]
-nmap <leader>nt :NERDTree<cr>
+" \fl                 打开/关闭文件树窗口，在左侧栏显示 [NERDTree插件]
+nmap <leader>fl :NERDTree<cr>
 
 " \tl                 打开/关闭Tags窗口，在右侧栏显示 [Tagbar插件]
 nmap <leader>tl :TagbarToggle<cr><c-w><c-l>
@@ -177,9 +321,11 @@ autocmd BufRead *.dot imap ij <esc>o-<leader><Tab>
 
 " 加粗
 autocmd BufRead *.md imap <c-b> ****<esc>hi
+autocmd BufRead *.md imap <c-v> $$$$<esc>hi
 
 " code
-autocmd BufRead *.md imap <c-c> ```<enter><esc>O
+autocmd BufRead *.md imap <c-c> ```c<enter><esc>O
+
 
 "=========== JavaScript下nodejs 编译
 autocmd BufRead *.js inoremap <F8> <esc>:w<CR>:!node % <CR><CR>
@@ -207,13 +353,13 @@ endif
 "------------------------------------------------------------------------------
 "  < 编译、连接、运行配置 >
 "------------------------------------------------------------------------------
-" Ctrl + F8 一键保存并编译
-map <c-F8> :call Run()<CR>
-imap <c-F8> <ESC>:call Run()<CR>
-
-" F8 一键保存、编译、连接存并运行
-map <F8> :call Compile()<CR>
-imap <F8> <ESC>:call Compile()<CR>
+" F9 一键保存、编译、连接存并运行
+map <F8> :call Run()<CR>
+imap <F8> <ESC>:call Run()<CR>
+ 
+" Ctrl + F9 一键保存并编译
+map <c-F8> :call Compile()<CR>
+imap <c-F8> <ESC>:call Compile()<CR>
  
 " Ctrl + F10  编译并调试
 map <c-F10> :call Gdb()<CR>
@@ -312,7 +458,7 @@ func! Compile()
         if empty(v:statusmsg)
             echohl WarningMsg | echo " compilation successful" | echohl None
         else
-            "exe ":bo cope"
+            exe ":bo cope"
         endif
     endif
 endfunc

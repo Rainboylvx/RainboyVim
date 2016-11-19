@@ -26,10 +26,9 @@ Plugin 'SirVer/ultisnips'                   "ultisnips
 
 Plugin 'iamcco/markdown-preview.vim'        "md preview
 
-
+Plugin 'ctrlpvim/ctrlp.vim'                 " ctrlp 文件查找
 Plugin 'Valloric/YouCompleteMe'                "YCM
 Plugin    'scrooloose/syntastic'                "syntastic
-"Plugin 'Shougo/neocomplete.vim'            "YCM 对我来说太复杂了，相对简单的neo就好了
 Plugin 'vim-scripts/a.vim'                    ".h .c 快速切换
 Plugin 'nathanaelkane/vim-indent-guides'      "代码缩进
 Plugin 'kshenoy/vim-signature'                "书签

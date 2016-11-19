@@ -228,9 +228,6 @@ nmap <leader>bb :Tab /=<cr>
 " \bn                 自定义对齐    [Tabular插件]
 nmap <leader>bn :Tab /
 
-" \fl                 打开/关闭文件树窗口，在左侧栏显示 [NERDTree插件]
-nmap <leader>fl :NERDTree<cr>
-
 " \tl                 打开/关闭Tags窗口，在右侧栏显示 [Tagbar插件]
 nmap <leader>tl :TagbarToggle<cr><c-w><c-l>
 

@@ -7,8 +7,10 @@ else
 endif
 
 "=================== airline ================
+
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#buffer_nr_show = 1
+
 if !exists('g:airline_symbols')
   let g:airline_symbols = {}
 endif
@@ -17,8 +19,6 @@ let g:airline_theme="badwolf"
 if(has('win32'))
     set encoding=utf-8
     "let g:Powerline_symbols="fancy"
-
-    let g:airline_symbols = {} 
     let g:airline_left_sep = "\u2b80" 
     let g:airline_left_alt_sep = "\u2b81" 
     let g:airline_right_sep = "\u2b82" 
@@ -38,7 +38,40 @@ else
     let g:airline_symbols.branch = ''
     let g:airline_symbols.readonly = ''
     let g:airline_symbols.linenr = ''
+    let g:airline#extensions#tabline#left_sep = ''
+    let g:airline#extensions#tabline#left_alt_sep = ''
 endif
+
+
+" 显示buffer 序号
+let g:airline#extensions#tabline#show_splits = 1
+" 显示buffer 序号
+let g:airline#extensions#tabline#buffer_idx_mode = 1
+" 显示buffer 的名字
+let g:airline#extensions#tabline#buffers_label = 'Buffer'
+
+" 快捷键
+nmap <leader>1 <Plug>AirlineSelectTab1
+nmap <leader>2 <Plug>AirlineSelectTab2
+nmap <leader>3 <Plug>AirlineSelectTab3
+nmap <leader>4 <Plug>AirlineSelectTab4
+nmap <leader>5 <Plug>AirlineSelectTab5
+nmap <leader>6 <Plug>AirlineSelectTab6
+nmap <leader>7 <Plug>AirlineSelectTab7
+nmap <leader>8 <Plug>AirlineSelectTab8
+nmap <leader>9 <Plug>AirlineSelectTab9
+nmap <leader>p <Plug>AirlineSelectPrevTab
+nmap <leader>n <Plug>AirlineSelectNextTab
+
+"关闭当前buffer
+nmap <leader>w :bw<enter>
+
+"和最近的buffer
+nmap <leader>w :b#<enter>
+
+"sb n 分割
+"
+
 "=============== WMctrl全屏 ==============
 " 将外部命令 wmctrl 控制窗口最大化的命令行参数封装成一个 vim 的函数
 fun! ToggleFullscreen()

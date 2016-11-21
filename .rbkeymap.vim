@@ -99,7 +99,7 @@ imap <m-k> <up>
 imap <m-l> <right>
 
 " \c                  复制至公共剪贴板
-vmap <leader>c "+y
+vmap <c-c> "+y
 
 " \a                  复制所有至公共剪贴板
 nmap <leader>a <esc>ggVG"+y<esc>
@@ -382,3 +382,4 @@ func! Gdb()
 
     set makeprg = gdb
 endfunc
+

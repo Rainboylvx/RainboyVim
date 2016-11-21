@@ -50,8 +50,8 @@ set laststatus=2            "显示状态栏(默认值为1, 无法显示状态�
 " 禁止光标闪烁
 set gcr+=n-v-c:blinkon0,i-ci:ver25-blinkon0
 " 设置光标颜色
-"au InsertLeave * hi Cursor guibg=green
-"au InsertEnter * hi Cursor guibg=red
+au InsertLeave * hi Cursor guibg=green
+au InsertEnter * hi Cursor guibg=red
 
 " 开启部分语法高亮的非默认特性
 let g:cpp_class_scope_highlight           = 1  " 高亮C++ class scope
@@ -218,8 +218,8 @@ if has("gui_running")
     set guioptions-=L        " 左边的滚动条 
     set guioptions-=r        " 右边的滚动条 
     set guioptions-=b        " 隐藏底部滚动条
-    "set showtabline=0      " 隐藏Tab栏
-    "set go=                " 置空
+    set showtabline=0      " 隐藏Tab栏
+    set go=                " 置空
     set guitablabel=        " 关闭GUI TAB
     set paste                " paste 模式 可以在插入模式下粘贴内容，不会有任何变形
     set mousemodel=popup_setpos
@@ -258,4 +258,7 @@ else
     endif
 endif
 
+
+"============ 设定中文 doc 目录============
+set rtp+=/home/rainboy/RainboyVim/doc
 

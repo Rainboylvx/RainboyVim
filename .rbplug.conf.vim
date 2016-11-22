@@ -8,8 +8,20 @@ endif
 
 "=================== airline ================
 
+"启用tabline
 let g:airline#extensions#tabline#enabled = 1
-let g:airline#extensions#tabline#buffer_nr_show = 1
+
+"let g:airline#extensions#disable_rtp_load = 1
+"let g:airline_extensions = ['branch', 'tabline']
+
+"静态查错
+""let g:airline#extensions#syntastic#enabled = 1
+""let g:airline#extensions#tabline#show_tab_type = 1
+let g:airline#extensions#tabline#switch_buffers_and_tabs = 1
+let g:airline#extensions#tabline#show_buffers = 1
+let g:airline#extensions#tabline#show_tabs = 0
+
+"let g:airline#extensions#tabline#tab_min_count = 11
 
 if !exists('g:airline_symbols')
   let g:airline_symbols = {}
@@ -42,9 +54,6 @@ else
     let g:airline#extensions#tabline#left_alt_sep = ''
 endif
 
-
-" 显示buffer 序号
-let g:airline#extensions#tabline#show_splits = 1
 " 显示buffer 序号
 let g:airline#extensions#tabline#buffer_idx_mode = 1
 " 显示buffer 的名字
@@ -67,7 +76,7 @@ nmap <leader>n <Plug>AirlineSelectNextTab
 nmap <leader>w :bw<enter>
 
 "和最近的buffer
-nmap <leader>w :b#<enter>
+nmap <leader>t :b#<enter>
 
 "sb n 分割
 "

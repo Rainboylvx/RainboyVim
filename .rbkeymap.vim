@@ -1,5 +1,7 @@
 " ctrl +s 保存
 imap <F2> <esc>:w<enter>a
+imap <F3> <esc>:w<enter><esc>:shell<enter>
+nmap <F3> :w<enter>:shell<enter>
 
 
 " ======= 引号 && 括号自动匹配 ======= "

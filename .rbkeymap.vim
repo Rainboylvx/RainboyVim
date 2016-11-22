@@ -72,19 +72,17 @@ map <s-l> <c-w>>
 
 
 " ctrl + right        向右或向下方交换窗口
-map <c-right> <c-w>r
+""unmap <c-left>
+nmap <c-left> <c-w><c-r>
 
-" ctrl + left         向左或向上方交换窗口
-map <c-left> <c-w>R
+" ctrl + right 向左或向上方交换窗口
+nmap <c-right> <c-w>R
 
 " ctrl + up           让所有窗口调整至相同尺寸(平均划分)
 map <c-up> <c-w>=
 
 " ctrl + down         将当前窗口的宽度调到最大
-map <c-down> <c-w>|
-
-" ctrl + t             向左或向上方交换窗口
-map <c-left> <c-w>T
+nmap <c-down> :vertical resize<enter>
 
 " Alt  + H            光标左移一格
 imap <m-h> <left>

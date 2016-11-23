@@ -257,8 +257,3 @@ else
         set title
     endif
 endif
-
-
-"============ 设定中文 doc 目录============
-set rtp+=/home/rainboy/RainboyVim/doc
-

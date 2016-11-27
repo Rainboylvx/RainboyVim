@@ -28,8 +28,8 @@ colorscheme gruvbox
 
 
 " ---对部分语言设置单独的缩进
-au FileType ruby,eruby,slim,coffee,jade,sh set shiftwidth=2
-au FileType ruby,eruby,slim,coffee,jade,sh set tabstop=2
+au FileType javascript,html,vue,ruby,eruby,slim,coffee,jade,sh set shiftwidth=2
+au FileType javascript,html,vue,ruby,eruby,slim,coffee,jade,sh set tabstop=2
 
 
 set autowrite                 " 档案一有更动就会自动存盘

@@ -13,6 +13,23 @@ ${0}
 endsnippet
 
 
+#pcs文章信息
+snippet pcs "文章信息" b
+---
+title: ${1: 文章标题}
+author: ${2: Rainboy}
+tags:
+ - ${3: 标签}
+oj: ${4: OJ名}
+createTime: ${5: `!v strftime("%Y-%m-%d %H:%M")`}
+updateTime: ${6: `!v strftime("%Y-%m-%d %H:%M")`}
+hidden: false
+comment: ${7: 摘要}
+---
+${0}
+endsnippet
+
+
 # ojtm 也就是我写的题目+解析
 snippet ojtm "文章信息" b
 ---
@@ -64,3 +81,4 @@ endsnippet
 snippet h5 "h5" b
 ##### ${0}
 endsnippet
+

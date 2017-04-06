@@ -12,18 +12,19 @@ else
 endif
 
 "----------管理插件----------
-Plugin 'VundleVim/Vundle.vim'                    " 让vundle管理插件版本,必须
-Plugin 'thinca/vim-quickrun'                   " 运行 Run commands quickly 更快
-Plugin 'morhetz/gruvbox'                    "gruvbox主题
-Plugin 'bling/vim-airline'                  "airline
-Plugin 'vim-airline/vim-airline-themes'        "airline themes
-Plugin 'SirVer/ultisnips'                   "ultisnips
-Plugin 'iamcco/markdown-preview.vim'        "md preview
+Plugin 'VundleVim/Vundle.vim'               " 让vundle管理插件版本,必须
+Plugin 'thinca/vim-quickrun'                " 运行 Run commands quickly 更快
+Plugin 'morhetz/gruvbox'                    " gruvbox主题
+Plugin 'bling/vim-airline'                  " airline
+Plugin 'vim-airline/vim-airline-themes'     " airline themes
+Plugin 'SirVer/ultisnips'                   " ultisnips
+Plugin 'iamcco/markdown-preview.vim'        " md preview
 Plugin 'ctrlpvim/ctrlp.vim'                 " ctrlp 文件查找
-Plugin 'Valloric/YouCompleteMe'                "YCM
-Plugin 'scrooloose/syntastic'                "syntastic
-Plugin 'vim-scripts/a.vim'                    ".h .c 快速切换
-Plugin 'nathanaelkane/vim-indent-guides'      "代码缩进
+Plugin 'Valloric/YouCompleteMe'             " YCM
+Plugin 'Valloric/ListToggle'                " list windows(quickfix location-list) quick toggle
+Plugin 'scrooloose/syntastic'               " syntastic
+Plugin 'vim-scripts/a.vim'                  ".h .c 快速切换
+Plugin 'nathanaelkane/vim-indent-guides'    "代码缩进
 Plugin 'kshenoy/vim-signature'                "书签
 Plugin 'majutsushi/tagbar'                    "tagbar
 

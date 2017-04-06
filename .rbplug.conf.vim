@@ -109,6 +109,9 @@ let NERDTreeShowHidden=1
 let NERDTreeMinimalUI=1
 " 删除文件时自动删除文件对应 buffer
 
+"============= ListToggle ============
+let g:lt_location_list_toggle_map = '<leader>l'
+let g:lt_quickfix_list_toggle_map = '<leader>q'
 "============= YouCompleteMe ============
 if(has('win32'))
     set tags+="E:/HackTools/MinGW/include/sys.tags"

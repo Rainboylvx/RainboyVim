@@ -116,8 +116,8 @@ else
     "let g:ycm_global_ycm_extra_conf="~/.vim/bundle/YouCompleteMe/third_party/ycmd/.ycm_extra_conf.py"
     let g:ycm_global_ycm_extra_conf="~/RainboyVim/extra/.ycm_extra_conf.py"
     " 引入 C++ 标准库tags
-
-
+" location list 不一直打开
+let g:ycm_always_populate_location_list = 0
 " 开启 YCM 标签引擎
 let g:ycm_collect_identifiers_from_tags_files=1
 " YCM 补全菜单配色
@@ -258,6 +258,7 @@ let g:syntastic_auto_loc_list = 0
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 
+let g:ycm_autoclose_preview_window_after_completion = 1
 let g:syntastic_cpp_compiler = 'g++' 
 
 "let g:syntastic_cpp_compiler_options = '-Wall'

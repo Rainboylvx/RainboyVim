@@ -13,22 +13,15 @@ endif
 
 "----------管理插件----------
 Plugin 'VundleVim/Vundle.vim'                    " 让vundle管理插件版本,必须
-    
 Plugin 'thinca/vim-quickrun'                   " 运行 Run commands quickly 更快
-
 Plugin 'morhetz/gruvbox'                    "gruvbox主题
-
 Plugin 'bling/vim-airline'                  "airline
-
 Plugin 'vim-airline/vim-airline-themes'        "airline themes
-
 Plugin 'SirVer/ultisnips'                   "ultisnips
-
 Plugin 'iamcco/markdown-preview.vim'        "md preview
-
 Plugin 'ctrlpvim/ctrlp.vim'                 " ctrlp 文件查找
 Plugin 'Valloric/YouCompleteMe'                "YCM
-Plugin    'scrooloose/syntastic'                "syntastic
+Plugin 'scrooloose/syntastic'                "syntastic
 Plugin 'vim-scripts/a.vim'                    ".h .c 快速切换
 Plugin 'nathanaelkane/vim-indent-guides'      "代码缩进
 Plugin 'kshenoy/vim-signature'                "书签
@@ -42,7 +35,7 @@ Plugin 'scrooloose/nerdtree'                " 工程文件浏览
 Plugin 'Xuyuanp/nerdtree-git-plugin'        "
 
 
-"Plugin 'scrooloose/syntastic'                "静态分析器
+"Plugin 'scrooloose/syntastic'               "静态分析器
 Plugin 'dhruvasagar/vim-table-mode'         "table 生成
 Plugin 'plasticboy/vim-markdown'            "markdown 语法高亮
 "Plugin 'suan/vim-instant-markdown'          "markdown 实时渲染,使用失败
@@ -59,11 +52,11 @@ Plugin 'luochen1990/rainbow'                "彩虹括号
 
 Plugin 'vim-scripts/DrawIt'                 "Ascii 画图
 
-Plugin 'larrupingpig/vimgdb-for-vim7.4'     "vimgdb
+"Plugin 'larrupingpig/vimgdb-for-vim7.4'     "vimgdb
 
 Plugin 'othree/html5.vim'                   "html5 complete
 Plugin 'posva/vim-vue'                   "vue高亮
-Plugin 'Yggdroot/indentLine'                   "对齐
+Plugin 'Yggdroot/indentLine'                  "对齐
 
 if(!has("win32"))
 Plugin 'ryanoasis/vim-devicons'                "nerd-font

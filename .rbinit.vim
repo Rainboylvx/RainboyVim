@@ -250,6 +250,7 @@ else
         set noimd
     set ttimeoutlen=0
     if len($TMUX) > 0
+        set term=screen-256color
         " set screen title to vim $PWD folder name - format 'v:folder'
         set titlestring=v:%(%{fnamemodify(expand(\"$PWD\"),\":t\")}%)
         set t_ts=k

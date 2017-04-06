@@ -12,6 +12,18 @@ tags:
 ${0}
 endsnippet
 
+#blog 文章信息
+snippet blog "文章信息" b
+---
+_id: `uuid.js`
+title: ${1:文章标题 }
+date: ${2:`!v strftime("%Y-%m-%d %H:%M")`}
+categories:
+	- ${3:分类 }
+tags:
+	- ${4:tag }
+---
+endsnippet
 
 #pcs文章信息
 snippet pcs "文章信息" b

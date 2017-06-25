@@ -1,7 +1,7 @@
 import os 
 import ycm_core 
 flags = [ 
-    '-std=c++11', 
+    # '-std=c++11', 
     '-Wno-deprecated-declarations', 
     '-Wno-disabled-macro-expansion', 
     '-Wno-float-equal', 
@@ -20,8 +20,6 @@ flags = [
     '/usr/include',
     '-I',
     '/usr/include',
-    '-I',
-    '/usr/include/c++/4.8',
     '-I'
 ] 
 compilation_database_folder = '' 

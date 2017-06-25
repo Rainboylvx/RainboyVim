@@ -102,6 +102,11 @@ cmake --build . --target ycm_core
 cd ~/.vim/bundle/YouCompleteMe
 /install.sh --clang-completer
 ```
+## 安装 Vundle
+
+```
+git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+```
 
 ###YCM错误解决
 vim 1.cpp 打开后 提醒有一个错误的 third_party里的syntax-parse.py：

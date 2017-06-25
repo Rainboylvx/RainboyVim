@@ -99,7 +99,7 @@ imap <m-k> <up>
 imap <m-l> <right>
 
 " \c                  复制至公共剪贴板
-vmap <c-c> "+y
+vmap <leader>c "+y
 
 " \a                  复制所有至公共剪贴板
 nmap <leader>a <esc>ggVG"+y<esc>

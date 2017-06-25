@@ -1,7 +1,7 @@
 #hexo文章信息
 snippet hexo "文章信息" b
 ---
-title: ${1: 文章标题 }
+title: ${1: `!v expand("%:r")`}
 date: ${2: `!v strftime("%Y-%m-%d %H:%M")`}
 categories:
 	- ${3: 分类 }
@@ -16,19 +16,21 @@ endsnippet
 snippet blog "文章信息" b
 ---
 _id: `uuid.js`
-title: ${1:文章标题 }
+title: ${1:`!v expand("%:t:r")`}
 date: ${2:`!v strftime("%Y-%m-%d %H:%M")`}
+update: ${3:`!v strftime("%Y-%m-%d %H:%M")`}
 categories:
-	- ${3:分类 }
+	- ${4:分类 }
 tags:
-	- ${4:tag }
+	- ${5:tag }
 ---
+${0}
 endsnippet
 
 #pcs文章信息
 snippet pcs "文章信息" b
 ---
-title: ${1: 文章标题}
+title: ${1:`!v expand("%:t:r")`}
 author: ${2: Rainboy}
 tags:
  - ${3: 标签}

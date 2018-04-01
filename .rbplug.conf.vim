@@ -108,10 +108,15 @@ let NERDTreeShowHidden=1
 " NERDTree 子窗口中不显示冗余帮助信息
 let NERDTreeMinimalUI=1
 " 删除文件时自动删除文件对应 buffer
+" 
+"============= ListToggle ============
+let Tlist_Use_Right_Window = 1 " 在右侧使用taglist
+
 
 "============= ListToggle ============
 let g:lt_location_list_toggle_map = '<leader>l'
 let g:lt_quickfix_list_toggle_map = '<leader>q'
+
 "============= YouCompleteMe ============
 if(has('win32'))
     set tags+="E:/HackTools/MinGW/include/sys.tags"
@@ -193,9 +198,9 @@ let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
 
 "============= tagbar
 " 设置 tagbar 子窗口的位置出现在主编辑区的左边 
-let tagbar_left=1 
+"let tagbar_left=1 
 " 设置显示／隐藏标签列表子窗口的快捷键。速记：tag list 
-nnoremap <Leader>tl :TagbarToggle<CR> 
+"nnoremap <Leader>tl :TagbarToggle<CR> 
 " 设置标签子窗口的宽度 
 let tagbar_width=32 
 " tagbar 子窗口中不显示冗余帮助信息 

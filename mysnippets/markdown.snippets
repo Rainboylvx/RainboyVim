@@ -12,6 +12,18 @@ tags:
 ${0}
 endsnippet
 
+snippet oj "创建oj题目" b
+---
+title: 【noip2017模拟题】${1}
+time: 1000
+memory: 256
+hidden: false
+---
+
+## 【问题描述】
+${0}
+endsnippet
+
 #blog 文章信息
 snippet blog "文章信息" b
 ---
@@ -19,26 +31,34 @@ _id: `uuid.js`
 title: ${1:`!v expand("%:t:r")`}
 date: ${2:`!v strftime("%Y-%m-%d %H:%M")`}
 update: ${3:`!v strftime("%Y-%m-%d %H:%M")`}
+series: ${4:系列}
 categories:
-	- ${4:分类 }
+	- ${5:分类 }
 tags:
-	- ${5:tag }
+	- ${6:tag }
 ---
+${0}
+endsnippet
+
+#  more => <!--more-->
+snippet more "summary" b
+
+<!--more-->
+
 ${0}
 endsnippet
 
 #pcs文章信息
 snippet pcs "文章信息" b
 ---
+_id: `uuid.js`
 title: ${1:`!v expand("%:t:r")`}
 author: ${2: Rainboy}
+date: ${3:`!v strftime("%Y-%m-%d %H:%M")`}
 tags:
- - ${3: 标签}
-oj: ${4: OJ名}
-createTime: ${5: `!v strftime("%Y-%m-%d %H:%M")`}
-updateTime: ${6: `!v strftime("%Y-%m-%d %H:%M")`}
+ - ${4: 标签}
+oj: ${5: OJ名}
 hidden: false
-comment: ${7: 摘要}
 ---
 ${0}
 endsnippet
@@ -95,4 +115,21 @@ endsnippet
 snippet h5 "h5" b
 ##### ${0}
 endsnippet
+
+snippet b "blod" i
+**${0}**
+endsnippet
+
+snippet m "math" i
+$$${0}$$
+endsnippet
+
+
+snippet matrix "matrix" b
+\begin{matrix}
+${0} & \\\\
+ & 
+\end{matrix}
+endsnippet
+
 

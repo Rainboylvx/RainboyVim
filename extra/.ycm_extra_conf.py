@@ -14,13 +14,14 @@ flags = [
     '-x', 
     'c++',
     'c',
+    '-isystem',
+    '/usr/include/c++/7.2.1',
     '-I', 
     '.', 
     '-isystem',
     '/usr/include',
     '-I',
     '/usr/include',
-    '-I'
 ] 
 compilation_database_folder = '' 
 if compilation_database_folder: 

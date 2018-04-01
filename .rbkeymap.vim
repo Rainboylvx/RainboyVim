@@ -117,6 +117,10 @@ nmap <leader>bn :Tab /
 
 " \tl                 打开/关闭Tags窗口，在右侧栏显示 [Tagbar插件]
 nmap <leader>tl :TagbarToggle<cr><c-w><c-l>
+"nmap <leader>tl :TagbarToggle<cr>
+
+" \lt                 打开/关闭Tags窗口，在右侧栏显示 [Tagbar插件]
+nmap <leader>lt :TlistToggle<cr>
 
 " \fe                 打开文件编码窗口，在右侧栏显示 [FencView插件]
 nmap <leader>fe :FencView<cr>
@@ -204,11 +208,11 @@ autocmd BufRead *.dot imap ij <esc>o-<leader><Tab>
 "========== markdown 文件下的快捷键
 
 " 加粗
-autocmd BufRead *.md imap <c-b> ****<esc>hi
-autocmd BufRead *.md imap <c-v> $$$$<esc>hi
+"autocmd BufRead *.md imap <c-b> ****<esc>hi
+"autocmd BufRead *.md imap <c-v> $$$$<esc>hi
 
-" code
-autocmd BufRead *.md imap <c-c> ```c<enter><esc>O
+"" code
+"autocmd BufRead *.md imap <c-c> ```c<enter><esc>O
 
 
 "=========== JavaScript下nodejs 编译

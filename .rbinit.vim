@@ -81,7 +81,8 @@ set encoding=utf-8
 set fileencodings=cs-bom,utf-8,gbk,cp936,latin-1
 set fileformat=unix
 set fileformats=unix,mac
-language messages zh_CN.utf-8
+"language messages zh_CN.utf-8
+language messages en_US.utf-8
 if has('win32')
     source $VIMRUNTIME/delmenu.vim
     source $VIMRUNTIME/menu.vim

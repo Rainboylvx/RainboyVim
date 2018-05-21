@@ -5,6 +5,62 @@ if(has('win32'))
 else
     let path=$HOME.'/RainboyVim'
 endif
+"=================== ale   ==================
+let g:ale_linters = {
+\   'cpp': ['gcc','cppcheck'],
+\}
+let g:ale_sign_error = 'E'
+let g:ale_sign_warning = 'W'
+let g:ale_sign_column_always =1
+"let g:ale_linters_explicit = 1
+"let g:ale_completion_delay = 500
+"let g:ale_echo_delay = 20
+"let g:ale_lint_delay = 500
+"let g:ale_echo_msg_format = '[%linter%] %code: %%s'
+"let g:ale_lint_on_text_changed = 'normal'
+"let g:ale_lint_on_insert_leave = 1
+let g:airline#extensions#ale#enabled = 1
+
+let g:ale_echo_msg_error_str = 'E'
+let g:ale_echo_msg_warning_str = 'W'
+let g:ale_echo_msg_format = '[%linter%] %s [%severity%]'
+
+let g:ale_c_gcc_options = '-Wall -O2 -std=c99'
+let g:ale_cpp_gcc_options = '-Wall -O2 -std=c++14'
+let g:ale_c_cppcheck_options = ''
+let g:ale_cpp_cppcheck_options = ''
+
+
+"=================== LeaderF ================
+
+let g:Lf_ShortcutF = '<c-p>'
+let g:Lf_ShortcutB = '<m-n>'
+noremap <c-n> :LeaderfMru<cr>
+noremap <m-p> :LeaderfFunction!<cr>
+noremap <M-n> :LeaderfBuffer<cr>
+exec "set <M-n>=\en"
+set ttimeout ttimeoutlen=100
+noremap <m-m> :LeaderfTag<cr>
+let g:Lf_StlSeparator = { 'left': '', 'right': '', 'font': '' }
+
+let g:Lf_RootMarkers = ['.project', '.root', '.svn', '.git']
+let g:Lf_WorkingDirectoryMode = 'Ac'
+let g:Lf_WindowHeight = 0.30
+let g:Lf_CacheDirectory = expand('~/.vim/cache')
+let g:Lf_ShowRelativePath = 0
+let g:Lf_HideHelp = 1
+let g:Lf_StlColorscheme = 'powerline'
+let g:Lf_PreviewResult = {'Function':0}
+
+let g:Lf_NormalMap = {
+	\ "File":   [["<ESC>", ':exec g:Lf_py "fileExplManager.quit()"<CR>']],
+	\ "Buffer": [["<ESC>", ':exec g:Lf_py "bufExplManager.quit()"<CR>']],
+	\ "Mru":    [["<ESC>", ':exec g:Lf_py "mruExplManager.quit()"<CR>']],
+	\ "Tag":    [["<ESC>", ':exec g:Lf_py "tagExplManager.quit()"<CR>']],
+	\ "Function":    [["<ESC>", ':exec g:Lf_py "functionExplManager.quit()"<CR>']],
+	\ "Colorscheme":    [["<ESC>", ':exec g:Lf_py "colorschemeExplManager.quit()"<CR>']],
+	\ }
+
 
 "=================== airline ================
 
@@ -15,8 +71,7 @@ let g:airline#extensions#tabline#enabled = 1
 "let g:airline_extensions = ['branch', 'tabline']
 
 "静态查错
-""let g:airline#extensions#syntastic#enabled = 1
-""let g:airline#extensions#tabline#show_tab_type = 1
+
 let g:airline#extensions#tabline#switch_buffers_and_tabs = 1
 let g:airline#extensions#tabline#show_buffers = 1
 let g:airline#extensions#tabline#show_tabs = 0
@@ -196,49 +251,6 @@ let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
 
    "inoremap <leader><tab> <C-R>=(Ulti_ExpandOrJump_and_getRes() > 0)?"":IMAP_Jumpfunc('', 0)<CR>
 
-"============= tagbar
-" 设置 tagbar 子窗口的位置出现在主编辑区的左边 
-"let tagbar_left=1 
-" 设置显示／隐藏标签列表子窗口的快捷键。速记：tag list 
-"nnoremap <Leader>tl :TagbarToggle<CR> 
-" 设置标签子窗口的宽度 
-let tagbar_width=32 
-" tagbar 子窗口中不显示冗余帮助信息 
-let g:tagbar_compact=1
-" 设置 ctags 对哪些代码元素生成标签
-let g:tagbar_type_cpp = {
-    \ 'kinds' : [
-        \ 'd:macros:1',
-        \ 'g:enums',
-        \ 't:typedefs:0:0',
-        \ 'e:enumerators:0:0',
-        \ 'n:namespaces',
-        \ 'c:classes',
-        \ 's:structs',
-        \ 'u:unions',
-        \ 'f:functions',
-        \ 'm:members:0:0',
-        \ 'v:global:0:0',
-        \ 'x:external:0:0',
-        \ 'l:local:0:0'
-     \ ],
-     \ 'sro'        : '::',
-     \ 'kind2scope' : {
-         \ 'g' : 'enum',
-         \ 'n' : 'namespace',
-         \ 'c' : 'class',
-         \ 's' : 'struct',
-         \ 'u' : 'union'
-     \ },
-     \ 'scope2kind' : {
-         \ 'enum'      : 'g',
-         \ 'namespace' : 'n',
-         \ 'class'     : 'c',
-         \ 'struct'    : 's',
-         \ 'union'     : 'u'
-     \ }
-\ }
-
 
 
 "====== MiniBufExplorer
@@ -251,27 +263,6 @@ map <C-S-Tab> :MBEbp<cr>
 
 "----------nerdtree-git-plugin
 
-
-
-"===========syntastic===========
-let g:syntastic_error_symbol = 'e'
-let g:syntastic_warning_symbol = 'w'
-
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
-
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 0
-let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 0
-
-let g:ycm_autoclose_preview_window_after_completion = 1
-let g:syntastic_cpp_compiler = 'g++' 
-
-"let g:syntastic_cpp_compiler_options = '-Wall'
-
-let g:syntastic_javascript_checkers = ['jshint']
 
 "============ vim - table
 let g:table_mode_corner="|"     "兼容Markdown Table

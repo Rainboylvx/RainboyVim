@@ -1,3 +1,6 @@
+noremap <M-x> :echo "ALT-X pressed"<cr>
+exec "set <M-x>=\ex"
+set ttimeout ttimeoutlen=100
 " ctrl +s 保存
 imap <F2> <esc>:w<enter>a
 imap <F3> <esc>:w<enter><esc>:shell<enter>
@@ -115,12 +118,12 @@ nmap <leader>bb :Tab /=<cr>
 " \bn                 自定义对齐    [Tabular插件]
 nmap <leader>bn :Tab /
 
-" \tl                 打开/关闭Tags窗口，在右侧栏显示 [Tagbar插件]
-nmap <leader>tl :TagbarToggle<cr><c-w><c-l>
-"nmap <leader>tl :TagbarToggle<cr>
 
-" \lt                 打开/关闭Tags窗口，在右侧栏显示 [Tagbar插件]
-nmap <leader>lt :TlistToggle<cr>
+" \fl                显示函数列表
+nmap <leader>fl :LeaderfFunction<cr>
+
+" \fla                显示所有函数列表
+nmap <leader>fla :LeaderfFunctionAll<cr>
 
 " \fe                 打开文件编码窗口，在右侧栏显示 [FencView插件]
 nmap <leader>fe :FencView<cr>

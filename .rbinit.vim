@@ -259,3 +259,6 @@ else
         set title
     endif
 endif
+
+"============================ tags ============================
+set tags=./.tags;,.tags

@@ -13,15 +13,17 @@ endif
 
 "----------管理插件----------
 Plug 'thinca/vim-quickrun'                " 运行 Run commands quickly 更快
+Plug 'ludovicchabant/vim-gutentags'       " ctags,gtags
 Plug 'morhetz/gruvbox'                    " gruvbox主题
 Plug 'bling/vim-airline'                  " airline
 Plug 'vim-airline/vim-airline-themes'     " airline themes
 Plug 'SirVer/ultisnips'                   " ultisnips
 Plug 'iamcco/markdown-preview.vim'        " md preview
+Plug 'scrooloose/syntastic'              "静态分析器
 Plug 'Valloric/YouCompleteMe'             " YCM
 Plug 'octol/vim-cpp-enhanced-highlight'   " cpp 代码高亮
 Plug 'Valloric/ListToggle'                " list windows(quickfix location-list) quick toggle
-Plug 'w0rp/ale'                           " ale 代码检查
+"Plug 'w0rp/ale'                           " ale 代码检查
 Plug 'vim-scripts/a.vim'                  ".h .c 快速切换
 Plug 'nathanaelkane/vim-indent-guides'    "代码缩进
 Plug 'kshenoy/vim-signature'              "书签
@@ -34,9 +36,8 @@ Plug 'scrooloose/nerdcommenter'           " 代码注释
 
 Plug 'scrooloose/nerdtree'                " 工程文件浏览
 Plug 'Xuyuanp/nerdtree-git-plugin'        "
-Plug 'vim-scripts/taglist.vim'            " taglist
+"Plug 'vim-scripts/taglist.vim'            " taglist
 
-"Plugin 'scrooloose/syntastic'              "静态分析器
 Plug 'dhruvasagar/vim-table-mode'         "table 生成
 Plug 'plasticboy/vim-markdown'            "markdown 语法高亮
 "Plugin 'suan/vim-instant-markdown'         "markdown 实时渲染,使用失败

@@ -114,13 +114,17 @@ vmap <leader>v "+p
 
 " \bb                 按=号对齐代码 [Tabular插件]
 nmap <leader>bb :Tab /=<cr>
-
 " \bn                 自定义对齐    [Tabular插件]
 nmap <leader>bn :Tab /
 
 
 " \fl                显示函数列表
-nmap <leader>fl :LeaderfFunction<cr>
+nmap <leader>fl :NERDTreeToggle<cr>
+
+
+
+" \fll                显示所有函数列表
+nmap <leader>fll :LeaderfFunction<cr>
 
 " \fla                显示所有函数列表
 nmap <leader>fla :LeaderfFunctionAll<cr>

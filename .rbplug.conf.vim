@@ -5,6 +5,32 @@ if(has('win32'))
 else
     let path=$HOME.'/RainboyVim'
 endif
+
+"=================== gutentags ==================
+" gutentags 搜索工程目录的标志，碰到这些文件/目录名就停止向上一级目录递归
+let g:gutentags_project_root = ['.root', '.svn', '.git', '.hg', '.project']
+
+" 所生成的数据文件的名称
+let g:gutentags_ctags_tagfile = '.tags'
+
+" 将自动生成的 tags 文件全部放入 ~/.cache/tags 目录中，避免污染工程目录
+let s:vim_tags = expand('~/.cache/tags')
+let g:gutentags_cache_dir = s:vim_tags
+
+" 配置 ctags 的参数
+let g:gutentags_ctags_extra_args = ['--fields=+niazS', '--extra=+q']
+let g:gutentags_ctags_extra_args += ['--c++-kinds=+px']
+let g:gutentags_ctags_extra_args += ['--c-kinds=+px']
+
+" 检测 ~/.cache/tags 不存在就新建
+if !isdirectory(s:vim_tags)
+   silent! call mkdir(s:vim_tags, 'p')
+endif
+
+" 默认不使能 手动使用
+let g:gutentags_enabled =0
+
+
 "=================== ale   ==================
 let g:ale_linters = {
 \   'cpp': ['gcc','cppcheck'],
@@ -40,6 +66,8 @@ noremap <m-p> :LeaderfFunction!<cr>
 noremap <M-n> :LeaderfBuffer<cr>
 exec "set <M-n>=\en"
 set ttimeout ttimeoutlen=100
+
+
 noremap <m-m> :LeaderfTag<cr>
 let g:Lf_StlSeparator = { 'left': '', 'right': '', 'font': '' }
 
@@ -51,6 +79,7 @@ let g:Lf_ShowRelativePath = 0
 let g:Lf_HideHelp = 1
 let g:Lf_StlColorscheme = 'powerline'
 let g:Lf_PreviewResult = {'Function':0}
+let g:Lf_DefaultMode = 'FullPath'
 
 let g:Lf_NormalMap = {
 	\ "File":   [["<ESC>", ':exec g:Lf_py "fileExplManager.quit()"<CR>']],
@@ -61,6 +90,15 @@ let g:Lf_NormalMap = {
 	\ "Colorscheme":    [["<ESC>", ':exec g:Lf_py "colorschemeExplManager.quit()"<CR>']],
 	\ }
 
+let g:Lf_WildIgnore = {
+    \ 'dir': ['.git','.svn','node_modules'],
+    \ 'file': []
+    \ }
+
+let g:Lf_MruWildIgnore = {
+\ 'dir': ['.git','.svn','node_modules'],
+\ 'file': []
+\}
 
 "=================== airline ================
 
@@ -172,6 +210,27 @@ let Tlist_Use_Right_Window = 1 " 在右侧使用taglist
 let g:lt_location_list_toggle_map = '<leader>l'
 let g:lt_quickfix_list_toggle_map = '<leader>q'
 
+
+"===========syntastic===========
+let g:syntastic_error_symbol = 'E'
+let g:syntastic_warning_symbol = 'W'
+
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 0
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+
+let g:ycm_autoclose_preview_window_after_completion = 1
+let g:syntastic_cpp_compiler = 'g++' 
+
+"let g:syntastic_cpp_compiler_options = '-Wall'
+
+let g:syntastic_javascript_checkers = ['jshint']
+
 "============= YouCompleteMe ============
 if(has('win32'))
     set tags+="E:/HackTools/MinGW/include/sys.tags"
@@ -207,6 +266,9 @@ let g:ycm_cache_omnifunc=1
 " 语法关键字补全         
 let g:ycm_seed_identifiers_with_syntax=1
 
+" 自动关闭补全窗口
+let g:ycm_autoclose_preview_window_after_completion=1
+let g:ycm_autoclose_preview_window_after_insertion=1
 endif
 
 

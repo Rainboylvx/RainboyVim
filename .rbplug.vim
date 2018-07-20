@@ -20,7 +20,7 @@ Plug 'vim-airline/vim-airline-themes'     " airline themes
 Plug 'SirVer/ultisnips'                   " ultisnips
 Plug 'iamcco/markdown-preview.vim'        " md preview
 Plug 'scrooloose/syntastic'              "静态分析器
-Plug 'Valloric/YouCompleteMe'             " YCM
+""Plug 'Valloric/YouCompleteMe'             " YCM
 Plug 'octol/vim-cpp-enhanced-highlight'   " cpp 代码高亮
 Plug 'Valloric/ListToggle'                " list windows(quickfix location-list) quick toggle
 "Plug 'w0rp/ale'                           " ale 代码检查

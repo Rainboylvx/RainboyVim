@@ -1,0 +1,24 @@
+# 转换成相应
+global !p
+def tranFlag(flag,inp,sep=''):
+	if flag == None:
+		flag = 'd'
+	flag = '%'+flag
+	return len(inp.split())*flag
+endglobal
+
+global !p
+def tranSeq(inp,sep=''):
+	a = inp.split()
+	return sep+(','+sep).join(a)
+endglobal
+
+# printf
+snippet "pr(\w+)? ((\w+ )*\w+)" "printf" br
+printf("`!p snip.rv=tranFlag(match.group(1),match.group(2))`",`!p snip.rv=tranSeq(match.group(2))`);
+endsnippet
+
+# scanf
+snippet "sc(\w+)? ((\w+ )*\w+)" "scanf" br
+scanf("`!p snip.rv=tranFlag(match.group(1),match.group(2))`",`!p snip.rv=tranSeq(match.group(2),'&')`);
+endsnippet

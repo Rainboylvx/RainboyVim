@@ -202,6 +202,8 @@ let NERDTreeShowHidden=1
 let NERDTreeMinimalUI=1
 " 删除文件时自动删除文件对应 buffer
 " 
+
+let NERDTreeIgnore=['node_modules$','\.vim$', '\~$']
 "============= ListToggle ============
 let Tlist_Use_Right_Window = 1 " 在右侧使用taglist
 
@@ -301,8 +303,8 @@ endif
 let g:UltiSnipsSnippetDirectories=[path.'/mysnippets']
 " UltiSnips 的 tab 键与 YCM 冲突，重新设定
 let g:UltiSnipsExpandTrigger="<leader><tab>"
-let g:UltiSnipsJumpForwardTrigger="<leader><tab>"
-let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
+"let g:UltiSnipsJumpForwardTrigger="<leader><tab>"
+"let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
 
 "   let g:ulti_expand_or_jump_res = 0 "default value, just set once
    "function! Ulti_ExpandOrJump_and_getRes()

@@ -73,3 +73,13 @@ int main(){
     return 0;
 }
 endsnippet
+
+# memset
+snippet "mem (\S+) (\S+)" "memset a 0" br
+memset(${1:`!p snip.rv=match.group(1)`},`!p snip.rv=match.group(2)`,sizeof($1));
+endsnippet
+
+# return
+snippet "re (\S+)" "return" br
+return `!p snip.rv=match.group(1)`;
+endsnippet

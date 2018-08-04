@@ -24,15 +24,10 @@ vim
 :PluginInstall
 ```
 
-## 4. 编译YCM core
+## install youcompeleteme
 
-```bash
-# 进入目录
-cd ~/.vim/plugged/YouCompleteMe/
-# 运行安装
-./install.sh
-# ./install.sh --clang-completer
+```sh
+pacman -S clang cmake
+./install.sh --clang-completer --system-libclang
+
 ```
-
-
-## 5

@@ -15,7 +15,7 @@ flags = [
     'c++',
     'c',
     '-isystem',
-    '/usr/include/c++/7.2.1',
+    '/usr/include/c++/8.1.1',
     '-I', 
     '.', 
     '-isystem',

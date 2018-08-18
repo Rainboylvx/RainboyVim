@@ -179,13 +179,23 @@ nmap <leader>t :b#<enter>
 
 "=============== WMctrl全屏 ==============
 " 将外部命令 wmctrl 控制窗口最大化的命令行参数封装成一个 vim 的函数
-fun! ToggleFullscreen()
-    call system("wmctrl -ir " . v:windowid . " -b toggle,fullscreen")
-endf
+let g:fullscreen = 0
+function! ToggleFullscreen()
+    if g:fullscreen == 1
+        let g:fullscreen = 0
+        let mod = "remove"
+    else
+        let g:fullscreen = 1
+        let mod = "add"
+    endif
+    call system("wmctrl -ir " . v:windowid . " -b " . mod . ",fullscreen")
+endfunction
 " 全屏开/关快捷键
 map <silent> <F11> :call ToggleFullscreen()<CR>
 " 启动 vim 时自动全屏
-"autocmd VimEnter * call ToggleFullscreen()
+if has("gui_running")
+    autocmd VimEnter * call ToggleFullscreen()
+endif    
 
 
 
@@ -391,8 +401,5 @@ let g:pyclewn_terminal = "xterm, -e"
 
 
 
-
-
 "================== Markdown-preview
-
-let g:mkdp_path_to_chrome = "C:/Program Files (x86)/Google/Chrome/Application/chrome.exe"
+"let g:mkdp_path_to_chrome = "C:/Program Files (x86)/Google/Chrome/Application/chrome.exe"

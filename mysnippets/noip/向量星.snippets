@@ -4,7 +4,7 @@ int first[N];
 int edge_cnt = 0;
 struct _e{
     int u,v,w,next;
-}e[N];
+}e[N<<1];
 
 void addEdge(int u,int v,int w){
     edge_cnt++;

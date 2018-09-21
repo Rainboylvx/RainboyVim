@@ -20,3 +20,25 @@ int rmin(int a,int b){
 	return b;
 }
 endsnippet
+
+
+
+# 输出二进制
+snippet p_bin "输出二进制" b
+/* num:数   len:长度*/
+char s4_pbin[40];
+char * p_bin(int n,int len){
+    memset(s4_pbin,'0',sizeof(s4_pbin));
+    s4_pbin[len+1] = '\0';
+
+    while(n && len){
+        s4_pbin[len--] = (n & 1)+'0';
+        n >>=1;
+    }
+    return s4_pbin+1;
+}
+#define print_bin4(i)               printf("%s", p_bin(i,4))
+#define print_bin8(i)               printf("%s", p_bin(i,8))
+#define print_bin16(i)              printf("%s", p_bin(i,16))
+#define print_bin32(i)              printf("%s", p_bin(i,32))
+endsnippet

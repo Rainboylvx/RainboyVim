@@ -1,19 +1,25 @@
 snippet xlx "向量星" b
 
-int first[N];
+/* ================= 向量星 =================*/
+int head[maxn];
 int edge_cnt = 0;
 struct _e{
     int u,v,w,next;
-}e[N<<1];
+}e[maxn<<1];
+
+inline xlx_init(){
+	memset(head,-1,sizeof(head));
+}
 
 void addEdge(int u,int v,int w){
     edge_cnt++;
     e[edge_cnt].u = u;
     e[edge_cnt].v= v;
     e[edge_cnt].w=w;
-    e[edge_cnt].next = first[u];
-    first[u] = edge_cnt;
+    e[edge_cnt].next = head[u];
+    head[u] = edge_cnt;
 }
+/* ================= 向量星 end =================*/
 ${0}
 endsnippet
 

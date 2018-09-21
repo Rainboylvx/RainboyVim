@@ -1,0 +1,22 @@
+snippet bjj "并查集" b
+/* ================= 并查集 =================*/
+int fa[maxn];
+
+inline void bjj_init(int x){ //并查集 初始化
+    int i;
+    for(i=1;i<=x;i++) fa[i] = i;
+}
+int find(int x){ //查找 and 压缩
+    if( x == fa[x]) return x;
+    fa[x] = find(fa[x]);
+    return fa[x];
+}
+
+void bjj_union(int x,int y){
+    int fx = find(x);
+    int fy = find(y);
+    fa[fx] = fy;
+}
+/* ================= 并查集 end =================*/
+${0}
+endsnippet

@@ -213,7 +213,7 @@ let NERDTreeMinimalUI=1
 " 删除文件时自动删除文件对应 buffer
 " 
 
-let NERDTreeIgnore=['node_modules$','\.vim$', '\~$']
+let NERDTreeIgnore=['node_modules$', '\~$','.git']
 "============= ListToggle ============
 let Tlist_Use_Right_Window = 1 " 在右侧使用taglist
 

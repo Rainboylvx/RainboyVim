@@ -17,7 +17,7 @@ nmap <F3> :w<enter>:shell<enter>
 :inoremap ] <c-r>=ClosePair(']')<cr>
 :inoremap " ""<esc>i
 :inoremap ' ''<esc>i
-":inoremap ` ``<esc>i
+:inoremap ` ``<esc>i
 au FileType scheme,racket,lisp,clojure :inoremap ' '
 au FileType scheme,racket,lisp,clojure :inoremap ` `
 au FileType scheme,racket,lisp,clojure :inoremap * **<esc>i

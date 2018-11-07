@@ -30,6 +30,8 @@ endif
 " 默认不使能 手动使用
 let g:gutentags_enabled =0
 
+"=================== emmt   ==================
+let g:user_emmet_expandabbr_key='<C-y><C-y>'
 
 "=================== ale   ==================
 let g:ale_linters = {

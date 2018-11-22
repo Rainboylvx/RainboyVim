@@ -13,3 +13,23 @@ endsnippet
 snippet re "require" b
 const ${1:pack name} = require("$1")
 endsnippet
+
+
+snippet mod "module.exports" b
+module.exports = (${1:/*code*/})=>{
+    ${0}
+}
+endsnippet
+
+
+snippet func_annotation "函数注释" b
+/**
+ *@method ${1:方法名}
+ *@param {${2:参数类型}} ${3:参数名} ${4:参数说明}
+ *@return {${5:返回值类型}} ${6:返回值说明}
+ *@desc ${7:根据目标对象获取运营商}
+*/
+function $1($8){
+	${0}
+}
+endsnippet

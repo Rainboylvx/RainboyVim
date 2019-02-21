@@ -12,8 +12,10 @@ else
 endif
 
 "----------管理插件----------
+Plug 'yianwillis/vimcdoc'                 " 中文文档
 Plug 'thinca/vim-quickrun'                " 运行 Run commands quickly 更快
 Plug 'ludovicchabant/vim-gutentags'       " ctags,gtags
+Plug 'skywind3000/gutentags_plus'
 Plug 'morhetz/gruvbox'                    " gruvbox主题
 Plug 'bling/vim-airline'                  " airline
 Plug 'vim-airline/vim-airline-themes'     " airline themes
@@ -23,6 +25,7 @@ Plug 'scrooloose/syntastic'              "静态分析器
 Plug 'Valloric/YouCompleteMe'             " YCM
 Plug 'mattn/emmet-vim'                    " html emmet
 Plug 'octol/vim-cpp-enhanced-highlight'   " cpp 代码高亮
+Plug 'wannesm/wmgraphviz.vim'             " graphviz :GraphvizShow
 Plug 'Valloric/ListToggle'                " list windows(quickfix location-list) quick toggle
 "Plug 'w0rp/ale'                           " ale 代码检查
 Plug 'vim-scripts/a.vim'                  ".h .c 快速切换

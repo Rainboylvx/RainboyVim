@@ -8,6 +8,8 @@ endif
 
 "=================== gutentags ==================
 " gutentags 搜索工程目录的标志，碰到这些文件/目录名就停止向上一级目录递归
+"
+set statusline+=%{gutentags#statusline()}
 let g:gutentags_project_root = ['.root', '.svn', '.git', '.hg', '.project']
 
 " 所生成的数据文件的名称
@@ -64,10 +66,9 @@ let g:ale_cpp_cppcheck_options = ''
 let g:Lf_ShortcutF = '<c-p>'
 let g:Lf_ShortcutB = '<m-n>'
 noremap <c-n> :LeaderfMru<cr>
-noremap <m-p> :LeaderfFunction!<cr>
-noremap <M-n> :LeaderfBuffer<cr>
-exec "set <M-n>=\en"
-set ttimeout ttimeoutlen=100
+" 函数列表
+imap <c-f> <esc>:LeaderfFunction<cr> 
+imap <c-b> :LeaderfBuffer<cr>
 
 
 noremap <m-m> :LeaderfTag<cr>
@@ -106,6 +107,7 @@ let g:Lf_MruWildIgnore = {
 
 "启用tabline
 let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#gutentags#enabled = 1
 
 "let g:airline#extensions#disable_rtp_load = 1
 "let g:airline_extensions = ['branch', 'tabline']
@@ -268,7 +270,9 @@ let g:ycm_confirm_extra_conf=0
 " 开启 YCM 标签补全引擎
 let g:ycm_collect_identifiers_from_tags_files=1
 " 引入 C++ 标准库tags
-set tags+=/usr/include/c++/4.8/stdcpp.tags
+"set tags+=/usr/include/c++/4.8/stdcpp.tags
+set tags+=/usr/include/c++/8.2.1/tags
+set tags+=/usr/include/graphviz/tags
 " YCM 集成 OmniCppComplete 补全引擎，设置其快捷键
 inoremap <leader>; <C-x><C-o>
 " 补全内容不以分割子窗口形式出现，只显示补全列表

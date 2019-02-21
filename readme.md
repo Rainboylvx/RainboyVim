@@ -14,6 +14,19 @@ cd ~/RainboyVim
 cp ./extra/.vimrc ~
 ```
 
+**安装字体**
+
+```
+sudo mkdir /user/share/fonts/truetype/powerline
+sudo cp DejaVu Sans Mono for Powerline Nerd Font Plus Font Awesome Plus Octicons Plus Pomicons Windows Compatible.ttf /user/share/fonts/truetype/powerline
+cd /user/share/fonts/truetype/powerline
+sudo mkfontdir
+sudo mkfontscale
+sudo fc-cache
+# 查看是否已经安装
+fc-list |grep DejaVu
+```
+
 ## 3. 安装Plugin
 
 ```bash
@@ -28,6 +41,10 @@ vim
 
 ```sh
 pacman -S clang cmake
-./install.sh --clang-completer --system-libclang
+./install.py --clang-completer --system-libclang
 
 ```
+
+## 安装中文文档
+
+中文文档的git地址: https://github.com/yianwillis/vimcdoc

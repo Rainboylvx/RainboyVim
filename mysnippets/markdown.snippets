@@ -159,3 +159,14 @@ snip.rv = match.group(3) if match.group(2) is not None else "something"`}}
 endsnippet
 
 
+#book 文章信息
+snippet book "文章信息" b
+---
+title: ${1:`!v expand("%:t:r")`}
+date: ${2:`!v strftime("%Y-%m-%d %H:%M")`}
+update: ${3:`!v strftime("%Y-%m-%d %H:%M")`}
+author: ${4:Rainboy}
+${5:cover: }
+---
+${0}
+endsnippet

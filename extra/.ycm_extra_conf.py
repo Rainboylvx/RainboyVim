@@ -1,7 +1,7 @@
 import os 
 import ycm_core 
 flags = [ 
-    # '-std=c++11', 
+    '-std=c++11', 
     '-Wno-deprecated-declarations', 
     '-Wno-disabled-macro-expansion', 
     '-Wno-float-equal', 
@@ -11,17 +11,19 @@ flags = [
     '-Wno-exit-time-destructors', 
     '-Wno-missing-prototypes', 
     '-Wno-padded', 
-    '-x', 
-    'c++',
-    'c',
-    '-isystem',
-    '/usr/include/c++/8.1.1',
-    '-I', 
-    '.', 
-    '-isystem',
-    '/usr/include',
-    '-I',
-    '/usr/include',
+    # '-Wall',
+    '-Wextra',
+    '-Werror',
+    '-x', 'c++',    
+    '-isystem', '/usr/include/c++/8.2.1',
+    '-isystem', '/usr/include/c++/8.2.1/x86_64-pc-linux-gnu',
+    '-isystem', '/usr/include/c++/8.2.1/backward',
+    '-isystem', '/usr/local/include',
+    '-isystem', '/usr/include',
+    # '-x', 
+    # 'c++',
+    # '-isystem', '/usr/include/c++/8.2.1',
+    # '-isystem', '/usr/include',
 ] 
 compilation_database_folder = '' 
 if compilation_database_folder: 

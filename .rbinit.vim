@@ -261,4 +261,4 @@ else
 endif
 
 "============================ tags ============================
-set tags=./.tags;,.tags
+"set tags=./.tags;,.tags

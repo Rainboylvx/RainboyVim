@@ -1,12 +1,10 @@
-noremap <M-x> :echo "ALT-X pressed"<cr>
-exec "set <M-x>=\ex"
-set ttimeout ttimeoutlen=100
 " ctrl +s 保存
 imap <F2> <esc>:w<enter>a
 imap <F3> <esc>:w<enter><esc>:shell<enter>
 nmap <F3> :w<enter>:shell<enter>
 
 
+inoremap ` ``<esc>i
 " ======= 引号 && 括号自动匹配 ======= "
 
 :inoremap ( ()<esc>i
@@ -213,6 +211,9 @@ autocmd BufRead *.dot imap ij <esc>o-<leader><Tab>
 
 
 "========== markdown 文件下的快捷键
+
+" 快捷键 把选中的公式用 $ $ 包起来
+vmap <c-m> c$<esc>pa$<esc>
 
 " 加粗
 "autocmd BufRead *.md imap <c-b> ****<esc>hi

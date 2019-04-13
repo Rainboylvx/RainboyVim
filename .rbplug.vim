@@ -2,14 +2,25 @@
 " 设定 vundle 的参数
 filetype off
 " linux 和 windows 下不同的路径
-if(has('win32'))
-    set rtp+=$VIM/vimfiles/bundle/Vundle.vim
-"    call vundle#rc('$VIM/vimfiles/bundle')
-    call vundle#begin('$VIM/vimfiles/bundle/')
-else
-    set rtp+=~/RainboyVim
-    call plug#begin('~/.vim/plugged') " plug 安装地址
+"if(has('win32'))
+    "set rtp+=$VIM/vimfiles/bundle/Vundle.vim
+    "call plug#begin('~/.vim/plugged') " plug 安装地址
+"else
+    "set rtp+=$VIM/RainboyVim
+    "call plug#begin('$VIM/.vim/plugged') " plug 安装地址
+"endif
+"
+let $PLUG_DIR = expand("$VIM/.vim/plugged")
+if empty(glob(expand("$PLUG_DIR/plug.vim")))
+  silent !curl -fLo $PLUG_DIR/plug.vim --create-dirs
+    \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+  "autocmd VimEnter * PlugInstall --sync | source ~/.vimrc
 endif
+source $PLUG_DIR/plug.vim
+
+
+"set rtp+=$VIM/RainboyVim
+call plug#begin($PLUG_DIR) " plug 安装地址
 
 "----------管理插件----------
 Plug 'yianwillis/vimcdoc'                 " 中文文档

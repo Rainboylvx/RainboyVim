@@ -29,8 +29,9 @@ endif
 if g:OS#win
 "    source $VIMRUNTIME/mswin.vim
 "    behave mswin
-    let $VIUMFILES = $VIM.'/vimfiles'
-    let $HOME = $VIUMFILES
+    "let $VIUMFILES = $VIM.'/vimfiles'
+    "let $HOME = $VIUMFILES
+    let $VIM = $HOME
 elseif g:OS#unix
     let $VIM = $HOME
     let $VIMFILES = $HOME.'~/.vim'
@@ -113,26 +114,18 @@ if has('gui_running') && has('gui_win32') && has('libcall')
 endif
 
 if g:OS#win == 1
-" 一些基础的VIM设定
-source $HOME/../RainboyVim/.rb.vim
-" VIM忽略的文件夹 和 文件
-source $HOME/../RainboyVim/.rbignore.vim
-
-" - 插件管理 和插件设定
-source $HOME/../RainboyVim/.rbplug.vim
-source $HOME/../RainboyVim/.rbplug.conf.vim
-
-
-source $HOME/../RainboyVim/.rbinit.vim
-
-source $HOME/../RainboyVim/.rbkeymap.vim
+    source $VIM/RainboyVim/.rb.vim
+    source $VIM/RainboyVim/.rbignore.vim
+    source $VIM/RainboyVim/.rbplug.vim
+    source $VIM/RainboyVim/.rbplug.conf.vim
+    source $VIM/RainboyVim/.rbinit.vim
+    source $VIM/RainboyVim/.rbkeymap.vim
 else
-
-source ~/RainboyVim/.rb.vim
-source ~/RainboyVim/.rbignore.vim
-source ~/RainboyVim/.rbplug.vim
-source ~/RainboyVim/.rbplug.conf.vim
-source ~/RainboyVim/.rbinit.vim
-source ~/RainboyVim/.rbkeymap.vim
+    source ~/RainboyVim/.rb.vim
+    source ~/RainboyVim/.rbignore.vim
+    source ~/RainboyVim/.rbplug.vim
+    source ~/RainboyVim/.rbplug.conf.vim
+    source ~/RainboyVim/.rbinit.vim
+    source ~/RainboyVim/.rbkeymap.vim
 endif
 

@@ -215,6 +215,7 @@ autocmd BufRead *.dot imap ij <esc>o-<leader><Tab>
 " 快捷键 把选中的公式用 $ $ 包起来
 vmap <c-m> c$<esc>pa$<esc>
 
+nmap <leader>m :.s/[a-zA-Z0-9\[\]+-=]\+/\$\0\$/<CR>
 " 加粗
 "autocmd BufRead *.md imap <c-b> ****<esc>hi
 "autocmd BufRead *.md imap <c-v> $$$$<esc>hi

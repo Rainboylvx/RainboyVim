@@ -1,0 +1,12 @@
+snippet _in "快读" b
+/* ========== 快读 ========== */
+void in(int &a){
+    a = 0;
+    int flag = 1;
+    char ch = getchar();
+    while( ch < '0' || ch > '9'){ if( ch == '-') flag = -1; ch = getchar(); }
+    while( ch >= '0' && ch <= '9'){ a = a*10 + ch-'0'; ch = getchar(); }
+    a = a*flag;
+}
+/* ========== 快读 END ========== */
+endsnippet

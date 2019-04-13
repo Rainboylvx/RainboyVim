@@ -1,0 +1,65 @@
+snippet dinic "dinic最大流算法" b
+
+/* ============ dinic 最大流 ============ */
+int dep[maxn]; //分层
+int cur[maxn]; //当前弧度优化
+//起点,终点
+int S = 0;
+int T; 
+bool bfs(){
+    memset(dep,-1,sizeof(dep));
+    dep[S]  =0;
+    queue<int> q; //队列
+    q.push(S);
+
+    while(!q.empty()){
+        int u = q.front();q.pop();
+        int i;
+        for(i=head[u];i!=-1;i=e[i].next){
+            int v= e[i].v;
+            if( dep[v]==-1 && e[i].cap >0){
+                dep[v] = dep[u]+1;
+                q.push(v);
+            }
+        }
+    }
+
+    return dep[T] !=-1;
+}
+
+int dfs(int u,int low){
+
+    if( u == T) return low; //边界
+
+    int ret = low;
+    int i;
+    for(i=cur[u];i!=-1;i=e[i].next){
+        cur[u] = i;
+        int v= e[i].v;
+
+        if( dep[v] == dep[u]+1 && e[i].cap >0){
+
+            int flow = dfs(v,min(ret,e[i].cap));
+
+            ret -= flow;
+            e[i].cap -= flow;
+            e[i^1].cap += flow;
+
+            if( !ret) break;
+        }
+    }
+
+    if( ret == low) dep[u] = -1; //证明从u点出发并增广
+    return low - ret;
+}
+
+int dinic(){
+    int tmp = 0;
+    while( bfs()){
+        memcpy(cur,head,sizeof(head)); //重新设定
+        tmp += dfs(S,0x7f7f7f7f);
+    }
+    return tmp;
+}
+/* ============ dinic 最大流 END ============ */
+endsnippet

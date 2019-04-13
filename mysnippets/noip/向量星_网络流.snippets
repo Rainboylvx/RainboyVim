@@ -1,24 +1,24 @@
-snippet xlx "向量星" b
+snippet xlxw "向量星->网络流" b
 
-/* ================= 向量星 =================*/
+/* ================= 向量星 for flowNet=================*/
 int head[maxn];
 int edge_cnt = 0;
 struct _e{
-    int u,v,w,next;
-}e[maxn<<1];
+    int u,v,cap,next;
+}e[maxe];
 
 void inline xlx_init(){
 	edge_cnt = 0;
 	memset(head,-1,sizeof(head));
 }
 
-void addEdge(int u,int v,int w){
-    edge_cnt++;
+void addEdge(int u,int v,int cap){
     e[edge_cnt].u = u;
     e[edge_cnt].v= v;
-    e[edge_cnt].w=w;
+    e[edge_cnt].cap=cap;
     e[edge_cnt].next = head[u];
     head[u] = edge_cnt;
+    edge_cnt++;
 }
 /* ================= 向量星 end =================*/
 ${0}

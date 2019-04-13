@@ -20,6 +20,7 @@ flags = [
     '-isystem', '/usr/include/c++/8.2.1/backward',
     '-isystem', '/usr/local/include',
     '-isystem', '/usr/include',
+    '-I','/home/rainboy/__git__/random/include/effolkronium'
     # '-x', 
     # 'c++',
     # '-isystem', '/usr/include/c++/8.2.1',

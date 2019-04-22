@@ -30,6 +30,7 @@ Plug 'skywind3000/gutentags_plus'
 Plug 'morhetz/gruvbox'                    " gruvbox主题
 Plug 'bling/vim-airline'                  " airline
 Plug 'vim-airline/vim-airline-themes'     " airline themes
+Plug 'Linfee/ultisnips-zh-doc'
 Plug 'SirVer/ultisnips'                   " ultisnips
 Plug 'iamcco/markdown-preview.vim'        " md preview
 Plug 'scrooloose/syntastic'              "静态分析器
@@ -78,6 +79,9 @@ Plug 'posva/vim-vue'                      "vue高亮
 if(!has("win32"))
 Plug 'ryanoasis/vim-devicons'                "nerd-font
 endif
+
+
+Plug 'leafgarland/typescript-vim',{'for':'ts'}
 
 call plug#end()
 "call vundle#end()                " 必须

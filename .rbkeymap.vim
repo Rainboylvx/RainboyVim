@@ -65,7 +65,7 @@ map <c-l> <c-w><c-l>
 map <s-k> <c-w>+
 
 " shift + J              窗口向下增加一行
-map <s-n> <c-w>-
+"map <s-n> <c-w>-
 
 " shift + h              窗口向左增加一行
 map <s-h> <c-w><

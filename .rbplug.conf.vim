@@ -287,6 +287,14 @@ let g:ycm_seed_identifiers_with_syntax=1
 " 自动关闭补全窗口
 let g:ycm_autoclose_preview_window_after_completion=1
 let g:ycm_autoclose_preview_window_after_insertion=1
+
+
+"设定触发的字符
+if !exists("g:ycm_semantic_triggers")
+  let g:ycm_semantic_triggers = {}
+endif
+let g:ycm_semantic_triggers['typescript'] = ['.']
+
 endif
 
 

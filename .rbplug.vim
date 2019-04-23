@@ -59,8 +59,8 @@ Plug 'plasticboy/vim-markdown'            "markdown 语法高亮
 "Plugin 'suan/vim-instant-markdown'         "markdown 实时渲染,使用失败
 "Plugin 'shime/vim-livedown'
 
-Plug 'Shougo/vimproc.vim'                 "vim shell
-Plug 'Shougo/vimshell.vim'
+"Plug 'Shougo/vimproc.vim'                 "vim shell
+"Plug 'Shougo/vimshell.vim'
 
 "Plugin 'vim-scripts/AutoComplPop'          "自动弹出 del!
 
@@ -82,6 +82,8 @@ endif
 
 
 Plug 'leafgarland/typescript-vim',{'for':'ts'}
+Plug 'Quramy/tsuquyomi',{'for':'typescript'}
+"Plug 'jason0x43/vim-js-indent',{'for':['typescript','javascript']}
 
 call plug#end()
 "call vundle#end()                " 必须

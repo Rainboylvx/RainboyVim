@@ -417,3 +417,8 @@ let g:pyclewn_terminal = "xterm, -e"
 
 "================== Markdown-preview
 "let g:mkdp_path_to_chrome = "C:/Program Files (x86)/Google/Chrome/Application/chrome.exe"
+"
+"
+
+"================== typescript 相关
+"let g:typescript_indent_disable = 0

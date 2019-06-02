@@ -31,6 +31,8 @@ colorscheme gruvbox
 ""au FileType javascript,html,vue,ruby,eruby,slim,coffee,jade,sh set shiftwidth=2
 ""au FileType javascript,html,vue,ruby,eruby,slim,coffee,jade,sh set tabstop=2
 
+au BufNewFile,BufRead *.ejs set filetype=html
+
 
 set autowrite                 " 档案一有更动就会自动存盘
 set display=lastline          " 解决自动换行格式下, 如高度在折行之后超过窗口高度结果这一行看不到的问题  
@@ -39,7 +41,7 @@ set cursorline                 " 高亮当前 行/列
 set ruler                     " 显示光标当前位置,逗号分隔
 set noshowmode                 " 不显示当前操作模式
 
-set guiheadroom=0 " Prefix GTK borders  边框设置
+"set guiheadroom=0 " Prefix GTK borders  边框设置
 
 set list                     " 显示特殊字符，其中Tab使用高亮~代替，尾部空白使用高亮点号代替
 set listchars=tab:\~\ ,trail:.
@@ -253,10 +255,10 @@ else
     if len($TMUX) > 0
         set term=screen-256color
         " set screen title to vim $PWD folder name - format 'v:folder'
-        set titlestring=v:%(%{fnamemodify(expand(\"$PWD\"),\":t\")}%)
-        set t_ts=k
-        set t_fs=\
-        set title
+        "set titlestring=v:%(%{fnamemodify(expand(\"$PWD\"),\":t\")}%)
+        "set t_ts=k
+        "set t_fs=\
+        "set title
     endif
 endif
 

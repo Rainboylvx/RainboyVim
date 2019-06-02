@@ -15,12 +15,12 @@ flags = [
     '-Wextra',
     '-Werror',
     '-x', 'c++',    
-    '-isystem', '/usr/include/c++/8.2.1',
-    '-isystem', '/usr/include/c++/8.2.1/x86_64-pc-linux-gnu',
-    '-isystem', '/usr/include/c++/8.2.1/backward',
+    '-isystem', '/usr/include/c++/8.3.0',
+    '-isystem', '/usr/include/c++/8.3.0/x86_64-pc-linux-gnu',
+    '-isystem', '/usr/include/c++/8.3.0/backward',
     '-isystem', '/usr/local/include',
     '-isystem', '/usr/include',
-    '-I','/home/rainboy/__git__/random/include/effolkronium'
+    # '-I','/home/rainboy/__git__/random/include/effolkronium'
     # '-x', 
     # 'c++',
     # '-isystem', '/usr/include/c++/8.2.1',

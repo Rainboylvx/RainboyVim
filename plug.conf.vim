@@ -5,6 +5,11 @@ if(has('win32'))
 else
     let path=$HOME.'/RainboyVim'
 endif
+"=================== vim-cool ==================
+let g:CoolTotalMatches = 1
+"=================== vim-cool end ==================
+
+
 
 "=================== gutentags ==================
 " gutentags 搜索工程目录的标志，碰到这些文件/目录名就停止向上一级目录递归
@@ -26,7 +31,7 @@ let g:gutentags_ctags_extra_args += ['--c-kinds=+px']
 
 " 检测 ~/.cache/tags 不存在就新建
 if !isdirectory(s:vim_tags)
-   silent! call mkdir(s:vim_tags, 'p')
+    silent! call mkdir(s:vim_tags, 'p')
 endif
 
 " 默认不使能 手动使用
@@ -37,8 +42,8 @@ let g:user_emmet_expandabbr_key='<C-y><C-y>'
 
 "=================== ale   ==================
 let g:ale_linters = {
-\   'cpp': ['gcc','cppcheck'],
-\}
+            \   'cpp': ['gcc','cppcheck'],
+            \}
 let g:ale_sign_error = 'E'
 let g:ale_sign_warning = 'W'
 let g:ale_sign_column_always =1
@@ -67,7 +72,7 @@ let g:Lf_ShortcutF = '<c-p>'
 let g:Lf_ShortcutB = '<m-n>'
 noremap <c-n> :LeaderfMru<cr>
 " 函数列表
-imap <c-f> <esc>:LeaderfFunction<cr> 
+imap <c-f> <esc>:LeaderfFunction<cr>
 imap <c-b> :LeaderfBuffer<cr>
 
 
@@ -85,23 +90,23 @@ let g:Lf_PreviewResult = {'Function':0}
 let g:Lf_DefaultMode = 'FullPath'
 
 let g:Lf_NormalMap = {
-	\ "File":   [["<ESC>", ':exec g:Lf_py "fileExplManager.quit()"<CR>']],
-	\ "Buffer": [["<ESC>", ':exec g:Lf_py "bufExplManager.quit()"<CR>']],
-	\ "Mru":    [["<ESC>", ':exec g:Lf_py "mruExplManager.quit()"<CR>']],
-	\ "Tag":    [["<ESC>", ':exec g:Lf_py "tagExplManager.quit()"<CR>']],
-	\ "Function":    [["<ESC>", ':exec g:Lf_py "functionExplManager.quit()"<CR>']],
-	\ "Colorscheme":    [["<ESC>", ':exec g:Lf_py "colorschemeExplManager.quit()"<CR>']],
-	\ }
+            \ "File":   [["<ESC>", ':exec g:Lf_py "fileExplManager.quit()"<CR>']],
+            \ "Buffer": [["<ESC>", ':exec g:Lf_py "bufExplManager.quit()"<CR>']],
+            \ "Mru":    [["<ESC>", ':exec g:Lf_py "mruExplManager.quit()"<CR>']],
+            \ "Tag":    [["<ESC>", ':exec g:Lf_py "tagExplManager.quit()"<CR>']],
+            \ "Function":    [["<ESC>", ':exec g:Lf_py "functionExplManager.quit()"<CR>']],
+            \ "Colorscheme":    [["<ESC>", ':exec g:Lf_py "colorschemeExplManager.quit()"<CR>']],
+            \ }
 
 let g:Lf_WildIgnore = {
-    \ 'dir': ['.git','.svn','node_modules'],
-    \ 'file': []
-    \ }
+            \ 'dir': ['.git','.svn','node_modules'],
+            \ 'file': []
+            \ }
 
 let g:Lf_MruWildIgnore = {
-\ 'dir': ['.git','.svn','node_modules'],
-\ 'file': []
-\}
+            \ 'dir': ['.git','.svn','node_modules','.vscode','dist'],
+            \ 'file': []
+            \}
 
 "=================== airline ================
 
@@ -124,22 +129,22 @@ let g:airline#extensions#tabline#fnamemod = ':t'
 "let g:airline#extensions#tabline#tab_min_count = 11
 
 if !exists('g:airline_symbols')
-  let g:airline_symbols = {}
+    let g:airline_symbols = {}
 endif
-let g:airline_theme="badwolf" 
+let g:airline_theme="badwolf"
 
 if(has('win32'))
     set encoding=utf-8
     "let g:Powerline_symbols="fancy"
-    let g:airline_left_sep = "\u2b80" 
-    let g:airline_left_alt_sep = "\u2b81" 
-    let g:airline_right_sep = "\u2b82" 
-    let g:airline_right_alt_sep = "\u2b83" 
-    let g:airline_symbols.branch = "\u2b60" 
-    let g:airline_symbols.readonly = "\u2b64" 
+    let g:airline_left_sep = "\u2b80"
+    let g:airline_left_alt_sep = "\u2b81"
+    let g:airline_right_sep = "\u2b82"
+    let g:airline_right_alt_sep = "\u2b83"
+    let g:airline_symbols.branch = "\u2b60"
+    let g:airline_symbols.readonly = "\u2b64"
     let g:airline_symbols.linenr = "\u2b61"
     "设置顶部tabline栏符号显示"
-    let g:airline#extensions#tabline#left_sep = "\u2b80" 
+    let g:airline#extensions#tabline#left_sep = "\u2b80"
     let g:airline#extensions#tabline#left_alt_sep = "\u2b81"
 else
     set encoding=utf-8
@@ -199,7 +204,7 @@ map <silent> <F11> :call ToggleFullscreen()<CR>
 " 启动 vim 时自动全屏
 if has("gui_running")
     autocmd VimEnter * call ToggleFullscreen()
-endif    
+endif
 
 
 
@@ -215,9 +220,9 @@ let NERDTreeShowHidden=1
 " NERDTree 子窗口中不显示冗余帮助信息
 let NERDTreeMinimalUI=1
 " 删除文件时自动删除文件对应 buffer
-" 
+"
 
-let NERDTreeIgnore=['node_modules$', '\~$','.git']
+let NERDTreeIgnore=['node_modules$', '\~$','.git','^\.','^dist$']
 "============= ListToggle ============
 let Tlist_Use_Right_Window = 1 " 在右侧使用taglist
 
@@ -241,19 +246,38 @@ let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 
 let g:ycm_autoclose_preview_window_after_completion = 1
-let g:syntastic_cpp_compiler = 'g++' 
+let g:syntastic_cpp_compiler = 'g++'
 
 "let g:syntastic_cpp_compiler_options = '-Wall'
 
 let g:syntastic_javascript_checkers = ['jshint']
 
+"============= coc.nvim ============
+inoremap <silent><expr> <TAB>
+      \ pumvisible() ? coc#_select_confirm() :
+      \ coc#expandableOrJumpable() ? "\<C-r>=coc#rpc#request('doKeymap', ['snippets-expand-jump',''])\<CR>" :
+      \ <SID>check_back_space() ? "\<TAB>" :
+      \ coc#refresh()
+
+function! s:check_back_space() abort
+  let col = col('.') - 1
+  return !col || getline('.')[col - 1]  =~# '\s'
+endfunction
+
+"let g:coc_snippet_next = '<tab>'
+"============= coc.nvim end  ============
+
+
 "============= YouCompleteMe ============
-if(has('win32'))
-    set tags+="E:/HackTools/MinGW/include/sys.tags"
-else
-    "let g:ycm_global_ycm_extra_conf="~/.vim/bundle/YouCompleteMe/third_party/ycmd/.ycm_extra_conf.py"
-    let g:ycm_global_ycm_extra_conf="~/RainboyVim/extra/.ycm_extra_conf.py"
-    " 引入 C++ 标准库tags
+"https://blog.csdn.net/tenghui0425/article/details/70201929
+"augroup load_ycm
+    "autocmd!
+    "autocmd InsertEnter * call plug#load('YouCompleteMe') | autocmd! load_ycm
+"augroup END
+
+"let g:ycm_global_ycm_extra_conf="~/.vim/bundle/YouCompleteMe/third_party/ycmd/.ycm_extra_conf.py"
+let g:ycm_global_ycm_extra_conf="~/RainboyVim/extra/.ycm_extra_conf.py"
+" 引入 C++ 标准库tags
 " location list 不一直打开
 let g:ycm_always_populate_location_list = 0
 " 开启 YCM 标签引擎
@@ -278,10 +302,10 @@ inoremap <leader>; <C-x><C-o>
 " 补全内容不以分割子窗口形式出现，只显示补全列表
 set completeopt-=preview
 " 从第一个键入字符就开始罗列匹配项
-let g:ycm_min_num_of_chars_for_completion=2
+let g:ycm_min_num_of_chars_for_completion=1
 " 使用omnifunc的cache 但是可以会造成vim迟钝
-let g:ycm_cache_omnifunc=1
-" 语法关键字补全         
+"let g:ycm_cache_omnifunc=1
+" 语法关键字补全
 let g:ycm_seed_identifiers_with_syntax=1
 
 " 自动关闭补全窗口
@@ -291,37 +315,36 @@ let g:ycm_autoclose_preview_window_after_insertion=1
 
 "设定触发的字符
 if !exists("g:ycm_semantic_triggers")
-  let g:ycm_semantic_triggers = {}
+    let g:ycm_semantic_triggers = {}
 endif
-let g:ycm_semantic_triggers['typescript'] = ['.']
+"let g:ycm_semantic_triggers['typescript'] = ['.']
 
-endif
 
 
 "================= vim-signature
-      let g:SignatureMap = {
-        \ 'Leader'             :  "m",
-        \ 'PlaceNextMark'      :  "m,",
-        \ 'ToggleMarkAtLine'   :  "m.",
-        \ 'PurgeMarksAtLine'   :  "m-",
-        \ 'DeleteMark'         :  "dm",
-        \ 'PurgeMarks'         :  "m<Space>",
-        \ 'PurgeMarkers'       :  "m<BS>",
-        \ 'GotoNextLineAlpha'  :  "']",
-        \ 'GotoPrevLineAlpha'  :  "'[",
-        \ 'GotoNextSpotAlpha'  :  "`]",
-        \ 'GotoPrevSpotAlpha'  :  "`[",
-        \ 'GotoNextLineByPos'  :  "]'",
-        \ 'GotoPrevLineByPos'  :  "['",
-        \ 'GotoNextSpotByPos'  :  "]`",
-        \ 'GotoPrevSpotByPos'  :  "[`",
-        \ 'GotoNextMarker'     :  "[+",
-        \ 'GotoPrevMarker'     :  "[-",
-        \ 'GotoNextMarkerAny'  :  "]=",
-        \ 'GotoPrevMarkerAny'  :  "[=",
-        \ 'ListBufferMarks'    :  "m/",
-        \ 'ListBufferMarkers'  :  "m?"
-        \ }
+let g:SignatureMap = {
+            \ 'Leader'             :  "m",
+            \ 'PlaceNextMark'      :  "m,",
+            \ 'ToggleMarkAtLine'   :  "m.",
+            \ 'PurgeMarksAtLine'   :  "m-",
+            \ 'DeleteMark'         :  "dm",
+            \ 'PurgeMarks'         :  "m<Space>",
+            \ 'PurgeMarkers'       :  "m<BS>",
+            \ 'GotoNextLineAlpha'  :  "']",
+            \ 'GotoPrevLineAlpha'  :  "'[",
+            \ 'GotoNextSpotAlpha'  :  "`]",
+            \ 'GotoPrevSpotAlpha'  :  "`[",
+            \ 'GotoNextLineByPos'  :  "]'",
+            \ 'GotoPrevLineByPos'  :  "['",
+            \ 'GotoNextSpotByPos'  :  "]`",
+            \ 'GotoPrevSpotByPos'  :  "[`",
+            \ 'GotoNextMarker'     :  "[+",
+            \ 'GotoPrevMarker'     :  "[-",
+            \ 'GotoNextMarkerAny'  :  "]=",
+            \ 'GotoPrevMarkerAny'  :  "[=",
+            \ 'ListBufferMarks'    :  "m/",
+            \ 'ListBufferMarkers'  :  "m?"
+            \ }
 
 "============= ultisnipptes ==========
 let g:UltiSnipsSnippetDirectories=[path.'/mysnippets']
@@ -331,13 +354,13 @@ let g:UltiSnipsExpandTrigger="<leader><tab>"
 "let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
 
 "   let g:ulti_expand_or_jump_res = 0 "default value, just set once
-   "function! Ulti_ExpandOrJump_and_getRes()
-     "call UltiSnips#ExpandSnippetOrJump()
-     "return g:ulti_expand_or_jump_res
-   "endfunction
+"function! Ulti_ExpandOrJump_and_getRes()
+"call UltiSnips#ExpandSnippetOrJump()
+"return g:ulti_expand_or_jump_res
+"endfunction
 
 
-   "inoremap <leader><tab> <C-R>=(Ulti_ExpandOrJump_and_getRes() > 0)?"":IMAP_Jumpfunc('', 0)<CR>
+"inoremap <leader><tab> <C-R>=(Ulti_ExpandOrJump_and_getRes() > 0)?"":IMAP_Jumpfunc('', 0)<CR>
 
 
 
@@ -386,27 +409,27 @@ let g:WMGraphviz_outpt = 'png'
 
 "============ Rainbow 括号
 let g:rainbow_conf = {
-\   'guifgs': ['royalblue3', 'darkorange3', 'seagreen3', 'azure'],
-\   'ctermfgs': ['lightblue', 'lightyellow', 'darkblue', 'lightmagenta'],
-\   'operators': '_,_',
-\   'parentheses': ['start=/(/ end=/)/ fold', 'start=/\[/ end=/\]/ fold', 'start=/{/ end=/}/ fold'],
-\   'separately': {
-\       '*': {},
-\       'tex': {
-\           'parentheses': ['start=/(/ end=/)/', 'start=/\[/ end=/\]/'],
-\       },
-\       'lisp': {
-\           'guifgs': ['royalblue3', 'darkorange3', 'seagreen3', 'firebrick', 'darkorchid3'],
-\       },
-\       'vim': {
-\           'parentheses': ['start=/(/ end=/)/', 'start=/\[/ end=/\]/', 'start=/{/ end=/}/ fold', 'start=/(/ end=/)/ containedin=vimFuncBody', 'start=/\[/ end=/\]/ containedin=vimFuncBody', 'start=/{/ end=/}/ fold containedin=vimFuncBody'],
-\       },
-\       'html': {
-\           'parentheses': ['start=/\v\<((area|base|br|col|embed|hr|img|input|keygen|link|menuitem|meta|param|source|track|wbr)[ >])@!\z([-_:a-zA-Z0-9]+)(\s+[-_:a-zA-Z0-9]+(\=("[^"]*"|'."'".'[^'."'".']*'."'".'|[^ '."'".'"><=`]*))?)*\>/ end=#</\z1># fold'],
-\       },
-\       'css': 0,
-\   }
-\}
+            \   'guifgs': ['royalblue3', 'darkorange3', 'seagreen3', 'azure'],
+            \   'ctermfgs': ['lightblue', 'lightyellow', 'darkblue', 'lightmagenta'],
+            \   'operators': '_,_',
+            \   'parentheses': ['start=/(/ end=/)/ fold', 'start=/\[/ end=/\]/ fold', 'start=/{/ end=/}/ fold'],
+            \   'separately': {
+            \       '*': {},
+            \       'tex': {
+            \           'parentheses': ['start=/(/ end=/)/', 'start=/\[/ end=/\]/'],
+            \       },
+            \       'lisp': {
+            \           'guifgs': ['royalblue3', 'darkorange3', 'seagreen3', 'firebrick', 'darkorchid3'],
+            \       },
+            \       'vim': {
+            \           'parentheses': ['start=/(/ end=/)/', 'start=/\[/ end=/\]/', 'start=/{/ end=/}/ fold', 'start=/(/ end=/)/ containedin=vimFuncBody', 'start=/\[/ end=/\]/ containedin=vimFuncBody', 'start=/{/ end=/}/ fold containedin=vimFuncBody'],
+            \       },
+            \       'html': {
+            \           'parentheses': ['start=/\v\<((area|base|br|col|embed|hr|img|input|keygen|link|menuitem|meta|param|source|track|wbr)[ >])@!\z([-_:a-zA-Z0-9]+)(\s+[-_:a-zA-Z0-9]+(\=("[^"]*"|'."'".'[^'."'".']*'."'".'|[^ '."'".'"><=`]*))?)*\>/ end=#</\z1># fold'],
+            \       },
+            \       'css': 0,
+            \   }
+            \}
 
 let g:rainbow_active = 1
 
@@ -422,3 +445,8 @@ let g:pyclewn_terminal = "xterm, -e"
 
 "================== typescript 相关
 "let g:typescript_indent_disable = 0
+
+
+"================== auto format
+"au BufWrite *.ts :Autoformat
+noremap <F3> :Autoformat<CR>

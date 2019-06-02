@@ -27,8 +27,14 @@ printf("${1:`!p snip.rv=tranFlag(match.group(1),match.group(2),match.group(4))`}
 endsnippet
 
 # scanf
-snippet "sc(\w+)? ((\S+ )*\S+)( )?" "scanf" br
+snippet "sc(\w+)? ((\S+ )*\S+)( )?" "scanf" ir
 scanf("`!p snip.rv=tranFlag(match.group(1),match.group(2),match.group(4))`",`!p snip.rv=tranSeq(match.group(2),'&')`);
+endsnippet
+
+snippet "func (\w+)?" "定义函数" br 
+${1:int} `!p snip.rv=match.group(1)`(${2: 参数}){
+    ${0}
+}
 endsnippet
 
 # int 定义变量
@@ -38,16 +44,14 @@ endsnippet
 
 
 # snoip 
-snippet snoip "弱版代码模板" b
+snippet sn  "代码模板" b
 /*-----------------
 * author: Rainboy
 * email: rainboylvx@qq.com
 * time: `date`
-* problem: ${1: online judge}-${2:_id }
+* problem: ${1: online_judge}-${2:_id }
 *----------------*/
-#include <cstdio>
-#include <cstring>
-#include <algorithm>
+#include <bits/stdc++.h>
 using namespace std;
 
 $3
@@ -55,30 +59,6 @@ $3
 int main(){
 	$0
 	return 0;
-}
-endsnippet
-
-
-#noip
-snippet  noip "强版代码模板" b
-#include <cstdio>
-#include <cstring>
-#include <cmath>
-#include <vector>
-#include <deque>
-#include <list>
-#include <queue>
-#include <stack>
-#include <map>
-#include <set>
-#include <algorithm>
-using namespace std;
-
-$1
-
-int main(){
-	$0
-    return 0;
 }
 endsnippet
 
@@ -99,4 +79,16 @@ endsnippet
 
 snippet maxm "define maxn" b
 #define maxm ${1:100005}
+endsnippet
+
+snippet double_max "double max" b
+/*
+* 最大值: 
+*   - 0x7f
+*   - 0x42
+*   - 0x43
+* 最小值:
+*   - 0xfe
+*   - 0xc2
+*/
 endsnippet

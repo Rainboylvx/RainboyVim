@@ -3,18 +3,18 @@
 filetype off
 " linux 和 windows 下不同的路径
 "if(has('win32'))
-    "set rtp+=$VIM/vimfiles/bundle/Vundle.vim
-    "call plug#begin('~/.vim/plugged') " plug 安装地址
+"set rtp+=$VIM/vimfiles/bundle/Vundle.vim
+"call plug#begin('~/.vim/plugged') " plug 安装地址
 "else
-    "set rtp+=$VIM/RainboyVim
-    "call plug#begin('$VIM/.vim/plugged') " plug 安装地址
+"set rtp+=$VIM/RainboyVim
+"call plug#begin('$VIM/.vim/plugged') " plug 安装地址
 "endif
 "
-let $PLUG_DIR = expand("$VIM/.vim/plugged")
+let $PLUG_DIR = expand("$HOME/.vim/plugged")
 if empty(glob(expand("$PLUG_DIR/plug.vim")))
-  silent !curl -fLo $PLUG_DIR/plug.vim --create-dirs
-    \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-  "autocmd VimEnter * PlugInstall --sync | source ~/.vimrc
+    silent !curl -fLo $PLUG_DIR/plug.vim --create-dirs
+                \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+    "autocmd VimEnter * PlugInstall --sync | source ~/.vimrc
 endif
 source $PLUG_DIR/plug.vim
 
@@ -24,18 +24,23 @@ call plug#begin($PLUG_DIR) " plug 安装地址
 
 "----------管理插件----------
 Plug 'yianwillis/vimcdoc'                 " 中文文档
+Plug 'romainl/vim-cool'                   " 搜索高亮
 Plug 'thinca/vim-quickrun'                " 运行 Run commands quickly 更快
-Plug 'ludovicchabant/vim-gutentags'       " ctags,gtags
-Plug 'skywind3000/gutentags_plus'
+"Plug 'ludovicchabant/vim-gutentags'       " ctags,gtags,暂时用不到
+"Plug 'skywind3000/gutentags_plus'
 Plug 'morhetz/gruvbox'                    " gruvbox主题
 Plug 'bling/vim-airline'                  " airline
 Plug 'vim-airline/vim-airline-themes'     " airline themes
 Plug 'Linfee/ultisnips-zh-doc'
 Plug 'SirVer/ultisnips'                   " ultisnips
 Plug 'iamcco/markdown-preview.vim'        " md preview
-Plug 'scrooloose/syntastic'              "静态分析器
-Plug 'Valloric/YouCompleteMe'             " YCM
+"Plug 'scrooloose/syntastic'              "静态分析器 加载太慢了
+"Plug 'Valloric/YouCompleteMe',{'on':[]}             " YCM,延迟加载
+"Plug 'Valloric/YouCompleteMe'             " YCM
+Plug 'neoclide/coc.nvim', {'do': { -> coc#util#install()}}
 Plug 'mattn/emmet-vim'                    " html emmet
+Plug 'Valloric/MatchTagAlways'
+"Plug 'othree/html5.vim'
 Plug 'octol/vim-cpp-enhanced-highlight'   " cpp 代码高亮
 Plug 'wannesm/wmgraphviz.vim'             " graphviz :GraphvizShow
 Plug 'Valloric/ListToggle'                " list windows(quickfix location-list) quick toggle
@@ -54,10 +59,12 @@ Plug 'scrooloose/nerdtree'                " 工程文件浏览
 Plug 'Xuyuanp/nerdtree-git-plugin'        "
 "Plug 'vim-scripts/taglist.vim'            " taglist
 
-Plug 'dhruvasagar/vim-table-mode'         "table 生成
+Plug 'dhruvasagar/vim-table-mode',{'for':['markdown']}         "table 生成
 Plug 'plasticboy/vim-markdown'            "markdown 语法高亮
 "Plugin 'suan/vim-instant-markdown'         "markdown 实时渲染,使用失败
 "Plugin 'shime/vim-livedown'
+
+Plug 'Chiel92/vim-autoformat',{'for':['typescript','javascript']}              " 自动格式化
 
 "Plug 'Shougo/vimproc.vim'                 "vim shell
 "Plug 'Shougo/vimshell.vim'
@@ -77,11 +84,11 @@ Plug 'posva/vim-vue'                      "vue高亮
 ""Plugin 'Yggdroot/indentLine'              "对齐
 
 if(!has("win32"))
-Plug 'ryanoasis/vim-devicons'                "nerd-font
+    Plug 'ryanoasis/vim-devicons'                "nerd-font
 endif
 
 
-Plug 'leafgarland/typescript-vim',{'for':'ts'}
+Plug 'leafgarland/typescript-vim',{'for':'typescript'}
 Plug 'Quramy/tsuquyomi',{'for':'typescript'}
 "Plug 'jason0x43/vim-js-indent',{'for':['typescript','javascript']}
 

@@ -13,15 +13,17 @@ ${0}
 endsnippet
 
 snippet oj "创建oj题目" b
----
-title: 【noip2017模拟题】${1}
-time: 1000
-memory: 256
-hidden: false
----
+## [题目描述]
 
-## 【问题描述】
 ${0}
+
+## [输入格式]
+
+## [输出格式]
+
+## [输入样例]
+
+## [输出样例]
 endsnippet
 
 #blog 文章信息
@@ -134,7 +136,7 @@ endsnippet
 
 snippet problem "题目框架" b
 
-## 题目描述
+## [题目描述]
 
 ${0}
 
@@ -180,3 +182,37 @@ snippet easy "记忆" b
 endsnippet
 
 
+# 记忆
+snippet oihexo "oi-hexo 文章的yaml-front" b
+---
+title: "${1:标题}"
+level: ${2:3}
+author: rainboy
+create_time: `!v strftime("%Y-%m-%d %H:%M")`
+update_time: `!v strftime("%Y-%m-%d %H:%M")`
+tags:
+    - ${3:oj}
+    - ${4:标签}
+source:
+    - 
+      oj: $3
+      url: ${5: 题目的地址}
+---
+
+## 解析
+
+${0}
+
+## 代码
+
+\`\`\`c
+<%-include("1.cpp")%>
+\`\`\`
+
+endsnippet
+
+snippet code "" b 
+\`\`\`${1:plaintext}
+$0
+\`\`\`
+endsnippet

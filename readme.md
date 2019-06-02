@@ -48,3 +48,9 @@ pacman -S clang cmake
 ## 安装中文文档
 
 中文文档的git地址: https://github.com/yianwillis/vimcdoc
+
+## 使用 auto format
+
+ - 安装 `node.js`
+ - 安装 `yarn`
+ - 安装 `yarn global add typescript typescript-formatter`

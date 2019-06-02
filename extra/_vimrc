@@ -32,7 +32,6 @@ if g:OS#win
     let $VIUMFILES = $VIM.'/vimfiles'
     let $HOME = $VIUMFILES
 elseif g:OS#unix
-    let $VIM = $HOME
     let $VIMFILES = $HOME.'~/.vim'
 elseif g:OS#mac
     let $VIM = $HOME

@@ -121,11 +121,11 @@ if g:OS#win == 1
     source $VIM/RainboyVim/.rbinit.vim
     source $VIM/RainboyVim/.rbkeymap.vim
 else
-    source ~/RainboyVim/.rb.vim
-    source ~/RainboyVim/.rbignore.vim
-    source ~/RainboyVim/.rbplug.vim
-    source ~/RainboyVim/.rbplug.conf.vim
-    source ~/RainboyVim/.rbinit.vim
-    source ~/RainboyVim/.rbkeymap.vim
+    source ~/RainboyVim/rb.vim
+    source ~/RainboyVim/ignore.vim
+    source ~/RainboyVim/plug.vim
+    source ~/RainboyVim/plug.conf.vim
+    source ~/RainboyVim/init.vim
+    source ~/RainboyVim/keymap.vim
 endif
 

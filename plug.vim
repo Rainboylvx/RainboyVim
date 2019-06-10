@@ -23,6 +23,7 @@ source $PLUG_DIR/plug.vim
 call plug#begin($PLUG_DIR) " plug 安装地址
 
 "----------管理插件----------
+Plug 'Yggdroot/indentLine'                " 缩进参考线
 Plug 'yianwillis/vimcdoc'                 " 中文文档
 Plug 'romainl/vim-cool'                   " 搜索高亮
 Plug 'thinca/vim-quickrun'                " 运行 Run commands quickly 更快

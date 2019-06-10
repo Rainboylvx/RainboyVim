@@ -253,16 +253,16 @@ let g:syntastic_cpp_compiler = 'g++'
 let g:syntastic_javascript_checkers = ['jshint']
 
 "============= coc.nvim ============
-inoremap <silent><expr> <TAB>
-      \ pumvisible() ? coc#_select_confirm() :
-      \ coc#expandableOrJumpable() ? "\<C-r>=coc#rpc#request('doKeymap', ['snippets-expand-jump',''])\<CR>" :
-      \ <SID>check_back_space() ? "\<TAB>" :
-      \ coc#refresh()
+"inoremap <silent><expr> <TAB>
+      "\ pumvisible() ? coc#_select_confirm() :
+      "\ coc#expandableOrJumpable() ? "\<C-r>=coc#rpc#request('doKeymap', ['snippets-expand-jump',''])\<CR>" :
+      "\ <SID>check_back_space() ? "\<TAB>" :
+      "\ coc#refresh()
 
-function! s:check_back_space() abort
-  let col = col('.') - 1
-  return !col || getline('.')[col - 1]  =~# '\s'
-endfunction
+"function! s:check_back_space() abort
+  "let col = col('.') - 1
+  "return !col || getline('.')[col - 1]  =~# '\s'
+"endfunction
 
 "let g:coc_snippet_next = '<tab>'
 "============= coc.nvim end  ============
@@ -450,3 +450,9 @@ let g:pyclewn_terminal = "xterm, -e"
 "================== auto format
 "au BufWrite *.ts :Autoformat
 noremap <F3> :Autoformat<CR>
+
+
+"======== indentLine
+let g:indentLine_setColors = 0
+"let g:indentLine_color_term = 239
+let g:indentLine_char_list = ['|', '¦', '┆', '┊']

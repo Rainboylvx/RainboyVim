@@ -99,7 +99,7 @@ let g:Lf_NormalMap = {
             \ }
 
 let g:Lf_WildIgnore = {
-            \ 'dir': ['.git','.svn','node_modules'],
+            \ 'dir': ['.git','.svn','node_modules','.ccls-cache'],
             \ 'file': []
             \ }
 
@@ -453,6 +453,8 @@ noremap <F3> :Autoformat<CR>
 
 
 "======== indentLine
+let g:indentLine_setConceal = 0
 let g:indentLine_setColors = 0
 "let g:indentLine_color_term = 239
 let g:indentLine_char_list = ['|', '¦', '┆', '┊']
+

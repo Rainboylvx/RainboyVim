@@ -23,7 +23,7 @@ source $PLUG_DIR/plug.vim
 call plug#begin($PLUG_DIR) " plug 安装地址
 
 "----------管理插件----------
-Plug 'Yggdroot/indentLine'                " 缩进参考线
+Plug 'Yggdroot/indentLine',{'for':['c','cpp']}                " 缩进参考线
 Plug 'yianwillis/vimcdoc'                 " 中文文档
 Plug 'romainl/vim-cool'                   " 搜索高亮
 Plug 'thinca/vim-quickrun'                " 运行 Run commands quickly 更快
@@ -45,7 +45,6 @@ Plug 'Valloric/MatchTagAlways'
 Plug 'octol/vim-cpp-enhanced-highlight'   " cpp 代码高亮
 Plug 'wannesm/wmgraphviz.vim'             " graphviz :GraphvizShow
 Plug 'Valloric/ListToggle'                " list windows(quickfix location-list) quick toggle
-"Plug 'w0rp/ale'                           " ale 代码检查
 Plug 'vim-scripts/a.vim'                  ".h .c 快速切换
 Plug 'nathanaelkane/vim-indent-guides'    "代码缩进
 Plug 'kshenoy/vim-signature'              "书签
@@ -78,9 +77,6 @@ Plug 'luochen1990/rainbow'                "彩虹括号
 
 Plug 'vim-scripts/DrawIt'                 "Ascii 画图
 
-"Plugin 'larrupingpig/vimgdb-for-vim7.4'    "vimgdb
-
-"Plugin 'othree/html5.vim'                   "html5 complete
 Plug 'posva/vim-vue'                      "vue高亮
 ""Plugin 'Yggdroot/indentLine'              "对齐
 
@@ -89,8 +85,8 @@ if(!has("win32"))
 endif
 
 
-Plug 'leafgarland/typescript-vim',{'for':'typescript'}
-Plug 'Quramy/tsuquyomi',{'for':'typescript'}
+Plug 'leafgarland/typescript-vim',{'for':'typescript'}  " typescript 高亮
+"Plug 'Quramy/tsuquyomi',{'for':'typescript'}
 "Plug 'jason0x43/vim-js-indent',{'for':['typescript','javascript']}
 
 call plug#end()

@@ -21,6 +21,13 @@ def tranSeq(inp,sep=''):
 	return sep+(','+sep).join(a)
 endglobal
 
+global !p
+def tranSeq2(inp,sep=''):
+	a = inp.split()
+	temp= sep+','
+	return temp.join(a)+sep
+endglobal
+
 # printf
 snippet "pr(\w+)? ((\S+ )*\S+)( )?" "printf" br
 printf("${1:`!p snip.rv=tranFlag(match.group(1),match.group(2),match.group(4))`}${2:\n}",`!p snip.rv=tranSeq(match.group(2))`);
@@ -28,7 +35,7 @@ endsnippet
 
 # scanf
 snippet "sc(\w+)? ((\S+ )*\S+)( )?" "scanf" ir
-scanf("`!p snip.rv=tranFlag(match.group(1),match.group(2),match.group(4))`",`!p snip.rv=tranSeq(match.group(2),'&')`);
+scanf("`!p snip.rv=tranFlag(match.group(1),match.group(2),match.group(4))`",`!p snip.rv=tranSeq(match.group(2),'' if match.group(1)=='s' else '&')`);
 endsnippet
 
 snippet "func (\w+)?" "定义函数" br 
@@ -41,6 +48,12 @@ endsnippet
 snippet "i ((\w+ )*\w+)" "int 定义" br
 int `!p snip.rv=tranSeq(match.group(1))`;
 endsnippet
+
+# int 定义变量,初始化 i0 a b c => int a=0,b=0,c=0;
+snippet "i(\d+) ((\w+ )*\w+)" "int 定义,初始化" br
+int `!p snip.rv=tranSeq2(match.group(2),'='+match.group(1))`;
+endsnippet
+
 
 
 # snoip 

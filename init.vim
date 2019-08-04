@@ -267,4 +267,4 @@ endif
 
 
 "============================ 透明 ============================
-hi Normal  ctermfg=252 ctermbg=none
+"hi Normal  ctermfg=252 ctermbg=none

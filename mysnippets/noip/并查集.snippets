@@ -1,10 +1,10 @@
-snippet bjj "并查集" b
+snippet bcj "并查集" b
 /* ================= 并查集 =================*/
-int fa[maxn];
+int fa_bcj[maxn];
 
-inline void bjj_init(int x){ //并查集 初始化
+inline void bcj_init(int x){ //并查集 初始化
     int i;
-    for(i=1;i<=x;i++) fa[i] = i;
+    for(i=1;i<=x;i++) fa_bcj[i] = i;
 }
 int find(int x){ //查找 and 压缩
     if( x == fa[x]) return x;
@@ -12,7 +12,7 @@ int find(int x){ //查找 and 压缩
     return fa[x];
 }
 
-void bjj_union(int x,int y){
+void bcj_union(int x,int y){
     int fx = find(x);
     int fy = find(y);
     fa[fx] = fy;

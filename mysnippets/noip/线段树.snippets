@@ -1,0 +1,75 @@
+snippet xds "线段树" b
+
+int n,m;
+
+/* =====  线段树区间更新--lazy [区间加,区间求和] ====*/
+
+/* 区间加,区间求和 的线段树 */
+int st[maxn<<2]={0};    //线段树
+int flag[maxn<<2]={0};  //标记树
+//memeset(flag,0/-1,sizeof(flag))
+
+
+inline int lson(int rt ){ return rt<<1;}
+inline int rson(int rt ){ return (rt<<1)|1;}
+/* 更新父亲 */
+void pushup(int rt){
+    st[rt] = st[lson(rt)] + st[rson(rt)];
+}
+
+/* 向下更新标记 */
+void pushdown(int rt,int m){
+    if(flag[rt]){
+        flag[lson(rt)] += flag[rt];   //[改]
+        flag[rson(rt)] += flag[rt];   //[改]
+        //[改]
+        st[lson(rt)] += flag[rt]*(m-(m>>1));  /* 左孩子的值改变,上面有标记 */
+        //[改]
+        st[rson(rt)] += flag[rt]*(m>>1);  /* 右孩子的值改变,上面有标记 */
+        flag[rt] = 0;
+    }
+}
+/* 区间更新 -- lazy */
+void update(int l1,int r1,int c,int l,int r,int rt){
+    if(l1 <=l && r<=r1){
+        flag[rt] += c; //我们到达一个点 [改]
+        st[rt] += (r-l+1)*c; //[改]
+        return ;
+    }
+    pushdown(rt,(r-l+1)); //查看当前点对应标记树是不是有标记,如果有就往下压
+    int m = (l+r)>>1;
+    if( l1 <= m) update(l1,r1,c,l,m,lson(rt));
+    if( r1 > m) update(l1,r1,c,m+1,r,rson(rt));
+    pushup(rt);
+}
+
+/* 区间查询 */
+int query(int l1,int r1,int l,int r,int rt){
+    if(l1<=l && r <= r1){//包含
+        return st[rt];
+    }
+
+    //路过
+    pushdown(rt,(r-l+1));
+    int ret = 0;
+    int m = (l+r)>>1;
+    if(l1 <= m) ret+= query(l1,r1,l,m,lson(rt));
+    if(r1 > m ) ret+= query(l1,r1,m+1,r,rson(rt));
+    return ret;
+}
+
+/* 建立线段树 */
+void build(int l,int r,int rt){
+    if( l==r){
+        scanf("%d",&st[rt]);
+        return ;
+    }
+    int m = (l+r)>>1;
+    build(l,m,lson(rt));
+    build(m+1,r,rson(rt));
+    pushup(rt);
+}
+
+/* ====== 线段树区间更新--lazy-- END ====*/
+
+endsnippet

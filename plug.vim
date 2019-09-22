@@ -24,12 +24,14 @@ call plug#begin($PLUG_DIR) " plug 安装地址
 
 "----------管理插件----------
 Plug 'Yggdroot/indentLine',{'for':['c','cpp']}                " 缩进参考线
+Plug 'Rainboylvx/rSnip'                   " noi code snippets
 Plug 'yianwillis/vimcdoc'                 " 中文文档
 Plug 'romainl/vim-cool'                   " 搜索高亮
 Plug 'thinca/vim-quickrun'                " 运行 Run commands quickly 更快
 "Plug 'ludovicchabant/vim-gutentags'       " ctags,gtags,暂时用不到
 "Plug 'skywind3000/gutentags_plus'
 Plug 'morhetz/gruvbox'                    " gruvbox主题
+Plug 'digitaltoad/vim-pug'
 Plug 'bling/vim-airline'                  " airline
 Plug 'vim-airline/vim-airline-themes'     " airline themes
 Plug 'Linfee/ultisnips-zh-doc'
@@ -73,7 +75,7 @@ Plug 'Chiel92/vim-autoformat',{'for':['typescript','javascript']}              "
 
 Plug 'gcmt/wildfire.vim'                  "括号内选择
 Plug 'lilydjwg/fcitx.vim'
-Plug 'luochen1990/rainbow'                "彩虹括号
+"Plug 'luochen1990/rainbow'                "彩虹括号
 
 Plug 'vim-scripts/DrawIt'                 "Ascii 画图
 

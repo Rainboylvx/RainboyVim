@@ -347,7 +347,7 @@ let g:SignatureMap = {
             \ }
 
 "============= ultisnipptes ==========
-let g:UltiSnipsSnippetDirectories=[path.'/mysnippets']
+let g:UltiSnipsSnippetDirectories=["UltiSnips",path.'/mysnippets']
 " UltiSnips 的 tab 键与 YCM 冲突，重新设定
 let g:UltiSnipsExpandTrigger="<leader><tab>"
 "let g:UltiSnipsJumpForwardTrigger="<leader><tab>"
@@ -457,4 +457,7 @@ let g:indentLine_setConceal = 0
 let g:indentLine_setColors = 0
 "let g:indentLine_color_term = 239
 let g:indentLine_char_list = ['|', '¦', '┆', '┊']
+
+"==================== 
+autocmd FileType pug setlocal shiftwidth=2 softtabstop=2 expandtab
 

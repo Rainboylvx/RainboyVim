@@ -19,6 +19,7 @@ inoremap ` ``<esc>i
 au FileType scheme,racket,lisp,clojure :inoremap ' '
 au FileType scheme,racket,lisp,clojure :inoremap ` `
 au FileType scheme,racket,lisp,clojure :inoremap * **<esc>i
+au FileType c,cpp,javascript :inoremap { {}<esc>i<cr><esc>O
 
 
 function ClosePair(char)

@@ -16,10 +16,11 @@ inoremap ` ``<esc>i
 :inoremap " ""<esc>i
 :inoremap ' ''<esc>i
 :inoremap ` ``<esc>i
+:inoremap <c-]> {}<esc>i<cr><esc>O
 au FileType scheme,racket,lisp,clojure :inoremap ' '
 au FileType scheme,racket,lisp,clojure :inoremap ` `
 au FileType scheme,racket,lisp,clojure :inoremap * **<esc>i
-au FileType c,cpp,javascript :inoremap { {}<esc>i<cr><esc>O
+"au FileType c,cpp,javascript :inoremap { {}<esc>i<cr><esc>O
 
 
 function ClosePair(char)
@@ -207,8 +208,8 @@ autocmd BufRead *.dot nmap <F8> :w<CR>:!dot -Tpng -o %<.png % && start %<.png &&
 autocmd BufRead *.dot nmap <F9> :w<CR>:!neato -n -Tpng -o %<.png % && start %<.png <CR><CR>
 " 快捷键
 
-autocmd BufRead *.dot imap ii <esc>oarrow<leader><Tab>
-autocmd BufRead *.dot imap ij <esc>o-<leader><Tab>
+"autocmd BufRead *.dot imap ii <esc>oarrow<leader><Tab>
+"autocmd BufRead *.dot imap ij <esc>o-<leader><Tab>
 
 
 "========== markdown 文件下的快捷键

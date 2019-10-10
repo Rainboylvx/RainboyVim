@@ -28,8 +28,10 @@ colorscheme gruvbox
 
 
 " ---对部分语言设置单独的缩进
-""au FileType javascript,html,vue,ruby,eruby,slim,coffee,jade,sh set shiftwidth=2
-""au FileType javascript,html,vue,ruby,eruby,slim,coffee,jade,sh set tabstop=2
+"au FileType javascript,html,vue,ruby,eruby,slim,coffee,jade,sh set shiftwidth=2
+"au FileType javascript,html,vue,ruby,eruby,slim,coffee,jade,sh set tabstop=2
+au FileType javascript set shiftwidth=2
+au FileType javascript set tabstop=2
 
 au BufNewFile,BufRead *.ejs set filetype=html
 
@@ -111,7 +113,7 @@ filetype indent on             " 自适应不同语言的智能缩进
 
 
 " ---搜索
-set gdefault                "行内替换 ?
+"set gdefault                "行内替换 默认global
 "set hlsearch                "高亮搜索        
 set incsearch                "实时搜索
 set ignorecase                "搜索时大小写不敏感

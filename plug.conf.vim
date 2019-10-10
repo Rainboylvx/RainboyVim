@@ -1,5 +1,4 @@
 "================== Default setting =====
-"定义dictionary
 if(has('win32'))
     let path=$VIM.'/RainboyVim'
 else
@@ -460,4 +459,9 @@ let g:indentLine_char_list = ['|', '¦', '┆', '┊']
 
 "==================== 
 autocmd FileType pug setlocal shiftwidth=2 softtabstop=2 expandtab
+
+"定义dictionary
+autocmd FileType dot execute 'setlocal dict+='.path.'/dict/'.&filetype.'.dict'
+"可以使用<c-n> 从字典里补全
+set complete+=k
 

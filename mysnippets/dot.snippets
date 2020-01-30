@@ -1,11 +1,13 @@
-snippet gra "" b
+snippet gra "无向图" b
 graph ${1:title} {
+    node[shape=circle fixedsize=true style=filled fillcolor=white colorscheme=accent8 ];
 	${2:a--b;}
 }
 endsnippet
 
 snippet digra "有向图" b
 digraph ${1:title} {
+    node[shape=circle fixedsize=true style=filled fillcolor=white colorscheme=accent8 ];
 	${2:a->b};
 }
 endsnippet
@@ -14,8 +16,7 @@ snippet sub "子图" b
 subgraph cluster_${1:name}{
 	label="${3}";
 	${4}
-}
-endsnippet
+} endsnippet
 
 snippet node "点性质" b
 node [shape=${1:circle},style=${2:filled},fillcolor="${3:white}"];
@@ -35,4 +36,12 @@ endsnippet
 
 snippet lab "label" i
 label="${0}"
+endsnippet
+
+snippet table "table,html-like" i
+label=< <TABLE CELLBORDER="1" BORDER="0" CELLSPACING="0" CELLPADDING="0">
+	<tr>
+		<td PORT="">${0}</td>
+	</tr>
+</TABLE> >
 endsnippet

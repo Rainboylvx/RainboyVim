@@ -10,7 +10,7 @@ let g:CoolTotalMatches = 1
 
 
 
-"=================== gutentags ==================
+""=================== gutentags ==================
 " gutentags 搜索工程目录的标志，碰到这些文件/目录名就停止向上一级目录递归
 "
 set statusline+=%{gutentags#statusline()}
@@ -40,29 +40,29 @@ let g:gutentags_enabled =0
 let g:user_emmet_expandabbr_key='<C-y><C-y>'
 
 "=================== ale   ==================
-let g:ale_linters = {
-            \   'cpp': ['gcc','cppcheck'],
-            \}
-let g:ale_sign_error = 'E'
-let g:ale_sign_warning = 'W'
-let g:ale_sign_column_always =1
-"let g:ale_linters_explicit = 1
-"let g:ale_completion_delay = 500
-"let g:ale_echo_delay = 20
-"let g:ale_lint_delay = 500
-"let g:ale_echo_msg_format = '[%linter%] %code: %%s'
-"let g:ale_lint_on_text_changed = 'normal'
-"let g:ale_lint_on_insert_leave = 1
-let g:airline#extensions#ale#enabled = 1
+"let g:ale_linters = {
+            "\   'cpp': ['gcc','cppcheck'],
+            "\}
+"let g:ale_sign_error = 'E'
+"let g:ale_sign_warning = 'W'
+"let g:ale_sign_column_always =1
+""let g:ale_linters_explicit = 1
+""let g:ale_completion_delay = 500
+""let g:ale_echo_delay = 20
+""let g:ale_lint_delay = 500
+""let g:ale_echo_msg_format = '[%linter%] %code: %%s'
+""let g:ale_lint_on_text_changed = 'normal'
+""let g:ale_lint_on_insert_leave = 1
+"let g:airline#extensions#ale#enabled = 1
 
-let g:ale_echo_msg_error_str = 'E'
-let g:ale_echo_msg_warning_str = 'W'
-let g:ale_echo_msg_format = '[%linter%] %s [%severity%]'
+"let g:ale_echo_msg_error_str = 'E'
+"let g:ale_echo_msg_warning_str = 'W'
+"let g:ale_echo_msg_format = '[%linter%] %s [%severity%]'
 
-let g:ale_c_gcc_options = '-Wall -O2 -std=c99'
-let g:ale_cpp_gcc_options = '-Wall -O2 -std=c++14'
-let g:ale_c_cppcheck_options = ''
-let g:ale_cpp_cppcheck_options = ''
+"let g:ale_c_gcc_options = '-Wall -O2 -std=c99'
+"let g:ale_cpp_gcc_options = '-Wall -O2 -std=c++14'
+"let g:ale_c_cppcheck_options = ''
+"let g:ale_cpp_cppcheck_options = ''
 
 
 "=================== LeaderF ================
@@ -221,7 +221,7 @@ let NERDTreeMinimalUI=1
 " 删除文件时自动删除文件对应 buffer
 "
 
-let NERDTreeIgnore=['node_modules$', '\~$','.git','^\.','^dist$']
+let NERDTreeIgnore=['node_modules$', '\~$','^\.','^dist$','tags']
 "============= ListToggle ============
 let Tlist_Use_Right_Window = 1 " 在右侧使用taglist
 
@@ -235,9 +235,9 @@ let g:lt_quickfix_list_toggle_map = '<leader>q'
 let g:syntastic_error_symbol = 'E'
 let g:syntastic_warning_symbol = 'W'
 
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
+"set statusline+=%#warningmsg#
+"set statusline+=%{SyntasticStatuslineFlag()}
+"set statusline+=%*
 
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 0
@@ -348,7 +348,8 @@ let g:SignatureMap = {
 "============= ultisnipptes ==========
 let g:UltiSnipsSnippetDirectories=["UltiSnips",path.'/mysnippets']
 " UltiSnips 的 tab 键与 YCM 冲突，重新设定
-let g:UltiSnipsExpandTrigger="<leader><tab>"
+let g:UltiSnipsExpandTrigger="<tab>"
+"let g:UltiSnipsExpandTrigger="<leader><tab>"
 "let g:UltiSnipsJumpForwardTrigger="<leader><tab>"
 "let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
 
@@ -461,6 +462,7 @@ let g:indentLine_char_list = ['|', '¦', '┆', '┊']
 autocmd FileType pug setlocal shiftwidth=2 softtabstop=2 expandtab
 
 "定义dictionary
+" know at https://vim.fandom.com/wiki/Dictionary_completions
 autocmd FileType dot execute 'setlocal dict+='.path.'/dict/'.&filetype.'.dict'
 "可以使用<c-n> 从字典里补全
 set complete+=k

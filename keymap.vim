@@ -9,6 +9,8 @@ inoremap ` ``<esc>i
 
 :inoremap ( ()<esc>i
 :inoremap ) <c-r>=ClosePair(')')<cr>
+:inoremap 「 「」<esc>i
+:inoremap 」 <c-r>=ClosePair(')')<cr>
 :inoremap { {}<esc>i
 :inoremap } <c-r>=ClosePair('}')<cr>
 :inoremap [ []<esc>i

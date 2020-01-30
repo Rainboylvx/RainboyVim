@@ -28,7 +28,7 @@ Plug 'Rainboylvx/rSnip'                   " noi code snippets
 Plug 'yianwillis/vimcdoc'                 " 中文文档
 Plug 'romainl/vim-cool'                   " 搜索高亮
 Plug 'thinca/vim-quickrun'                " 运行 Run commands quickly 更快
-"Plug 'ludovicchabant/vim-gutentags'       " ctags,gtags,暂时用不到
+Plug 'ludovicchabant/vim-gutentags'       " ctags,gtags,暂时用不到
 "Plug 'skywind3000/gutentags_plus'
 Plug 'morhetz/gruvbox'                    " gruvbox主题
 Plug 'digitaltoad/vim-pug'
@@ -58,7 +58,7 @@ Plug 'Lokaltog/vim-easymotion'            "快速移动
 Plug 'scrooloose/nerdcommenter'           " 代码注释
 
 Plug 'scrooloose/nerdtree'                " 工程文件浏览
-Plug 'Xuyuanp/nerdtree-git-plugin'        "
+"Plug 'Xuyuanp/nerdtree-git-plugin'        "
 "Plug 'vim-scripts/taglist.vim'            " taglist
 
 Plug 'dhruvasagar/vim-table-mode',{'for':['markdown']}         "table 生成

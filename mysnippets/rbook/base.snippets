@@ -1,0 +1,41 @@
+snippet pcs "pcs_site变量" i
+<%- USER.pcs_site %>$0
+endsnippet
+
+#exbook
+snippet exbook "extend book info" b
+---
+_id: "`date +%s%N | md5sum | head -c 10`"
+title: ${1:`!v expand("%:t:r")`}
+date: ${2:`!v strftime("%Y-%m-%d %H:%M")`}
+update: ${3:`!v strftime("%Y-%m-%d %H:%M")`}
+author: ${4:Rainboy}
+${5:cover: }
+tags:
+	- ${6:tag1}
+catalog: ${7:catalog1}
+source: 
+	- 
+	  oj: ${8:oj}
+	  url: ${9:url}
+---
+
+
+@[toc]
+## 分析
+
+$0
+
+## 代码
+
+\`\`\`c
+<%- include("1.cpp") %>
+\`\`\`
+
+endsnippet
+
+snippet duipai "对拍程序,下载" b
+- 对拍数据生成:[下载](./data_generator.py)
+- 对拍程序:[下载](./2.cpp)
+$0
+endsnippet

@@ -1,0 +1,12 @@
+#数据生成模板
+
+snippet data "数据生成模板" b
+const Random = require("random-js") //[random-js](https://github.com/ckknight/random-js)
+const print = console.log			// 输出
+const random = new Random.Random( Random.MersenneTwister19937.autoSeed())
+
+function randint(minNum,maxNum){ 
+  return random.integer(minNum,maxNum)
+} 
+
+endsnippet

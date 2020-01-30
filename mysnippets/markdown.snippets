@@ -1,3 +1,4 @@
+extends rbook
 #hexo文章信息
 snippet hexo "文章信息" b
 ---
@@ -50,20 +51,20 @@ snippet more "summary" b
 ${0}
 endsnippet
 
-#pcs文章信息
-snippet pcs "文章信息" b
----
-_id: `uuid.js`
-title: ${1:`!v expand("%:t:r")`}
-author: ${2: Rainboy}
-date: ${3:`!v strftime("%Y-%m-%d %H:%M")`}
-tags:
- - ${4: 标签}
-oj: ${5: OJ名}
-hidden: false
----
-${0}
-endsnippet
+##pcs文章信息
+#snippet pcs "文章信息" b
+#---
+#_id: `uuid.js`
+#title: ${1:`!v expand("%:t:r")`}
+#author: ${2: Rainboy}
+#date: ${3:`!v strftime("%Y-%m-%d %H:%M")`}
+#tags:
+ #- ${4: 标签}
+#oj: ${5: OJ名}
+#hidden: false
+#---
+#${0}
+#endsnippet
 
 
 # ojtm 也就是我写的题目+解析
@@ -164,6 +165,7 @@ endsnippet
 #book 文章信息
 snippet book "文章信息" b
 ---
+_id: "`date +%s%N | md5sum | head -c 10`"
 title: ${1:`!v expand("%:t:r")`}
 date: ${2:`!v strftime("%Y-%m-%d %H:%M")`}
 update: ${3:`!v strftime("%Y-%m-%d %H:%M")`}
@@ -172,6 +174,7 @@ ${5:cover: }
 ---
 ${0}
 endsnippet
+
 
 # 记忆
 snippet easy "记忆" b
@@ -183,22 +186,7 @@ endsnippet
 
 
 # 记忆
-snippet oihexo "oi-hexo 文章的yaml-front" b
----
-title: "${1:标题}"
-level: ${2:3}
-author: rainboy
-create_time: `!v strftime("%Y-%m-%d %H:%M")`
-update_time: `!v strftime("%Y-%m-%d %H:%M")`
-tags:
-    - ${3:oj}
-    - ${4:标签}
-source:
-    - 
-      oj: $3
-      url: ${5: 题目的地址}
----
-
+snippet jx "解析" b
 ## 解析
 
 ${0}
@@ -274,4 +262,24 @@ snippet error "error" b
 ::: error
 $0
 :::
+endsnippet
+
+snippet viz-gallery "viz grahviz gallery" b
+
+<<<< viz-gallery(title="${1:title}",engine="${2:dot}",height="${3:400}")
+
+<% 
+var log =["log1","log2","log3"]
+var engine = "dot"
+for(let i=1;i<=${1:n};i++){
+	var page = \`dot/_${i}.dot\`
+%>
+
+\`\`\` <%= engine || ""%> <%= log[i-1] || "" %>
+<%- include(page) %>
+\`\`\`
+<%}%>
+
+<<<<
+
 endsnippet

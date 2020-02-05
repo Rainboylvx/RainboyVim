@@ -1,0 +1,379 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_OUTPUT_FILESEP	slash	/slash or backslash/
+!_TAG_OUTPUT_MODE	u-ctags	/u-ctags or e-ctags/
+!_TAG_PROGRAM_AUTHOR	Universal Ctags Team	//
+!_TAG_PROGRAM_NAME	Universal Ctags	/Derived from Exuberant Ctags/
+!_TAG_PROGRAM_URL	https://ctags.io/	/official site/
+!_TAG_PROGRAM_VERSION	0.0.0	/a3c87ab5/
+$HOME	extra/_vimrc	/^    let $HOME = $VIUMFILES$/;"	v
+$PLUG_DIR	plug.vim	/^let $PLUG_DIR = expand("$HOME\/.vim\/plugged")$/;"	v
+$VIM	.config/nvim/init.vim	/^    let $VIM = $HOME$/;"	v
+$VIM	extra/.vimrc	/^    let $VIM = $HOME$/;"	v
+$VIM	extra/_vimrc	/^    let $VIM = $HOME$/;"	v
+$VIMFILES	.config/nvim/init.vim	/^    let $VIMFILES = $HOME.'~\/.vim'$/;"	v
+$VIMFILES	extra/.vimrc	/^    let $VIMFILES = $HOME.'~\/.vim'$/;"	v
+$VIMFILES	extra/_vimrc	/^    let $VIMFILES = $HOME.'~\/.vim'$/;"	v
+$VIUMFILES	extra/_vimrc	/^    let $VIUMFILES = $VIM.'\/vimfiles'$/;"	v
+/	plug.conf.vim	/^map  \/ <Plug>(easymotion-sn)$/;"	m
+/	plug.conf.vim	/^omap \/ <Plug>(easymotion-tn)$/;"	m
+0	.config/nvim/coc-settings.json	/^      "filetypes": ["c", "cpp", "cuda", "objc", "objcpp"],$/;"	s	array:languageserver.ccls.filetypes
+0	.config/nvim/coc-settings.json	/^      "rootPatterns": [".ccls", "compile_commands.json", ".vim\/", ".git\/", ".hg\/"],$/;"	s	array:languageserver.ccls.rootPatterns
+1	.config/nvim/coc-settings.json	/^      "filetypes": ["c", "cpp", "cuda", "objc", "objcpp"],$/;"	s	array:languageserver.ccls.filetypes
+1	.config/nvim/coc-settings.json	/^      "rootPatterns": [".ccls", "compile_commands.json", ".vim\/", ".git\/", ".hg\/"],$/;"	s	array:languageserver.ccls.rootPatterns
+1.下载 或 手动安装 `vim 8.0	readme.md	/^## 1.下载 或 手动安装 `vim 8.0$/;"	s
+2	.config/nvim/coc-settings.json	/^      "filetypes": ["c", "cpp", "cuda", "objc", "objcpp"],$/;"	s	array:languageserver.ccls.filetypes
+2	.config/nvim/coc-settings.json	/^      "rootPatterns": [".ccls", "compile_commands.json", ".vim\/", ".git\/", ".hg\/"],$/;"	s	array:languageserver.ccls.rootPatterns
+2. clone 本配置	readme.md	/^## 2. clone 本配置$/;"	s
+3	.config/nvim/coc-settings.json	/^      "filetypes": ["c", "cpp", "cuda", "objc", "objcpp"],$/;"	s	array:languageserver.ccls.filetypes
+3	.config/nvim/coc-settings.json	/^      "rootPatterns": [".ccls", "compile_commands.json", ".vim\/", ".git\/", ".hg\/"],$/;"	s	array:languageserver.ccls.rootPatterns
+3. 安装Plugin	readme.md	/^## 3. 安装Plugin$/;"	s
+4	.config/nvim/coc-settings.json	/^      "filetypes": ["c", "cpp", "cuda", "objc", "objcpp"],$/;"	s	array:languageserver.ccls.filetypes
+4	.config/nvim/coc-settings.json	/^      "rootPatterns": [".ccls", "compile_commands.json", ".vim\/", ".git\/", ".hg\/"],$/;"	s	array:languageserver.ccls.rootPatterns
+<C-S-Tab>	plug.conf.vim	/^map <C-S-Tab> :MBEbp<cr>$/;"	m
+<C-Tab>	plug.conf.vim	/^map <C-Tab> :MBEbn<cr>$/;"	m
+<F11>	plug.conf.vim	/^map <silent> <F11> :call ToggleFullscreen()<CR>$/;"	m
+<F1>	init.vim	/^    map <silent> <F1> :if &guioptions =~# 'T' <Bar>$/;"	m
+<F2>	keymap.vim	/^imap <F2> <esc>:w<enter>a$/;"	m
+<F3>	plug.conf.vim	/^noremap <F3> :Autoformat<CR>$/;"	m
+<F8>	keymap.vim	/^imap <F8> <ESC>:call Run()<CR>$/;"	m
+<F8>	keymap.vim	/^map <F8> :call Run()<CR>$/;"	m
+<Leader>bl	plug.conf.vim	/^map <Leader>bl :MBEToggle<cr>$/;"	m
+<Leader>fl	plug.conf.vim	/^nmap <Leader>fl :NERDTreeToggle<CR>$/;"	m
+<Leader>j	plug.conf.vim	/^map <Leader>j <Plug>(easymotion-j)$/;"	m
+<Leader>k	plug.conf.vim	/^map <Leader>k <Plug>(easymotion-k)$/;"	m
+<S-SPACE>	plug.conf.vim	/^vmap <S-SPACE> <Plug>(wildfire-water)$/;"	m
+<SPACE>	plug.conf.vim	/^map <SPACE> <Plug>(wildfire-fuel)$/;"	m
+<a-enter>	.config/nvim/init.vim	/^    map <a-enter> <esc>:call ToggleFullScreen()<cr>$/;"	m
+<a-enter>	extra/.vimrc	/^    map <a-enter> <esc>:call ToggleFullScreen()<cr>$/;"	m
+<a-enter>	extra/_vimrc	/^    map <a-enter> <esc>:call ToggleFullScreen()<cr>$/;"	m
+<a-i>	keymap.vim	/^imap <a-i> <c-l>;$/;"	m
+<c-F10>	keymap.vim	/^imap <c-F10> <ESC>:call Gdb()<CR>$/;"	m
+<c-F10>	keymap.vim	/^map <c-F10> :call Gdb()<CR>$/;"	m
+<c-F8>	keymap.vim	/^imap <c-F8> <ESC>:call Compile()<CR>$/;"	m
+<c-F8>	keymap.vim	/^map <c-F8> :call Compile()<CR>$/;"	m
+<c-]>	keymap.vim	/^nmap <c-]> g<c-]>$/;"	m
+<c-]>	keymap.vim	/^vmap <c-]> g<c-]>$/;"	m
+<c-b>	plug.conf.vim	/^imap <c-b> :LeaderfBuffer<cr>$/;"	m
+<c-down>	keymap.vim	/^nmap <c-down> :vertical resize<enter>$/;"	m
+<c-f>	plug.conf.vim	/^imap <c-f> <esc>:LeaderfFunction<cr>$/;"	m
+<c-h>	keymap.vim	/^imap <c-h> <esc>I$/;"	m
+<c-h>	keymap.vim	/^map <c-h> <c-w><c-h>$/;"	m
+<c-j>	keymap.vim	/^imap <c-j> <esc><down>I$/;"	m
+<c-j>	keymap.vim	/^map <c-j> <c-w><c-j>$/;"	m
+<c-k>	keymap.vim	/^imap <c-k> <esc><up>A$/;"	m
+<c-k>	keymap.vim	/^map <c-k> <c-w><c-k>$/;"	m
+<c-l>	keymap.vim	/^imap <c-l> <esc>A$/;"	m
+<c-l>	keymap.vim	/^map <c-l> <c-w><c-l>$/;"	m
+<c-left>	keymap.vim	/^nmap <c-left> <c-w><c-r>$/;"	m
+<c-m>	keymap.vim	/^vmap <c-m> c$<esc>pa$<esc>$/;"	m
+<c-n>	plug.conf.vim	/^noremap <c-n> :LeaderfMru<cr>$/;"	m
+<c-right>	keymap.vim	/^nmap <c-right> <c-w>R$/;"	m
+<c-u>	keymap.vim	/^imap <c-u> <c-x><c-o>$/;"	m
+<c-up>	keymap.vim	/^map <c-up> <c-w>=$/;"	m
+<leader>1	plug.conf.vim	/^nmap <leader>1 <Plug>AirlineSelectTab1$/;"	m
+<leader>2	plug.conf.vim	/^nmap <leader>2 <Plug>AirlineSelectTab2$/;"	m
+<leader>3	plug.conf.vim	/^nmap <leader>3 <Plug>AirlineSelectTab3$/;"	m
+<leader>4	plug.conf.vim	/^nmap <leader>4 <Plug>AirlineSelectTab4$/;"	m
+<leader>5	plug.conf.vim	/^nmap <leader>5 <Plug>AirlineSelectTab5$/;"	m
+<leader>6	plug.conf.vim	/^nmap <leader>6 <Plug>AirlineSelectTab6$/;"	m
+<leader>7	plug.conf.vim	/^nmap <leader>7 <Plug>AirlineSelectTab7$/;"	m
+<leader>8	plug.conf.vim	/^nmap <leader>8 <Plug>AirlineSelectTab8$/;"	m
+<leader>9	plug.conf.vim	/^nmap <leader>9 <Plug>AirlineSelectTab9$/;"	m
+<leader>;	plug.conf.vim	/^inoremap <leader>; <C-x><C-o>$/;"	m
+<leader>a	keymap.vim	/^nmap <leader>a <esc>ggVG"+y<esc>$/;"	m
+<leader>bb	keymap.vim	/^nmap <leader>bb :Tab \/=<cr>$/;"	m
+<leader>bn	keymap.vim	/^nmap <leader>bn :Tab \/$/;"	m
+<leader>c	keymap.vim	/^vmap <leader>c "+y$/;"	m
+<leader>css	keymap.vim	/^imap <leader>css <esc>:se ft=css<cr>li$/;"	m
+<leader>css	keymap.vim	/^nmap <leader>css <esc>:se ft=css<cr>$/;"	m
+<leader>ev	keymap.vim	/^nmap <leader>ev <esc>:e $MYVIMRC<cr>$/;"	m
+<leader>fe	keymap.vim	/^nmap <leader>fe :FencView<cr>$/;"	m
+<leader>fl	keymap.vim	/^nmap <leader>fl :NERDTreeToggle<cr>$/;"	m
+<leader>fla	keymap.vim	/^nmap <leader>fla :LeaderfFunctionAll<cr>$/;"	m
+<leader>fll	keymap.vim	/^nmap <leader>fll :LeaderfFunction<cr>$/;"	m
+<leader>gd	keymap.vim	/^nmap <leader>gd :Gdiff<cr>$/;"	m
+<leader>gi	keymap.vim	/^nmap <leader>gi :GitGutterToggle<cr>:GitGutterSignsToggle<cr>:GitGutterLineHighlightsToggle<cr>$/;"	m
+<leader>gs	keymap.vim	/^nmap <leader>gs :Gsdiff<cr>$/;"	m
+<leader>html	keymap.vim	/^imap <leader>html <esc>:se ft=html<cr>li$/;"	m
+<leader>html	keymap.vim	/^nmap <leader>html <esc>:se ft=html<cr>$/;"	m
+<leader>js	keymap.vim	/^imap <leader>js <esc>:se ft=javascript<cr>li$/;"	m
+<leader>js	keymap.vim	/^nmap <leader>js <esc>:se ft=javascript<cr>$/;"	m
+<leader>m	keymap.vim	/^nmap <leader>m :.s\/[a-zA-Z0-9\\[\\]+-=]\\+\/\\$\\0\\$\/<CR>$/;"	m
+<leader>mp	keymap.vim	/^nmap <leader>mp :!rm ~\/backup\/.promptline<cr><esc>:PromptlineSnapshot ~\/backup\/.promptline a/;"	m
+<leader>n	plug.conf.vim	/^nmap <leader>n <Plug>AirlineSelectNextTab$/;"	m
+<leader>p	plug.conf.vim	/^nmap <leader>p <Plug>AirlineSelectPrevTab$/;"	m
+<leader>php	keymap.vim	/^imap <leader>php <esc>:se ft=php<cr>li$/;"	m
+<leader>php	keymap.vim	/^nmap <leader>php <esc>:se ft=php<cr>$/;"	m
+<leader>ra	keymap.vim	/^nmap <leader>ra <esc>\\rt<esc>\\rb<esc>gg=G<esc>gg<esc>$/;"	m
+<leader>rb	keymap.vim	/^imap <leader>rb <esc>:let _s=@\/<bar>:%s\/\\s\\+$\/\/e<bar>:let @\/=_s<bar>:nohl<cr>$/;"	m
+<leader>rb	keymap.vim	/^nmap <leader>rb :let _s=@\/<bar>:%s\/\\s\\+$\/\/e<bar>:let @\/=_s<bar>:nohl<cr>$/;"	m
+<leader>rb	keymap.vim	/^vmap <leader>rb <esc>:let _s=@\/<bar>:%s\/\\s\\+$\/\/e<bar>:let @\/=_s<bar>:nohl<cr>$/;"	m
+<leader>rm	keymap.vim	/^imap <leader>rm <esc>:%s\/<c-v><c-m>\/\/g<cr>$/;"	m
+<leader>rm	keymap.vim	/^nmap <leader>rm :%s\/<c-v><c-m>\/\/g<cr>$/;"	m
+<leader>rm	keymap.vim	/^vmap <leader>rm <esc>:%s\/<c-v><c-m>\/\/g<cr>$/;"	m
+<leader>rt	keymap.vim	/^imap <leader>rt <esc>:call RemoveTabs()<cr>$/;"	m
+<leader>rt	keymap.vim	/^nmap <leader>rt :call RemoveTabs()<cr>$/;"	m
+<leader>rt	keymap.vim	/^vmap <leader>rt <esc>:call RemoveTabs()<cr>$/;"	m
+<leader>t	plug.conf.vim	/^nmap <leader>t :b#<enter>$/;"	m
+<leader>th	keymap.vim	/^imap <leader>th <esc>:set nonumber<cr>:set norelativenumber<cr><esc>:TOhtml<cr><esc>:w %:r.html</;"	m
+<leader>th	keymap.vim	/^nmap <leader>th <esc>:set nonumber<cr>:set norelativenumber<cr><esc>:TOhtml<cr><esc>:w %:r.html</;"	m
+<leader>th	keymap.vim	/^vmap <leader>th <esc>:set nonumber<cr>:set norelativenumber<cr><esc>:TOhtml<cr><esc>:w %:r.html</;"	m
+<leader>v	keymap.vim	/^imap <leader>v <esc>"+p$/;"	m
+<leader>v	keymap.vim	/^nmap <leader>v "+p$/;"	m
+<leader>v	keymap.vim	/^vmap <leader>v "+p$/;"	m
+<leader>w	plug.conf.vim	/^nmap <leader>w :bw<enter>$/;"	m
+<m-h>	keymap.vim	/^imap <m-h> <left>$/;"	m
+<m-j>	keymap.vim	/^imap <m-j> <down>$/;"	m
+<m-k>	keymap.vim	/^imap <m-k> <up>$/;"	m
+<m-l>	keymap.vim	/^imap <m-l> <right>$/;"	m
+<m-m>	plug.conf.vim	/^noremap <m-m> :LeaderfTag<cr>$/;"	m
+<s-h>	keymap.vim	/^map <s-h> <c-w><$/;"	m
+<s-k>	keymap.vim	/^map <s-k> <c-w>+$/;"	m
+<s-l>	keymap.vim	/^map <s-l> <c-w>>$/;"	m
+<s-r>	.config/nvim/init.vim	/^    nmap <s-r> <esc>:call SwitchVimTopMostMode()<cr>$/;"	m
+<s-r>	extra/.vimrc	/^    nmap <s-r> <esc>:call SwitchVimTopMostMode()<cr>$/;"	m
+<s-r>	extra/_vimrc	/^    nmap <s-r> <esc>:call SwitchVimTopMostMode()<cr>$/;"	m
+<s-t>	.config/nvim/init.vim	/^    nmap <s-t> <esc>:call SetAlpha(10)<cr>$/;"	m
+<s-t>	extra/.vimrc	/^    nmap <s-t> <esc>:call SetAlpha(10)<cr>$/;"	m
+<s-t>	extra/_vimrc	/^    nmap <s-t> <esc>:call SetAlpha(10)<cr>$/;"	m
+<s-y>	.config/nvim/init.vim	/^    nmap <s-y> <esc>:call SetAlpha(-10)<cr>$/;"	m
+<s-y>	extra/.vimrc	/^    nmap <s-y> <esc>:call SetAlpha(-10)<cr>$/;"	m
+<s-y>	extra/_vimrc	/^    nmap <s-y> <esc>:call SetAlpha(-10)<cr>$/;"	m
+Archlinux 下安装YCM	README_OLD.md	/^##  Archlinux 下安装YCM$/;"	s
+ClosePair	keymap.vim	/^function ClosePair(char)$/;"	f
+Compile	keymap.vim	/^func! Compile()$/;"	f
+DirectoryOfThisScript	extra/.ycm_extra_conf.py	/^def DirectoryOfThisScript(): $/;"	f
+Dot_gen_node_edge	script.vim	/^fu! Dot_gen_node_edge()$/;"	f
+FlagsForFile	extra/.ycm_extra_conf.py	/^def FlagsForFile( filename, **kwargs ): $/;"	f
+Gdb	keymap.vim	/^func! Gdb()$/;"	f
+GetCompilationInfoForFile	extra/.ycm_extra_conf.py	/^def GetCompilationInfoForFile( filename ): $/;"	f
+IsHeaderFile	extra/.ycm_extra_conf.py	/^def IsHeaderFile( filename ): $/;"	f
+MakeRelativePathsInFlagsAbsolute	extra/.ycm_extra_conf.py	/^def MakeRelativePathsInFlagsAbsolute( flags, working_directory ): $/;"	f
+MyDiff	.config/nvim/init.vim	/^	function! MyDiff()$/;"	f
+MyDiff	extra/.vimrc	/^	function! MyDiff()$/;"	f
+MyDiff	extra/_vimrc	/^	function! MyDiff()$/;"	f
+NERDTreeIgnore	plug.conf.vim	/^let NERDTreeIgnore=['node_modules$', '\\~$','^\\.','^dist$','tags']$/;"	v
+NERDTreeMinimalUI	plug.conf.vim	/^let NERDTreeMinimalUI=1$/;"	v
+NERDTreeShowHidden	plug.conf.vim	/^let NERDTreeShowHidden=1$/;"	v
+NERDTreeWinPos	plug.conf.vim	/^let NERDTreeWinPos="left"$/;"	v
+NERDTreeWinSize	plug.conf.vim	/^let NERDTreeWinSize=26$/;"	v
+RainboyVim	README_OLD.md	/^# RainboyVim$/;"	c
+RainboyVim	readme.md	/^# RainboyVim$/;"	c
+RemoveTabs	keymap.vim	/^func! RemoveTabs()$/;"	f
+Run	keymap.vim	/^func! Run()$/;"	f
+SOURCE_EXTENSIONS	extra/.ycm_extra_conf.py	/^SOURCE_EXTENSIONS = [ '.cpp', '.cxx', '.cc', '.c', '.m', '.mm' ] $/;"	v
+SetAlpha	.config/nvim/init.vim	/^    function! SetAlpha(alpha)$/;"	f
+SetAlpha	extra/.vimrc	/^    function! SetAlpha(alpha)$/;"	f
+SetAlpha	extra/_vimrc	/^    function! SetAlpha(alpha)$/;"	f
+SwitchVimTopMostMode	.config/nvim/init.vim	/^    function! SwitchVimTopMostMode()$/;"	f
+SwitchVimTopMostMode	extra/.vimrc	/^    function! SwitchVimTopMostMode()$/;"	f
+SwitchVimTopMostMode	extra/_vimrc	/^    function! SwitchVimTopMostMode()$/;"	f
+Tlist_Use_Right_Window	plug.conf.vim	/^let Tlist_Use_Right_Window = 1 " 在右侧使用taglist$/;"	v
+ToggleFullScreen	.config/nvim/init.vim	/^    function! ToggleFullScreen()$/;"	f
+ToggleFullScreen	extra/.vimrc	/^    function! ToggleFullScreen()$/;"	f
+ToggleFullScreen	extra/_vimrc	/^    function! ToggleFullScreen()$/;"	f
+ToggleFullscreen	plug.conf.vim	/^function! ToggleFullscreen()$/;"	f
+`	keymap.vim	/^inoremap ` ``<esc>i$/;"	m
+cache	.config/nvim/coc-settings.json	/^         "cache": {$/;"	o	object:languageserver.ccls.initializationOptions
+ccls	.config/nvim/coc-settings.json	/^    "ccls": {$/;"	o	object:languageserver
+coc-css	.config/coc/extensions/package.json	/^    "coc-css": ">=1.2.2",$/;"	s	object:dependencies
+coc-html	.config/coc/extensions/package.json	/^    "coc-html": ">=1.2.1",$/;"	s	object:dependencies
+coc-python	.config/coc/extensions/package.json	/^    "coc-python": ">=1.2.7",$/;"	s	object:dependencies
+coc-snippets	.config/coc/extensions/package.json	/^    "coc-snippets": ">=2.1.18",$/;"	s	object:dependencies
+coc-tsserver	.config/coc/extensions/package.json	/^    "coc-tsserver": ">=1.4.9",$/;"	s	object:dependencies
+coc-ultisnips	.config/coc/extensions/package.json	/^    "coc-ultisnips": ">=1.2.3",$/;"	s	object:dependencies
+coc-vetur	.config/coc/extensions/package.json	/^    "coc-vetur": ">=1.1.7"$/;"	s	object:dependencies
+command	.config/nvim/coc-settings.json	/^      "command": "ccls",$/;"	s	object:languageserver.ccls
+compilation_database_folder	extra/.ycm_extra_conf.py	/^compilation_database_folder = '' $/;"	v
+database	extra/.ycm_extra_conf.py	/^  database = ycm_core.CompilationDatabase( compilation_database_folder ) $/;"	v
+dependencies	.config/coc/extensions/package.json	/^  "dependencies": {$/;"	o
+directory	.config/nvim/coc-settings.json	/^           "directory": ".ccls-cache"$/;"	s	object:languageserver.ccls.initializationOptions.cache
+filetypes	.config/nvim/coc-settings.json	/^      "filetypes": ["c", "cpp", "cuda", "objc", "objcpp"],$/;"	a	object:languageserver.ccls
+flags	extra/.ycm_extra_conf.py	/^flags = [ $/;"	v
+g:CoolTotalMatches	plug.conf.vim	/^let g:CoolTotalMatches = 1$/;"	v
+g:EasyMotion_smartcase	plug.conf.vim	/^let g:EasyMotion_smartcase = 1$/;"	v
+g:EasyMotion_startofline	plug.conf.vim	/^let g:EasyMotion_startofline = 0 " keep cursor column when JK motion$/;"	v
+g:Lf_CacheDirectory	plug.conf.vim	/^let g:Lf_CacheDirectory = expand('~\/.vim\/cache')$/;"	v
+g:Lf_DefaultMode	plug.conf.vim	/^let g:Lf_DefaultMode = 'FullPath'$/;"	v
+g:Lf_HideHelp	plug.conf.vim	/^let g:Lf_HideHelp = 1$/;"	v
+g:Lf_MruWildIgnore	plug.conf.vim	/^let g:Lf_MruWildIgnore = {$/;"	v
+g:Lf_NormalMap	plug.conf.vim	/^let g:Lf_NormalMap = {$/;"	v
+g:Lf_PreviewResult	plug.conf.vim	/^let g:Lf_PreviewResult = {'Function':0}$/;"	v
+g:Lf_RootMarkers	plug.conf.vim	/^let g:Lf_RootMarkers = ['.project', '.root', '.svn', '.git']$/;"	v
+g:Lf_ShortcutB	plug.conf.vim	/^let g:Lf_ShortcutB = '<m-n>'$/;"	v
+g:Lf_ShortcutF	plug.conf.vim	/^let g:Lf_ShortcutF = '<c-p>'$/;"	v
+g:Lf_ShowRelativePath	plug.conf.vim	/^let g:Lf_ShowRelativePath = 0$/;"	v
+g:Lf_StlColorscheme	plug.conf.vim	/^let g:Lf_StlColorscheme = 'powerline'$/;"	v
+g:Lf_StlSeparator	plug.conf.vim	/^let g:Lf_StlSeparator = { 'left': '', 'right': '', 'font': '' }$/;"	v
+g:Lf_WildIgnore	plug.conf.vim	/^let g:Lf_WildIgnore = {$/;"	v
+g:Lf_WindowHeight	plug.conf.vim	/^let g:Lf_WindowHeight = 0.30$/;"	v
+g:Lf_WorkingDirectoryMode	plug.conf.vim	/^let g:Lf_WorkingDirectoryMode = 'Ac'$/;"	v
+g:MyVimLib	.config/nvim/init.vim	/^    let g:MyVimLib = 'gvimfullscreen.dll'$/;"	v
+g:MyVimLib	extra/.vimrc	/^    let g:MyVimLib = 'gvimfullscreen.dll'$/;"	v
+g:MyVimLib	extra/_vimrc	/^    let g:MyVimLib = 'gvimfullscreen.dll'$/;"	v
+g:OS#gui	.config/nvim/init.vim	/^    let g:OS#gui = 0$/;"	v
+g:OS#gui	.config/nvim/init.vim	/^    let g:OS#gui = 1$/;"	v
+g:OS#gui	extra/.vimrc	/^    let g:OS#gui = 0$/;"	v
+g:OS#gui	extra/.vimrc	/^    let g:OS#gui = 1$/;"	v
+g:OS#gui	extra/_vimrc	/^    let g:OS#gui = 0$/;"	v
+g:OS#gui	extra/_vimrc	/^    let g:OS#gui = 1$/;"	v
+g:OS#mac	.config/nvim/init.vim	/^    let g:OS#mac = 0$/;"	v
+g:OS#mac	.config/nvim/init.vim	/^    let g:OS#mac = 1$/;"	v
+g:OS#mac	extra/.vimrc	/^    let g:OS#mac = 0$/;"	v
+g:OS#mac	extra/.vimrc	/^    let g:OS#mac = 1$/;"	v
+g:OS#mac	extra/_vimrc	/^    let g:OS#mac = 0$/;"	v
+g:OS#mac	extra/_vimrc	/^    let g:OS#mac = 1$/;"	v
+g:OS#name	.config/nvim/init.vim	/^    let g:OS#name = "mac"$/;"	v
+g:OS#name	.config/nvim/init.vim	/^    let g:OS#name = "unix"$/;"	v
+g:OS#name	.config/nvim/init.vim	/^    let g:OS#name = "win"$/;"	v
+g:OS#name	extra/.vimrc	/^    let g:OS#name = "mac"$/;"	v
+g:OS#name	extra/.vimrc	/^    let g:OS#name = "unix"$/;"	v
+g:OS#name	extra/.vimrc	/^    let g:OS#name = "win"$/;"	v
+g:OS#name	extra/_vimrc	/^    let g:OS#name = "mac"$/;"	v
+g:OS#name	extra/_vimrc	/^    let g:OS#name = "unix"$/;"	v
+g:OS#name	extra/_vimrc	/^    let g:OS#name = "win"$/;"	v
+g:OS#unix	.config/nvim/init.vim	/^    let g:OS#unix = 0$/;"	v
+g:OS#unix	.config/nvim/init.vim	/^    let g:OS#unix = 1$/;"	v
+g:OS#unix	extra/.vimrc	/^    let g:OS#unix = 0$/;"	v
+g:OS#unix	extra/.vimrc	/^    let g:OS#unix = 1$/;"	v
+g:OS#unix	extra/_vimrc	/^    let g:OS#unix = 0$/;"	v
+g:OS#unix	extra/_vimrc	/^    let g:OS#unix = 1$/;"	v
+g:OS#win	.config/nvim/init.vim	/^    let g:OS#win = 0$/;"	v
+g:OS#win	.config/nvim/init.vim	/^    let g:OS#win = 1$/;"	v
+g:OS#win	extra/.vimrc	/^    let g:OS#win = 0$/;"	v
+g:OS#win	extra/.vimrc	/^    let g:OS#win = 1$/;"	v
+g:OS#win	extra/_vimrc	/^    let g:OS#win = 0$/;"	v
+g:OS#win	extra/_vimrc	/^    let g:OS#win = 1$/;"	v
+g:SignatureMap	plug.conf.vim	/^let g:SignatureMap = {$/;"	v
+g:UltiSnipsExpandTrigger	plug.conf.vim	/^let g:UltiSnipsExpandTrigger="<tab>"$/;"	v
+g:UltiSnipsSnippetDirectories	plug.conf.vim	/^let g:UltiSnipsSnippetDirectories=["UltiSnips",path.'\/mysnippets']$/;"	v
+g:VimAlpha	.config/nvim/init.vim	/^            let g:VimAlpha = 180$/;"	v
+g:VimAlpha	.config/nvim/init.vim	/^            let g:VimAlpha = 255$/;"	v
+g:VimAlpha	.config/nvim/init.vim	/^        let g:VimAlpha = g:VimAlpha + a:alpha$/;"	v
+g:VimAlpha	.config/nvim/init.vim	/^    let g:VimAlpha = 245$/;"	v
+g:VimAlpha	extra/.vimrc	/^            let g:VimAlpha = 180$/;"	v
+g:VimAlpha	extra/.vimrc	/^            let g:VimAlpha = 255$/;"	v
+g:VimAlpha	extra/.vimrc	/^        let g:VimAlpha = g:VimAlpha + a:alpha$/;"	v
+g:VimAlpha	extra/.vimrc	/^    let g:VimAlpha = 245$/;"	v
+g:VimAlpha	extra/_vimrc	/^            let g:VimAlpha = 180$/;"	v
+g:VimAlpha	extra/_vimrc	/^            let g:VimAlpha = 255$/;"	v
+g:VimAlpha	extra/_vimrc	/^        let g:VimAlpha = g:VimAlpha + a:alpha$/;"	v
+g:VimAlpha	extra/_vimrc	/^    let g:VimAlpha = 245$/;"	v
+g:VimTopMost	.config/nvim/init.vim	/^            let g:VimTopMost = 0$/;"	v
+g:VimTopMost	.config/nvim/init.vim	/^            let g:VimTopMost = 1$/;"	v
+g:VimTopMost	.config/nvim/init.vim	/^    let g:VimTopMost = 0$/;"	v
+g:VimTopMost	extra/.vimrc	/^            let g:VimTopMost = 0$/;"	v
+g:VimTopMost	extra/.vimrc	/^            let g:VimTopMost = 1$/;"	v
+g:VimTopMost	extra/.vimrc	/^    let g:VimTopMost = 0$/;"	v
+g:VimTopMost	extra/_vimrc	/^            let g:VimTopMost = 0$/;"	v
+g:VimTopMost	extra/_vimrc	/^            let g:VimTopMost = 1$/;"	v
+g:VimTopMost	extra/_vimrc	/^    let g:VimTopMost = 0$/;"	v
+g:WMGraphviz_outpt	plug.conf.vim	/^let g:WMGraphviz_outpt = 'png'$/;"	v
+g:airline#extensions#gutentags#enabled	plug.conf.vim	/^let g:airline#extensions#gutentags#enabled = 1$/;"	v
+g:airline#extensions#tabline#buffer_idx_mode	plug.conf.vim	/^let g:airline#extensions#tabline#buffer_idx_mode = 1$/;"	v
+g:airline#extensions#tabline#buffer_nr_format	plug.conf.vim	/^let g:airline#extensions#tabline#buffer_nr_format = '%s:'$/;"	v
+g:airline#extensions#tabline#buffer_nr_show	plug.conf.vim	/^let g:airline#extensions#tabline#buffer_nr_show = 1$/;"	v
+g:airline#extensions#tabline#buffers_label	plug.conf.vim	/^let g:airline#extensions#tabline#buffers_label = 'Buffer'$/;"	v
+g:airline#extensions#tabline#enabled	plug.conf.vim	/^let g:airline#extensions#tabline#enabled = 1$/;"	v
+g:airline#extensions#tabline#fnamemod	plug.conf.vim	/^let g:airline#extensions#tabline#fnamemod = ':t'$/;"	v
+g:airline#extensions#tabline#left_alt_sep	plug.conf.vim	/^    let g:airline#extensions#tabline#left_alt_sep = "\\u2b81"$/;"	v
+g:airline#extensions#tabline#left_alt_sep	plug.conf.vim	/^    let g:airline#extensions#tabline#left_alt_sep = ''$/;"	v
+g:airline#extensions#tabline#left_sep	plug.conf.vim	/^    let g:airline#extensions#tabline#left_sep = "\\u2b80"$/;"	v
+g:airline#extensions#tabline#left_sep	plug.conf.vim	/^    let g:airline#extensions#tabline#left_sep = ''$/;"	v
+g:airline#extensions#tabline#show_buffers	plug.conf.vim	/^let g:airline#extensions#tabline#show_buffers = 1$/;"	v
+g:airline#extensions#tabline#show_tabs	plug.conf.vim	/^let g:airline#extensions#tabline#show_tabs = 0$/;"	v
+g:airline#extensions#tabline#switch_buffers_and_tabs	plug.conf.vim	/^let g:airline#extensions#tabline#switch_buffers_and_tabs = 1$/;"	v
+g:airline_left_alt_sep	plug.conf.vim	/^    let g:airline_left_alt_sep = "\\u2b81"$/;"	v
+g:airline_left_alt_sep	plug.conf.vim	/^    let g:airline_left_alt_sep = ''$/;"	v
+g:airline_left_sep	plug.conf.vim	/^    let g:airline_left_sep = "\\u2b80"$/;"	v
+g:airline_left_sep	plug.conf.vim	/^    let g:airline_left_sep = ''$/;"	v
+g:airline_right_alt_sep	plug.conf.vim	/^    let g:airline_right_alt_sep = "\\u2b83"$/;"	v
+g:airline_right_alt_sep	plug.conf.vim	/^    let g:airline_right_alt_sep = ''$/;"	v
+g:airline_right_sep	plug.conf.vim	/^    let g:airline_right_sep = "\\u2b82"$/;"	v
+g:airline_right_sep	plug.conf.vim	/^    let g:airline_right_sep = ''$/;"	v
+g:airline_symbols	plug.conf.vim	/^    let g:airline_symbols = {}$/;"	v
+g:airline_symbols	plug.conf.vim	/^    let g:airline_symbols.branch = "\\u2b60"$/;"	v
+g:airline_symbols	plug.conf.vim	/^    let g:airline_symbols.branch = ''$/;"	v
+g:airline_symbols	plug.conf.vim	/^    let g:airline_symbols.linenr = "\\u2b61"$/;"	v
+g:airline_symbols	plug.conf.vim	/^    let g:airline_symbols.linenr = ''$/;"	v
+g:airline_symbols	plug.conf.vim	/^    let g:airline_symbols.readonly = "\\u2b64"$/;"	v
+g:airline_symbols	plug.conf.vim	/^    let g:airline_symbols.readonly = ''$/;"	v
+g:airline_theme	plug.conf.vim	/^let g:airline_theme="badwolf"$/;"	v
+g:cpp_class_scope_highlight	init.vim	/^let g:cpp_class_scope_highlight           = 1  " 高亮C++ class scope$/;"	v
+g:cpp_experimental_template_highlight	init.vim	/^let g:cpp_experimental_template_highlight = 1  " 高亮C++ template functions$/;"	v
+g:fullscreen	plug.conf.vim	/^        let g:fullscreen = 0$/;"	v
+g:fullscreen	plug.conf.vim	/^        let g:fullscreen = 1$/;"	v
+g:fullscreen	plug.conf.vim	/^let g:fullscreen = 0$/;"	v
+g:global_author	rb.vim	/^let g:global_author="Rainboy"$/;"	v
+g:go_auto_type_info	init.vim	/^let g:go_auto_type_info                   = 0  " 关闭Go语言自动显示类型信息 [默认就/;"	v
+g:go_def_mapping_enabled	init.vim	/^let g:go_def_mapping_enabled              = 0  " 关闭Go语言对gd的绑定$/;"	v
+g:go_highlight_functions	init.vim	/^let g:go_highlight_functions              = 1  " 开启Go语言函数名高亮$/;"	v
+g:go_highlight_methods	init.vim	/^let g:go_highlight_methods                = 1  " 开启Go语言方法名高亮$/;"	v
+g:go_highlight_operators	init.vim	/^let g:go_highlight_operators              = 1  " 开启Go语言操作符高亮$/;"	v
+g:go_highlight_structs	init.vim	/^let g:go_highlight_structs                = 1  " 开启Go语言结构体名高亮$/;"	v
+g:haskell_enable_arrowsyntax	init.vim	/^let g:haskell_enable_arrowsyntax          = 1  " 开启Haskell高亮 proc$/;"	v
+g:haskell_enable_pattern_synonyms	init.vim	/^let g:haskell_enable_pattern_synonyms     = 1  " 开启Haskell高亮 pattern$/;"	v
+g:haskell_enable_quantification	init.vim	/^let g:haskell_enable_quantification       = 1  " 开启Haskell高亮 forall$/;"	v
+g:haskell_enable_recursivedo	init.vim	/^let g:haskell_enable_recursivedo          = 1  " 开启Haskell高亮 mdo and rec$/;"	v
+g:haskell_enable_static_pointers	init.vim	/^let g:haskell_enable_static_pointers      = 1  " 开启Haskell高亮 static$/;"	v
+g:haskell_enable_typeroles	init.vim	/^let g:haskell_enable_typeroles            = 1  " 开启Haskell高亮 type roles$/;"	v
+g:indentLine_char_list	plug.conf.vim	/^let g:indentLine_char_list = ['|', '¦', '┆', '┊']$/;"	v
+g:indentLine_setColors	plug.conf.vim	/^let g:indentLine_setColors = 0$/;"	v
+g:indentLine_setConceal	plug.conf.vim	/^let g:indentLine_setConceal = 0$/;"	v
+g:isGUI	keymap.vim	/^    let g:isGUI = 0$/;"	v
+g:isGUI	keymap.vim	/^    let g:isGUI = 1$/;"	v
+g:iswindows	keymap.vim	/^    let g:iswindows = 0$/;"	v
+g:iswindows	keymap.vim	/^    let g:iswindows = 1$/;"	v
+g:lt_location_list_toggle_map	plug.conf.vim	/^let g:lt_location_list_toggle_map = '<leader>l'$/;"	v
+g:lt_quickfix_list_toggle_map	plug.conf.vim	/^let g:lt_quickfix_list_toggle_map = '<leader>q'$/;"	v
+g:pyclewn_terminal	plug.conf.vim	/^let g:pyclewn_terminal = "xterm, -e"$/;"	v
+g:python_highlight_all	init.vim	/^let g:python_highlight_all                = 1  " 开启Python的所有高亮$/;"	v
+g:rainbow_active	plug.conf.vim	/^let g:rainbow_active = 1$/;"	v
+g:rainbow_conf	plug.conf.vim	/^let g:rainbow_conf = {$/;"	v
+g:syntastic_always_populate_loc_list	plug.conf.vim	/^let g:syntastic_always_populate_loc_list = 1$/;"	v
+g:syntastic_auto_loc_list	plug.conf.vim	/^let g:syntastic_auto_loc_list = 0$/;"	v
+g:syntastic_check_on_open	plug.conf.vim	/^let g:syntastic_check_on_open = 1$/;"	v
+g:syntastic_check_on_wq	plug.conf.vim	/^let g:syntastic_check_on_wq = 0$/;"	v
+g:syntastic_cpp_compiler	plug.conf.vim	/^let g:syntastic_cpp_compiler = 'g++'$/;"	v
+g:syntastic_error_symbol	plug.conf.vim	/^let g:syntastic_error_symbol = 'E'$/;"	v
+g:syntastic_javascript_checkers	plug.conf.vim	/^let g:syntastic_javascript_checkers = ['jshint']$/;"	v
+g:syntastic_warning_symbol	plug.conf.vim	/^let g:syntastic_warning_symbol = 'W'$/;"	v
+g:table_mode_corner	plug.conf.vim	/^let g:table_mode_corner="|"     "兼容Markdown Table$/;"	v
+g:user_emmet_expandabbr_key	plug.conf.vim	/^let g:user_emmet_expandabbr_key='<C-y><C-y>'$/;"	v
+g:vim_markdown_conceal	plug.conf.vim	/^let g:vim_markdown_conceal = 0$/;"	v
+g:vim_markdown_frontmatter	plug.conf.vim	/^let g:vim_markdown_frontmatter=1$/;"	v
+g:vim_markdown_math	plug.conf.vim	/^let g:vim_markdown_math=0$/;"	v
+g:vim_markdown_new_list_item_indent	plug.conf.vim	/^let g:vim_markdown_new_list_item_indent = 2$/;"	v
+g:vim_markdown_toc_autofit	plug.conf.vim	/^let g:vim_markdown_toc_autofit = 1$/;"	v
+g:wildfire_objects	plug.conf.vim	/^let g:wildfire_objects = ["i'", 'i"', "i)", "i]", "i}", "i>", "ip"]$/;"	v
+g:ycm_always_populate_location_list	plug.conf.vim	/^let g:ycm_always_populate_location_list = 0$/;"	v
+g:ycm_autoclose_preview_window_after_completion	plug.conf.vim	/^let g:ycm_autoclose_preview_window_after_completion = 1$/;"	v
+g:ycm_autoclose_preview_window_after_completion	plug.conf.vim	/^let g:ycm_autoclose_preview_window_after_completion=1$/;"	v
+g:ycm_autoclose_preview_window_after_insertion	plug.conf.vim	/^let g:ycm_autoclose_preview_window_after_insertion=1$/;"	v
+g:ycm_collect_identifiers_from_tags_files	plug.conf.vim	/^let g:ycm_collect_identifiers_from_tags_files=1$/;"	v
+g:ycm_complete_in_comments	plug.conf.vim	/^let g:ycm_complete_in_comments=1$/;"	v
+g:ycm_confirm_extra_conf	plug.conf.vim	/^let g:ycm_confirm_extra_conf=0$/;"	v
+g:ycm_global_ycm_extra_conf	plug.conf.vim	/^let g:ycm_global_ycm_extra_conf="~\/RainboyVim\/extra\/.ycm_extra_conf.py"$/;"	v
+g:ycm_min_num_of_chars_for_completion	plug.conf.vim	/^let g:ycm_min_num_of_chars_for_completion=1$/;"	v
+g:ycm_seed_identifiers_with_syntax	plug.conf.vim	/^let g:ycm_seed_identifiers_with_syntax=1$/;"	v
+g:ycm_semantic_triggers	plug.conf.vim	/^    let g:ycm_semantic_triggers = {}$/;"	v
+initializationOptions	.config/nvim/coc-settings.json	/^      "initializationOptions": {$/;"	o	object:languageserver.ccls
+install youcompeleteme	readme.md	/^## install youcompeleteme$/;"	s
+languageserver	.config/nvim/coc-settings.json	/^  "languageserver": {$/;"	o
+mapleader	rb.vim	/^let mapleader="\\\\"$/;"	v
+path	plug.conf.vim	/^    let path=$HOME.'\/RainboyVim'$/;"	v
+path	plug.conf.vim	/^    let path=$VIM.'\/RainboyVim'$/;"	v
+rootPatterns	.config/nvim/coc-settings.json	/^      "rootPatterns": [".ccls", "compile_commands.json", ".vim\/", ".git\/", ".hg\/"],$/;"	a	object:languageserver.ccls
+s	plug.conf.vim	/^nmap s <Plug>(easymotion-s)$/;"	m
+s:LastShellReturn_C	keymap.vim	/^let s:LastShellReturn_C = 0$/;"	v
+s:ShowWarning	keymap.vim	/^let s:ShowWarning = 1$/;"	v
+suggest.noselect	.config/nvim/coc-settings.json	/^  "suggest.noselect": false,$/;"	b
+syntastic	README_OLD.md	/^### syntastic$/;"	S
+typescript.showUnused	.config/nvim/coc-settings.json	/^  "typescript.showUnused":false$/;"	b
+书签	README_OLD.md	/^## 书签$/;"	s
+使用 auto format	readme.md	/^## 使用 auto format$/;"	s
+安装 Vundle	README_OLD.md	/^## 安装 Vundle$/;"	s
+安装中文文档	readme.md	/^## 安装中文文档$/;"	s
+未来的	README_OLD.md	/^# 未来的$/;"	c
+解决fcitx.vim不能使用的的问题	README_OLD.md	/^## 解决fcitx.vim不能使用的的问题$/;"	s

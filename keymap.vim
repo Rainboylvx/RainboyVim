@@ -105,14 +105,24 @@ imap <m-l> <right>
 
 " \c                  复制至公共剪贴板
 vmap <leader>c "+y
+if exists("g:WSL")
+    vmap <leader>c : !/mnt/c/Windows/System32/clip.exe<cr>u
+endif
 
 " \a                  复制所有至公共剪贴板
 nmap <leader>a <esc>ggVG"+y<esc>
+if exists("g:WSL")
+    nmap <leader>a :w !/mnt/c/Windows/System32/clip.exe<cr><cr>
+endif
 
 " \v                  从公共剪贴板粘贴
 imap <leader>v <esc>"+p
 nmap <leader>v "+p
 vmap <leader>v "+p
+
+if exists("g:WSL")
+    nmap <leader>v :read !/mnt/c/Windows/System32/paste.exe <cr>i<bs><esc>l
+endif
 
 " \bb                 按=号对齐代码 [Tabular插件]
 nmap <leader>bb :Tab /=<cr>

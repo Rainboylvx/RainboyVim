@@ -116,16 +116,13 @@ let g:airline#extensions#gutentags#enabled = 1
 "let g:airline#extensions#disable_rtp_load = 1
 "let g:airline_extensions = ['branch', 'tabline']
 
-"静态查错
 
-let g:airline#extensions#tabline#switch_buffers_and_tabs = 1
-let g:airline#extensions#tabline#show_buffers = 1
-let g:airline#extensions#tabline#show_tabs = 0
-let g:airline#extensions#tabline#buffer_nr_show = 1
-let g:airline#extensions#tabline#buffer_nr_format = '%s:'
-let g:airline#extensions#tabline#fnamemod = ':t'
 
-"let g:airline#extensions#tabline#tab_min_count = 11
+let g:airline#extensions#coc#enabled = 1
+let airline#extensions#coc#error_symbol = 'COC-:'
+let airline#extensions#coc#warning_symbol = 'COC-:'
+let airline#extensions#coc#stl_format_err = '%E{[%e(#%fe)]}'
+let airline#extensions#coc#stl_format_warn = '%W{[%w(#%fw)]}'
 
 if !exists('g:airline_symbols')
     let g:airline_symbols = {}
@@ -466,4 +463,10 @@ autocmd FileType pug setlocal shiftwidth=2 softtabstop=2 expandtab
 autocmd FileType dot execute 'setlocal dict+='.path.'/dict/'.&filetype.'.dict'
 "可以使用<c-n> 从字典里补全
 set complete+=k
+
+
+
+"==================== autosave
+let g:auto_save = 1 " enable AutoSave on Vim startup
+let g:auto_save_events = ["InsertLeave", "TextChanged"]
 

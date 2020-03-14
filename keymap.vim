@@ -121,7 +121,7 @@ nmap <leader>v "+p
 vmap <leader>v "+p
 
 if exists("g:WSL")
-    nmap <leader>v :read !/mnt/c/Windows/System32/paste.exe <cr>i<bs><esc>l
+    nmap <leader>v :read !/mnt/c/Windows/System32/paste.exe <cr>
 endif
 
 " \bb                 按=号对齐代码 [Tabular插件]

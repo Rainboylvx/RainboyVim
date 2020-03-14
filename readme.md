@@ -54,3 +54,15 @@ pacman -S clang cmake
  - 安装 `node.js`
  - 安装 `yarn`
  - 安装 `yarn global add typescript typescript-formatter`
+
+## coc.nvim
+
+需要安装的插件
+
+```
+sudo pacman -S yarn node ctags
+yarn add tsserver ?
+
+## coc-python
+sudo pip install pylint jedi # 语法检查,补全server
+```

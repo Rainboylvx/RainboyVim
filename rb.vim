@@ -1,6 +1,6 @@
 "================== Rainboy Vim ==================
 
-let g:WSL=1
+"let g:WSL=1
 
 runtime! debian.vim
 

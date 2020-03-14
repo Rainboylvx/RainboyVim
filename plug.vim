@@ -19,6 +19,19 @@ endif
 source $PLUG_DIR/plug.vim
 
 
+
+"==================== coc.nvim
+
+let g:coc_global_extensions = [
+\ 'coc-ultisnips',
+\ 'coc-json',
+\ 'coc-python',
+\ 'coc-tsserver',
+\ 'coc-html',
+\ 'coc-css',
+\ 'coc-yaml']
+
+
 "set rtp+=$VIM/RainboyVim
 call plug#begin($PLUG_DIR) " plug 安装地址
 
@@ -78,6 +91,7 @@ Plug 'lilydjwg/fcitx.vim'
 "Plug 'luochen1990/rainbow'                "彩虹括号
 
 Plug 'vim-scripts/DrawIt'                 "Ascii 画图
+Plug '907th/vim-auto-save'                  " 自动保存
 
 Plug 'posva/vim-vue'                      "vue高亮
 ""Plugin 'Yggdroot/indentLine'              "对齐

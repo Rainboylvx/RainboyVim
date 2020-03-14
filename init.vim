@@ -148,9 +148,9 @@ set autoread                 " 自动重新加载外部修改内容
 "set showmatch                 " 在输入括号时光标会短暂地跳到与之相匹配的括号处，不影响输入
 set modelines=1                 " 当你想对某个文件进行特殊的设置而又不想影响其它文件，因此并不打算在
 set nowrapscan               " 搜索到文件两端时不重新搜索
-set nobackup                 " 不生成备份文件
-set nowritebackup             " ?
-set noswapfile                 " 不生成交换文件
+"set nobackup                 " 不生成备份文件
+"set nowritebackup             " ?
+"set noswapfile                 " 不生成交换文件
 
 
 " ---No surround sound
@@ -255,7 +255,7 @@ else
         set noimd
     set ttimeoutlen=0
     if len($TMUX) > 0
-        set term=screen-256color
+        "set term=screen-256color
         " set screen title to vim $PWD folder name - format 'v:folder'
         "set titlestring=v:%(%{fnamemodify(expand(\"$PWD\"),\":t\")}%)
         "set t_ts=k

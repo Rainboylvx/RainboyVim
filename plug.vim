@@ -23,7 +23,7 @@ source $PLUG_DIR/plug.vim
 "==================== coc.nvim
 
 let g:coc_global_extensions = [
-\ 'coc-ultisnips',
+"\ 'coc-ultisnips',
 \ 'coc-json',
 \ 'coc-python',
 \ 'coc-tsserver',
@@ -36,7 +36,7 @@ let g:coc_global_extensions = [
 call plug#begin($PLUG_DIR) " plug 安装地址
 
 "----------管理插件----------
-Plug 'Yggdroot/indentLine',{'for':['c','cpp']}                " 缩进参考线
+Plug 'Yggdroot/indentLine',{'for':['c','cpp']} " 缩进参考线
 Plug 'Rainboylvx/rSnip'                   " noi code snippets
 Plug 'yianwillis/vimcdoc'                 " 中文文档
 Plug 'romainl/vim-cool'                   " 搜索高亮
@@ -47,13 +47,14 @@ Plug 'morhetz/gruvbox'                    " gruvbox主题
 Plug 'digitaltoad/vim-pug'
 Plug 'bling/vim-airline'                  " airline
 Plug 'vim-airline/vim-airline-themes'     " airline themes
-Plug 'Linfee/ultisnips-zh-doc'
+Plug 'Linfee/ultisnips-zh-doc'            " ultisnips-zh-doc
 Plug 'SirVer/ultisnips'                   " ultisnips
 Plug 'iamcco/markdown-preview.vim'        " md preview
 "Plug 'scrooloose/syntastic'              "静态分析器 加载太慢了
 "Plug 'Valloric/YouCompleteMe',{'on':[]}             " YCM,延迟加载
 "Plug 'Valloric/YouCompleteMe'             " YCM
-Plug 'neoclide/coc.nvim', {'do': { -> coc#util#install()}}
+"Plug 'neoclide/coc.nvim', {'do': { -> coc#util#install()}}
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'mattn/emmet-vim'                    " html emmet
 Plug 'Valloric/MatchTagAlways'
 "Plug 'othree/html5.vim'
@@ -72,7 +73,7 @@ Plug 'scrooloose/nerdcommenter'           " 代码注释
 
 Plug 'scrooloose/nerdtree'                " 工程文件浏览
 "Plug 'Xuyuanp/nerdtree-git-plugin'        "
-"Plug 'vim-scripts/taglist.vim'            " taglist
+Plug 'vim-scripts/taglist.vim'            " taglist
 
 Plug 'dhruvasagar/vim-table-mode',{'for':['markdown']}         "table 生成
 Plug 'plasticboy/vim-markdown'            "markdown 语法高亮
@@ -93,7 +94,7 @@ Plug 'lilydjwg/fcitx.vim'
 Plug 'vim-scripts/DrawIt'                 "Ascii 画图
 Plug '907th/vim-auto-save'                  " 自动保存
 
-Plug 'posva/vim-vue'                      "vue高亮
+"Plug 'posva/vim-vue'                      "vue高亮
 ""Plugin 'Yggdroot/indentLine'              "对齐
 
 if(!has("win32"))

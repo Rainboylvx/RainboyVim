@@ -39,3 +39,24 @@ snippet duipai "对拍程序,下载" b
 - 对拍程序:[下载](./2.cpp)
 $0
 endsnippet
+
+snippet test "测试数据生成程序下载,下载" b
+测试数据生成程序下载:[点击下载](./data_generator.py)
+$0
+endsnippet
+
+#blog 文章信息
+snippet blog "文章信息" b
+---
+_id: "`date +%s%N | md5sum | head -c 10`"
+title: ${1:`!v expand("%:t:r")`}
+date: ${2:`!v strftime("%Y-%m-%d %H:%M")`}
+update: ${3:`!v strftime("%Y-%m-%d %H:%M")`}
+author: ${4:Rainboy}
+${5:cover: }
+tags:
+	- ${6:tag1}
+catalog: ${7:catalog1}
+---
+${0}
+endsnippet

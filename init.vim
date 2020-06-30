@@ -86,7 +86,7 @@ set fileencodings=cs-bom,utf-8,gbk,cp936,latin-1
 set fileformat=unix
 set fileformats=unix,mac
 "language messages zh_CN.utf-8
-language messages en_US.utf-8
+"language messages en_US.utf-8
 if has('win32')
     source $VIMRUNTIME/delmenu.vim
     source $VIMRUNTIME/menu.vim
@@ -125,14 +125,14 @@ set whichwrap+=<,>,h,l        "h和l命令可以移出当前行
 
 
 " ---Omni Complete Setting
-set wildmenu                "vim 自身命令行 智能补全
-set wildmode=longest,full
-set completeopt=menu,menuone,longest
-set completeopt+=preview
-set switchbuf=useopen,usetab
-set shortmess=a
+"set wildmenu                "vim 自身命令行 智能补全
+"set wildmode=longest,full
+"set completeopt=menu,menuone,longest
+"set completeopt+=preview
+"set switchbuf=useopen,usetab
+"set shortmess=a
 
-set winaltkeys=no            "不阻止了所有与Alt 键有关的映射
+"set winaltkeys=no            "不阻止了所有与Alt 键有关的映射
 set backspace=indent,eol,start     "设置backspace 的使用方式
 
 
@@ -233,9 +233,9 @@ if has("gui_running")
 
     " 字体设定
     if(has('win32'))                         "字体设定 win  and ubuntu
-		"set guifont =Monaco:h14
-		"set guifont=Consolas_for_Powerline_FixedD:h14
-		"set guifont=Anonymice\ Powerline:h14
+        "set guifont =Monaco:h14
+        "set guifont=Consolas_for_Powerline_FixedD:h14
+        "set guifont=Anonymice\ Powerline:h14
     else
         set guifont=DejaVu\ Sans\ Mono\ for\ Powerline\ 20
         " set guifont=DejaVu\ Sans\ Mono\ for\ Powerline\ Nerd\ Font\ Complete\ 13

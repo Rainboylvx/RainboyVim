@@ -1,5 +1,6 @@
 " ctrl +s 保存
-imap <F2> <esc>:w<enter>a
+""imap <F2> <esc>:w<enter>a
+imap <F1> <esc>
 "imap <F3> <esc>:w<enter><esc>:shell<enter>
 "nmap <F3> :w<enter>:shell<enter>
 
@@ -132,6 +133,8 @@ nmap <leader>bn :Tab /
 
 " \fl                显示函数列表
 nmap <leader>fl :NERDTreeToggle<cr>
+map <F3> :NERDTreeToggle<CR>
+
 
 
 

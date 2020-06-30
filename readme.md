@@ -61,7 +61,7 @@ pacman -S clang cmake
 
 ```
 sudo pacman -S yarn node ctags
-yarn add tsserver ?
+yarn global add typescript 
 
 ## coc-python
 sudo pip install pylint jedi # 语法检查,补全server

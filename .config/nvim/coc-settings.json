@@ -10,7 +10,14 @@
            "directory": ".ccls-cache"
          }
        }
-    },
+    }
   },
-  "typescript.showUnused":false
+  "python.linting.pylintArgs": ["--rcfile","/home/rainboy/RainboyVim/extra/pylint.conf"],
+  "typescript.showUnused":false,
+  "tsserver.typingsCacheLocation": "/home/rainboy/.config/types/",
+  //"tsserver.disableAutomaticTypeAcquisition":true,
+  "tsserver.npm": "/usr/bin/npm",
+  //"tsserver.log": "verbose"
+  "suggest.floatEnable": false
+
 }

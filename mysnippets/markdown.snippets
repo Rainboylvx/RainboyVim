@@ -27,21 +27,6 @@ ${0}
 ## [输出样例]
 endsnippet
 
-#blog 文章信息
-snippet blog "文章信息" b
----
-_id: `uuid.js`
-title: ${1:`!v expand("%:t:r")`}
-date: ${2:`!v strftime("%Y-%m-%d %H:%M")`}
-update: ${3:`!v strftime("%Y-%m-%d %H:%M")`}
-series: ${4:系列}
-categories:
-	- ${5:分类 }
-tags:
-	- ${6:tag }
----
-${0}
-endsnippet
 
 #  more => <!--more-->
 snippet more "summary" b

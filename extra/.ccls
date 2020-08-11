@@ -1,0 +1,4 @@
+g++
+-DLOCAL
+-include
+/home/rainboy/mycode/noi_cpp_tools/cpp_tools.h

@@ -1,0 +1,23 @@
+{
+  "suggest.noselect": false,
+  "languageserver": {
+    "ccls": {
+      "command": "ccls",
+      "filetypes": ["c", "cpp", "cuda", "objc", "objcpp"],
+      "rootPatterns": [".ccls", "compile_commands.json", ".vim/", ".git/", ".hg/"],
+      "initializationOptions": {
+         "cache": { "directory": "/tmp/ccls/cache" },
+         "compilationDatabaseDirectory":"/home/rainboy/RainboyVim/extra",
+         "clang": { "extraArgs": ["-DLOCAL","-DDEBUG","-include","/home/rainboy/mycode/noi_cpp_tools/cpp_tools.h"]}
+       }
+    }
+  },
+  "python.linting.pylintArgs": ["--rcfile","/home/rainboy/RainboyVim/extra/pylint.conf"],
+  "typescript.showUnused":false,
+  "tsserver.typingsCacheLocation": "/home/rainboy/.config/types/",
+  //"tsserver.disableAutomaticTypeAcquisition":true,
+  "tsserver.npm": "/usr/bin/npm",
+  //"tsserver.log": "verbose"
+  "suggest.floatEnable": false
+
+}

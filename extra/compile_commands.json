@@ -1,0 +1,5 @@
+{
+    "arguments":["g++","-include","/home/rainboy/mycode/noi_cpp_tools/cpp_tools.h","-c","1.cpp"],
+    "directory":"/home/tmp",
+    "file":"1.cpp"
+}

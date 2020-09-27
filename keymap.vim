@@ -52,7 +52,7 @@ imap <c-h> <esc>I
 map <c-h> <c-w><c-h>
 
 " Ctrl + J            光标移下一行行首[插入模式]、切换下窗口[Normal模式]
-imap <c-j> <esc><down>I
+"imap <c-j> <esc><down>I
 map <c-j> <c-w><c-j>
 
 " Ctrl + K            光标移上一行行尾[插入模式]、切换上窗口[Normal模式]

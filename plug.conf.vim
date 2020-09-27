@@ -218,7 +218,7 @@ let NERDTreeMinimalUI=1
 " 删除文件时自动删除文件对应 buffer
 "
 
-let NERDTreeIgnore=['node_modules$', '\~$','^\.','^dist$','tags']
+let NERDTreeIgnore=['node_modules$', '\~$','^\.','^dist$']
 "============= ListToggle ============
 let Tlist_Use_Right_Window = 1  " 在右侧使用taglist
 let Tlist_WinWidth=50           " 宽度
@@ -250,20 +250,6 @@ let g:syntastic_cpp_compiler = 'g++'
 
 let g:syntastic_javascript_checkers = ['jshint']
 
-"============= coc.nvim ============
-inoremap <silent><expr> <TAB>
-      \ pumvisible() ? coc#_select_confirm() :
-      \ coc#expandableOrJumpable() ? "\<C-r>=coc#rpc#request('doKeymap', ['snippets-expand-jump',''])\<CR>" :
-      \ <SID>check_back_space() ? "\<TAB>" :
-      \ coc#refresh()
-
-function! s:check_back_space() abort
-  let col = col('.') - 1
-  return !col || getline('.')[col - 1]  =~# '\s'
-endfunction
-
-let g:coc_snippet_next = '<tab>'
-"============= coc.nvim end  ============
 
 
 "============= YouCompleteMe ============
@@ -346,20 +332,20 @@ let g:SignatureMap = {
 
 "============= ultisnipptes ==========
 let g:UltiSnipsSnippetDirectories=["UltiSnips",path.'/mysnippets']
-" UltiSnips 的 tab 键与 YCM 冲突，重新设定
-let g:UltiSnipsExpandTrigger="<tab>"
-"let g:UltiSnipsExpandTrigger="<leader><tab>"
-"let g:UltiSnipsJumpForwardTrigger="<leader><tab>"
-"let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
+"" UltiSnips 的 tab 键与 YCM 冲突，重新设定
+"let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsExpandTrigger="<leader><tab>"
+""let g:UltiSnipsJumpForwardTrigger="<leader><tab>"
+""let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
 
-"   let g:ulti_expand_or_jump_res = 0 "default value, just set once
-"function! Ulti_ExpandOrJump_and_getRes()
-"call UltiSnips#ExpandSnippetOrJump()
-"return g:ulti_expand_or_jump_res
-"endfunction
+""   let g:ulti_expand_or_jump_res = 0 "default value, just set once
+""function! Ulti_ExpandOrJump_and_getRes()
+""call UltiSnips#ExpandSnippetOrJump()
+""return g:ulti_expand_or_jump_res
+""endfunction
 
 
-"inoremap <leader><tab> <C-R>=(Ulti_ExpandOrJump_and_getRes() > 0)?"":IMAP_Jumpfunc('', 0)<CR>
+""inoremap <leader><tab> <C-R>=(Ulti_ExpandOrJump_and_getRes() > 0)?"":IMAP_Jumpfunc('', 0)<CR>
 
 
 
@@ -477,3 +463,36 @@ let g:auto_save = 1 " enable AutoSave on Vim startup
 let g:auto_save_events = ["InsertLeave", "TextChanged"]
 
 
+
+"============= coc.nvim ============
+" use <tab> for trigger completion and navigate to the next complete item
+function! s:check_back_space() abort
+  let col = col('.') - 1
+  return !col || getline('.')[col - 1]  =~ '\s'
+endfunction
+
+inoremap <silent><expr> <Tab>
+      \ pumvisible() ? "\<C-n>" :
+      \ <SID>check_back_space() ? "\<Tab>" :
+      \ coc#refresh()
+
+"inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
+"inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
+""Use <cr> to confirm completion
+"inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
+
+
+"inoremap <expr> <TAB> pumvisible() ? "\<C-y>" : "\<TAB>"
+let g:coc_snippet_next = '<c-j>'
+let g:coc_snippet_prev = '<c-k>'
+
+
+" Use <cr> to confirm completion, `<C-g>u` means break undo chain at current
+" position. Coc only does snippet and additional edit on confirm.
+" <cr> could be remapped by other vim plugin, try `:verbose imap <CR>`.
+if exists('*complete_info')
+  inoremap <expr> <cr> complete_info()["selected"] != "-1" ? "\<C-y>" : "\<C-g>u\<CR>"
+else
+  inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
+endif
+"============= coc.nvim end  ============

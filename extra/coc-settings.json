@@ -18,6 +18,7 @@
   //"tsserver.disableAutomaticTypeAcquisition":true,
   "tsserver.npm": "/usr/bin/npm",
   //"tsserver.log": "verbose"
-  "suggest.floatEnable": false
+  "suggest.floatEnable": false,
+  "suggest.snippetIndicator":"  \uf942"
 
 }

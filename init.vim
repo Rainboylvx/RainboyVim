@@ -150,7 +150,7 @@ set modelines=1                 " 当你想对某个文件进行特殊的设置�
 set nowrapscan               " 搜索到文件两端时不重新搜索
 "set nobackup                 " 不生成备份文件
 "set nowritebackup             " ?
-"set noswapfile                 " 不生成交换文件
+set noswapfile                 " 不生成交换文件
 
 
 " ---No surround sound

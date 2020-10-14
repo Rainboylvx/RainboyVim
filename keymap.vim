@@ -73,10 +73,10 @@ map <s-k> <c-w>+
 "map <s-n> <c-w>-
 
 " shift + h              窗口向左增加一行
-map <s-h> <c-w><
+"map <s-h> <c-w><
 
 " shift + l              窗口向右增加一行
-map <s-l> <c-w>>
+"map <s-l> <c-w>>
 
 
 " ctrl + right        向右或向下方交换窗口

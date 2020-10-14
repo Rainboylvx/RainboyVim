@@ -333,8 +333,8 @@ let g:SignatureMap = {
 "============= ultisnipptes ==========
 let g:UltiSnipsSnippetDirectories=["UltiSnips",path.'/mysnippets']
 "" UltiSnips 的 tab 键与 YCM 冲突，重新设定
-"let g:UltiSnipsExpandTrigger="<tab>"
-let g:UltiSnipsExpandTrigger="<leader><tab>"
+let g:UltiSnipsExpandTrigger="<tab>"
+"let g:UltiSnipsExpandTrigger="<leader><tab>"
 ""let g:UltiSnipsJumpForwardTrigger="<leader><tab>"
 ""let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
 
@@ -471,10 +471,11 @@ function! s:check_back_space() abort
   return !col || getline('.')[col - 1]  =~ '\s'
 endfunction
 
-inoremap <silent><expr> <Tab>
-      \ pumvisible() ? "\<C-n>" :
-      \ <SID>check_back_space() ? "\<Tab>" :
-      \ coc#refresh()
+"inoremap <silent><expr> <Tab>
+      "\ pumvisible() ? "\<C-n>" :
+      "\ <SID>check_back_space() ? "<leader><tab>" :
+      "\ coc#refresh()
+      ""\ "<leader><tab>"
 
 "inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
 "inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"

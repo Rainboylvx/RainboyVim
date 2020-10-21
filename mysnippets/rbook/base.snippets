@@ -1,15 +1,19 @@
-snippet pcs "pcs_site变量" i
+snippet pcs_site "pcs_site变量" i
 <%- USER.pcs_site %>$0
 endsnippet
 
 #exbook
-snippet exbook "extend book info" b
+snippet pcs "pcs info" b
 ---
 _id: "`date +%s%N | md5sum | head -c 10`"
+extra_id: 
+ - id1
+ - id2
 title: ${1:`!v expand("%:t:r")`}
 date: ${2:`!v strftime("%Y-%m-%d %H:%M")`}
 update: ${3:`!v strftime("%Y-%m-%d %H:%M")`}
 author: ${4:Rainboy}
+comment: "${5:额外的说明}"
 ${5:cover: }
 tags:
 	- ${6:tag1}
@@ -59,4 +63,128 @@ tags:
 catalog: ${7:catalog1}
 ---
 ${0}
+endsnippet
+
+
+#book 文章信息
+snippet book "文章信息" b
+---
+_id: "`date +%s%N | md5sum | head -c 10`"
+title: ${1:`!v expand("%:t:r")`}
+date: ${2:`!v strftime("%Y-%m-%d %H:%M")`}
+update: ${3:`!v strftime("%Y-%m-%d %H:%M")`}
+author: ${4:Rainboy}
+${5:cover: }
+---
+
+## 问题的引用
+
+## ${1: xxx算法}
+
+## 代码模板
+
+## 练习题目
+
+endsnippet
+
+
+# 记忆
+snippet easy "记忆" b
+<easy-memory-board size="${1:4}">
+    <p slot="title">${2:记忆要点}</p>
+    <li>${3:写出来}</li>
+</easy-memory-board>
+endsnippet
+
+
+# 记忆
+snippet jx "解析" b
+## 解析
+
+${0}
+
+## 代码
+
+\`\`\`c
+<%-include("1.cpp")%>
+\`\`\`
+
+endsnippet
+
+snippet code "" b 
+\`\`\`${1:plaintext}
+$0
+\`\`\`
+endsnippet
+
+snippet ts "template start" b
+<!-- template start -->
+endsnippet
+
+snippet tt "template start" b
+<!-- template end -->
+endsnippet
+
+
+# include
+snippet include "include" b
+<%- include("${1:1}.cpp") %>
+endsnippet
+
+# blackboard line center warning info
+snippet blackboard "blackboard" b
+::: blackboard
+$0
+:::
+endsnippet
+
+snippet line "line" b
+::: line
+$0
+:::
+endsnippet
+
+
+snippet center "center" b
+::: center
+$0
+:::
+endsnippet
+
+snippet info "info" b
+::: info
+$0
+:::
+endsnippet
+
+snippet warning "warning" b
+::: warning
+$0
+:::
+endsnippet
+
+snippet error "error" b
+::: error
+$0
+:::
+endsnippet
+
+snippet viz-gallery "viz grahviz gallery" b
+
+<<<< viz-gallery(title="${1:title}",engine="${2:dot}",height="${3:400}")
+
+<% 
+var log =["log1","log2","log3"]
+var engine = "dot"
+for(let i=1;i<=${1:n};i++){
+	var page = \`dot/_${i}.dot\`
+%>
+
+\`\`\` <%= engine || ""%> <%= log[i-1] || "" %>
+<%- include(page) %>
+\`\`\`
+<%}%>
+
+<<<<
+
 endsnippet

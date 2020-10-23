@@ -69,6 +69,7 @@ Plug 'Yggdroot/LeaderF',{ 'do': './install.sh' }                  "tagbar
 Plug 'mattn/emmet-vim'                    "expanding html abbreivtion
 Plug 'danro/rename.vim'                   "重命名 很好用
 Plug 'Lokaltog/vim-easymotion'            "快速移动
+Plug 'junegunn/vim-easy-align'            " 文本对齐
 Plug 'scrooloose/nerdcommenter'           " 代码注释
 
 Plug 'scrooloose/nerdtree'                " 工程文件浏览

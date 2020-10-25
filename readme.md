@@ -2,16 +2,36 @@
 
 以下的安装针对的是`ubuntu 20.04`的环境,
 
-## 
+## 1. 安装对应的软件
 
-
-## 2. clone 本配置
+最新的vim
 
 ```bash
-./install.sh
+sudo add-apt-repository ppa:jonathonf/vim
+sudo apt-get update
+sudo apt-get install vim
 ```
 
-**安装字体**
+```bash
+sudo apt install -y git gcc g++ curl wget xsel ctags
+ccls ?
+```
+
+`node yarn`
+
+```bash
+# 安装nodejs
+wget https://npm.taobao.org/mirrors/node/v14.14.0/node-v14.14.0-linux-x64.tar.xz
+tar -xvf node-v14.14.0-linux-x64.tar.xz
+sudo cp -r ./node-v14.14.0-linux-x64/* /usr
+rm -r  node-v14.14.0-linux-x64*
+# 全局安装 yarn
+sudo npm install yarn -g --registry=https://registry.npm.taobao.org
+# 设置为淘宝镜像
+yarn config set registry https://registry.npm.taobao.org/
+```
+
+## 2. 安装字体
 
 ```
 wget -P ~/.local/share/fonts/FiraCode \
@@ -21,42 +41,22 @@ fc-cache -f -v
 # fc-list |grep FiraCode
 ```
 
-## 3. 安装Plugin
+手动设置终端的字体为`FiraCode`
+
+
+## 3. 安装本vim的配置
 
 ```bash
-# 进入vim
-vim
-
-# 安装Plugin
-:PluginInstall
+sh -c "$(curl -fsSL https://g.ioiox.com/https://raw.githubusercontent.com/Rainboylvx/RainboyVim/master/install.sh)"
 ```
 
-## install youcompeleteme
+会自动启动vim并安装插件
 
-```sh
-pacman -S clang cmake
-./install.py --clang-completer --system-libclang
-
-```
-
-## 安装中文文档
-
-中文文档的git地址: https://github.com/yianwillis/vimcdoc
-
-## 使用 auto format
-
- - 安装 `node.js`
- - 安装 `yarn`
- - 安装 `yarn global add typescript typescript-formatter`
-
-## coc.nvim
+## 其它
 
 需要安装的插件
 
 ```
-sudo pacman -S yarn node ctags
-yarn global add typescript 
-
 ## coc-python
 sudo pip install pylint jedi # 语法检查,补全server
 ```

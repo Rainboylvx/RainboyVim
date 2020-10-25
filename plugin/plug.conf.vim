@@ -363,6 +363,11 @@ map <C-S-Tab> :MBEbp<cr>
 "============ vim - table
 let g:table_mode_corner="|"     "兼容Markdown Table
 
+"============ vim-markdown
+"diable ge map
+map <Plug> <Plug>Markdown_OpenUrlUnderCursor
+
+
 "============ easymotion
 nmap s <Plug>(easymotion-s)
 map  / <Plug>(easymotion-sn)
@@ -434,7 +439,7 @@ let g:pyclewn_terminal = "xterm, -e"
 
 "================== auto format
 "au BufWrite *.ts :Autoformat
-noremap <F3> :Autoformat<CR>
+"noremap <F3> :Autoformat<CR>
 
 
 "======== indentLine

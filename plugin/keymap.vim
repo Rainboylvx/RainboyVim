@@ -12,14 +12,21 @@ inoremap ` ``<esc>i
 :inoremap ) <c-r>=ClosePair(')')<cr>
 :inoremap 「 「」<esc>i
 :inoremap 」 <c-r>=ClosePair(')')<cr>
-:inoremap { {}<esc>i
 :inoremap } <c-r>=ClosePair('}')<cr>
 :inoremap [ []<esc>i
 :inoremap ] <c-r>=ClosePair(']')<cr>
 :inoremap " ""<esc>i
 :inoremap ' ''<esc>i
 :inoremap ` ``<esc>i
-:inoremap <c-]> {}<esc>i<cr><esc>O
+function! s:check_is_last() abort
+    let col = col('$') - 1
+    return !col || col == col('.')-1
+endfunction
+:inoremap { {}<esc>i
+au FileType c,cpp,javascript :inoremap <silent><expr> { 
+            \ <SID>check_is_last() ? "{\n}<esc>O" :
+            \ "{}<esc>i"
+
 au FileType scheme,racket,lisp,clojure :inoremap ' '
 au FileType scheme,racket,lisp,clojure :inoremap ` `
 au FileType scheme,racket,lisp,clojure :inoremap * **<esc>i

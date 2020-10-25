@@ -1,30 +1,24 @@
 # RainboyVim
 
-## 1.下载 或 手动安装 `vim 8.0
+以下的安装针对的是`ubuntu 20.04`的环境,
+
+## 
 
 
 ## 2. clone 本配置
 
-
 ```bash
-# clone 到~
-git clone https://github.com/Rainboylvx/RainboyVim.git ~
-cd ~/RainboyVim
-# install font: DejaVu Sans Mono for Powerline Nerd Font Plus Font Awesome Plus Octicons Plus Pomicons Windows Compatible.ttf
-cp ./extra/.vimrc ~
+./install.sh
 ```
 
 **安装字体**
 
 ```
-sudo mkdir /user/share/fonts/truetype/powerline
-sudo cp DejaVu Sans Mono for Powerline Nerd Font Plus Font Awesome Plus Octicons Plus Pomicons Windows Compatible.ttf /user/share/fonts/truetype/powerline
-cd /user/share/fonts/truetype/powerline
-sudo mkfontdir
-sudo mkfontscale
-sudo fc-cache
+wget -P ~/.local/share/fonts/FiraCode \
+https://g.ioiox.com/https://github.com/ryanoasis/nerd-fonts/raw/master/patched-fonts/FiraCode/Regular/complete/Fira%20Code%20Regular%20Nerd%20Font%20Complete%20Mono%20Windows%20Compatible.ttf
+fc-cache -f -v
 # 查看是否已经安装
-fc-list |grep DejaVu
+# fc-list |grep FiraCode
 ```
 
 ## 3. 安装Plugin

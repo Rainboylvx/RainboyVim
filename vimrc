@@ -3,6 +3,17 @@ set regexpengine=1
 set history=100
 let mapleader="\\"
 let g:global_author=system('whoami')
+
+let g:coc_global_extensions = [
+\ 'coc-ultisnips',
+\ 'coc-json',
+\ 'coc-python',
+\ 'coc-tsserver',
+\ 'coc-html',
+\ 'coc-css',
+\ 'coc-yaml']
+
+
 " ============ Plugin Manager ============
 filetype off
 let $PLUG_DIR = expand("$HOME/.vim/plugged")

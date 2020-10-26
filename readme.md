@@ -2,9 +2,9 @@
 
 以下的安装针对的是`ubuntu 20.04`的环境,
 
-## 1. 安装对应的软件
+## 1. 安装软件
 
-最新的vim
+### 1.1 最新的vim
 
 ```bash
 sudo add-apt-repository -y ppa:jonathonf/vim
@@ -12,11 +12,13 @@ sudo apt update
 sudo apt install -y vim-gtk
 ```
 
+### 1.2 vim要用到的软件
+
 ```bash
-sudo apt install -y git gcc g++ curl wget xsel ctags ccls
+sudo apt install -y git curl wget ctags ccls
 ```
 
-`node yarn`
+### 1.3 node yarn
 
 ```bash
 # 安装nodejs

@@ -15,7 +15,7 @@ sudo apt install -y vim-gtk
 ### 1.2 vim要用到的软件
 
 ```bash
-sudo apt install -y git curl wget ctags ccls python3-dev
+sudo apt install -y git curl wget ctags ccls python3-dev python-dev
 ```
 
 ### 1.3 node yarn

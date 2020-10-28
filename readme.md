@@ -15,7 +15,7 @@ sudo apt install -y vim-gtk
 ### 1.2 vim要用到的软件
 
 ```bash
-sudo apt install -y git curl wget ctags ccls
+sudo apt install -y git curl wget ctags ccls python3-dev
 ```
 
 ### 1.3 node yarn
@@ -81,7 +81,7 @@ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
 # 安装.vimrc
 curl -fLo ~/.vimrc \
-https://raw.githubusercontent.com/Rainboylvx/RainboyVim/master/vimrc
+https://raw.githubusercontent.com/Rainboylvx/RainboyVim/master/minVimrc
 
 # 安装 coc-settings.json
 curl -fLo ~/.vim/coc-settings.json \
@@ -97,11 +97,19 @@ https://cdn.jsdelivr.net/gh/junegunn/vim-plug@master/plug.vim
 
 # 安装.vimrc
 curl -fLo ~/.vimrc \
-https://cdn.jsdelivr.net/gh/Rainboylvx/RainboyVim@master/vimrc
+https://cdn.jsdelivr.net/gh/Rainboylvx/RainboyVim@master/minVimrc
 
 # 安装 coc-settings.json
 curl -fLo ~/.vim/coc-settings.json \
 https://cdn.jsdelivr.net/gh/Rainboylvx/RainboyVim@master/coc-settings.json
+```
+
+补充: 上面的安装`vimrc`是精简了几个打代码用不到配置，完整的配置运行下面的命令，如果你不懂vim如何配置，就不要执行，使用精简的就可以。
+
+```
+# 安装.vimrc
+curl -fLo ~/.vimrc \
+https://cdn.jsdelivr.net/gh/Rainboylvx/RainboyVim@master/vimrc
 ```
 
 ### 3.2 启动vim并安装对应的
@@ -127,3 +135,5 @@ vim
 ## coc-python
 sudo pip install pylint jedi # 语法检查,补全server
 ```
+
+

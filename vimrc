@@ -33,9 +33,7 @@ Plug 'bling/vim-airline'                                          " airline
 Plug 'vim-airline/vim-airline-themes'                             " airline themes
 Plug 'Linfee/ultisnips-zh-doc'                                    " ultisnips-zh-doc
 Plug 'SirVer/ultisnips'                                           " ultisnips
-Plug 'iamcco/markdown-preview.vim'                                " md preview
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
-Plug 'mattn/emmet-vim'                                            " html emmet
 Plug 'Valloric/MatchTagAlways'
 Plug 'octol/vim-cpp-enhanced-highlight'                           " cpp 代码高亮
 Plug 'wannesm/wmgraphviz.vim'                                     " graphviz :GraphvizShow

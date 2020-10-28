@@ -93,7 +93,7 @@ https://raw.githubusercontent.com/Rainboylvx/RainboyVim/master/coc-settings.json
 ```bash
 # 安装vim-plug 插件
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
-https://cdn.jsdelivr.net/gh/junegunn/vim-plugr@master/plug.vim
+https://cdn.jsdelivr.net/gh/junegunn/vim-plug@master/plug.vim
 
 # 安装.vimrc
 curl -fLo ~/.vimrc \

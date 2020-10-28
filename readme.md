@@ -86,6 +86,10 @@ https://raw.githubusercontent.com/Rainboylvx/RainboyVim/master/minVimrc
 # 安装 coc-settings.json
 curl -fLo ~/.vim/coc-settings.json \
 https://raw.githubusercontent.com/Rainboylvx/RainboyVim/master/coc-settings.json
+
+# 安装 coc.nvim的插件
+curl -fLo ~/.config/coc/extensions/package.json \
+https://raw.githubusercontent.com/Rainboylvx/RainboyVim/master/coc-package.json
 ```
 
 注意：如果下载过慢或不能下载，使用下面命令安装
@@ -102,6 +106,10 @@ https://cdn.jsdelivr.net/gh/Rainboylvx/RainboyVim/minVimrc
 # 安装 coc-settings.json
 curl -fLo ~/.vim/coc-settings.json \
 https://cdn.jsdelivr.net/gh/Rainboylvx/RainboyVim/coc-settings.json
+
+# 安装 coc.nvim的插件
+curl -fLo ~/.config/coc/extensions/package.json \
+https://cdn.jsdelivr.net/gh/Rainboylvx/RainboyVim/coc-package.json
 ```
 
 补充: 上面的安装`vimrc`是精简了几个打代码用不到配置，完整的配置运行下面的命令，如果你不懂vim如何配置，就不要执行，使用精简的就可以。
@@ -112,12 +120,19 @@ curl -fLo ~/.vimrc \
 https://cdn.jsdelivr.net/gh/Rainboylvx/RainboyVim/vimrc
 ```
 
-### 3.2 启动vim并安装对应的
+### 3.2 启动vim并安装对应的插件
 
 ```bash
 vim -c PlugInstall
 ```
-会自动启动vim并安装插件。可能时间有点长，等待。
+会自动启动vim并安装插件。可能时间有点长，等待。如果失败了重新尝试。
+
+coc.nvim的插件
+
+```bash
+cd ~/.config/coc/extensions
+yarn
+```
 
 ## 4 安装完毕
 

@@ -26,13 +26,6 @@ Plug 'vim-airline/vim-airline-themes'                             " airline them
 Plug 'Linfee/ultisnips-zh-doc'                                    " ultisnips-zh-doc
 Plug 'SirVer/ultisnips'                                           " ultisnips
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
-Plug 'neoclide/coc-ultisnips' ,{'do':'yarn install --frozen-lockfile'}
-Plug 'neoclide/coc-json' ,{'do':'yarn install --frozen-lockfile'}
-Plug 'neoclide/coc-python' ,{'do':'yarn install --frozen-lockfile'}
-Plug 'neoclide/coc-tsserver' ,{'do':'yarn install --frozen-lockfile'}
-Plug 'neoclide/coc-html' ,{'do':'yarn install --frozen-lockfile'}
-Plug 'neoclide/coc-css' ,{'do':'yarn install --frozen-lockfile'}
-Plug 'neoclide/coc-yaml' ,{'do':'yarn install --frozen-lockfile'}
 Plug 'Valloric/MatchTagAlways'
 Plug 'octol/vim-cpp-enhanced-highlight'                           " cpp 代码高亮
 Plug 'wannesm/wmgraphviz.vim'                                     " graphviz :GraphvizShow

@@ -44,7 +44,7 @@ https://github.com/ryanoasis/nerd-fonts/raw/master/patched-fonts/FiraCode/Regula
 
 ```bash
 wget -P ~/.local/share/fonts/FiraCode \
-https://cdn.jsdelivr.net/gh/ryanoasis/nerd-fonts@master/patched-fonts/FiraCode/Regular/complete/Fira%20Code%20Regular%20Nerd%20Font%20Complete%20Mono%20Windows%20Compatible.ttf
+https://cdn.jsdelivr.net/gh/ryanoasis/nerd-fonts/patched-fonts/FiraCode/Regular/complete/Fira%20Code%20Regular%20Nerd%20Font%20Complete%20Mono%20Windows%20Compatible.ttf
 ```
 
 
@@ -93,15 +93,15 @@ https://raw.githubusercontent.com/Rainboylvx/RainboyVim/master/coc-settings.json
 ```bash
 # 安装vim-plug 插件
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
-https://cdn.jsdelivr.net/gh/junegunn/vim-plug@master/plug.vim
+https://cdn.jsdelivr.net/gh/junegunn/vim-plug/plug.vim
 
 # 安装.vimrc
 curl -fLo ~/.vimrc \
-https://cdn.jsdelivr.net/gh/Rainboylvx/RainboyVim@master/minVimrc
+https://cdn.jsdelivr.net/gh/Rainboylvx/RainboyVim/minVimrc
 
 # 安装 coc-settings.json
 curl -fLo ~/.vim/coc-settings.json \
-https://cdn.jsdelivr.net/gh/Rainboylvx/RainboyVim@master/coc-settings.json
+https://cdn.jsdelivr.net/gh/Rainboylvx/RainboyVim/coc-settings.json
 ```
 
 补充: 上面的安装`vimrc`是精简了几个打代码用不到配置，完整的配置运行下面的命令，如果你不懂vim如何配置，就不要执行，使用精简的就可以。
@@ -109,7 +109,7 @@ https://cdn.jsdelivr.net/gh/Rainboylvx/RainboyVim@master/coc-settings.json
 ```
 # 安装.vimrc
 curl -fLo ~/.vimrc \
-https://cdn.jsdelivr.net/gh/Rainboylvx/RainboyVim@master/vimrc
+https://cdn.jsdelivr.net/gh/Rainboylvx/RainboyVim/vimrc
 ```
 
 ### 3.2 启动vim并安装对应的

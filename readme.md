@@ -88,7 +88,7 @@ curl -fLo ~/.vim/coc-settings.json \
 https://raw.githubusercontent.com/rainboylvx/RainboyVim/master/coc-settings.json
 
 # 安装 coc.nvim的插件
-curl -fLo ~/.config/coc/extensions/package.json \
+curl -fLo ~/.config/coc/extensions/package.json --create-dirs \
 https://raw.githubusercontent.com/rainboylvx/RainboyVim/master/coc-package.json
 ```
 
@@ -108,7 +108,7 @@ curl -fLo ~/.vim/coc-settings.json \
 https://cdn.jsdelivr.net/gh/rainboylvx/RainboyVim/coc-settings.json
 
 # 安装 coc.nvim的插件
-curl -fLo ~/.config/coc/extensions/package.json \
+curl -fLo ~/.config/coc/extensions/package.json --create-dirs \
 https://cdn.jsdelivr.net/gh/rainboylvx/RainboyVim/coc-package.json
 ```
 

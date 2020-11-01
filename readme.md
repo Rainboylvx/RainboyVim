@@ -122,12 +122,19 @@ https://cdn.jsdelivr.net/gh/rainboylvx/RainboyVim/vimrc
 
 ### 3.2 启动vim并安装对应的插件
 
-```bash
-vim -c PlugInstall
-```
-会自动启动vim并安装插件。可能时间有点长，等待。如果失败了重新尝试。
 
-coc.nvim的插件
+第一步: 安装vim的插件
+
+```bash
+vim -c PlugInstall -c "qa"
+```
+会自动启动vim并安装插件。可能时间有点长，等待。如果失败了尝试下面的方法
+
+```bash
+sh -c "$(curl -fsSL https://gitee.com/Rainboy/RainboyVim/raw/master/install_plugins.sh)"
+```
+
+第二步:coc.nvim的插件
 
 ```bash
 cd ~/.config/coc/extensions

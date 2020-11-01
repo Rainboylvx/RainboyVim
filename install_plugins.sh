@@ -1,4 +1,5 @@
 GH_PROXY="https://g.ioiox.com/"
+mkdir -p $HOME/.vim/plugged
 git -C $HOME/.vim/plugged clone --depth 1  ${GH_PROXY}https://github.com/Rainboylvx/RainboyVim
 git -C $HOME/.vim/plugged clone --depth 1  ${GH_PROXY}https://github.com/Yggdroot/indentLine
 git -C $HOME/.vim/plugged clone --depth 1  ${GH_PROXY}https://github.com/Rainboylvx/rSnip

@@ -77,39 +77,20 @@ fc-list |grep FiraCode
 ```bash
 # 安装vim-plug 插件
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
-https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+https://gitee.com/yaozhijin/vim-plug/raw/master/plug.vim
+#https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
 # 安装.vimrc
 curl -fLo ~/.vimrc \
-https://raw.githubusercontent.com/rainboylvx/RainboyVim/master/minVimrc
+https://gitee.com/Rainboy/RainboyVim/raw/master/minVimrc
 
 # 安装 coc-settings.json
 curl -fLo ~/.vim/coc-settings.json --create-dirs \
-https://raw.githubusercontent.com/rainboylvx/RainboyVim/master/coc-settings.json
+https://gitee.com/Rainboy/RainboyVim/raw/master/coc-settings.json
 
 # 安装 coc.nvim的插件
 curl -fLo ~/.config/coc/extensions/package.json --create-dirs \
-https://raw.githubusercontent.com/rainboylvx/RainboyVim/master/coc-package.json
-```
-
-注意：如果下载过慢或不能下载，使用下面命令安装
-
-```bash
-# 安装vim-plug 插件
-curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
-https://cdn.jsdelivr.net/gh/junegunn/vim-plug/plug.vim
-
-# 安装.vimrc
-curl -fLo ~/.vimrc \
-https://cdn.jsdelivr.net/gh/rainboylvx/RainboyVim/minVimrc
-
-# 安装 coc-settings.json
-curl -fLo ~/.vim/coc-settings.json --create-dirs \
-https://cdn.jsdelivr.net/gh/rainboylvx/RainboyVim/coc-settings.json
-
-# 安装 coc.nvim的插件
-curl -fLo ~/.config/coc/extensions/package.json --create-dirs \
-https://cdn.jsdelivr.net/gh/rainboylvx/RainboyVim/coc-package.json
+https://gitee.com/Rainboy/RainboyVim/raw/master/coc-package.json
 ```
 
 补充: 上面的安装`vimrc`是精简了几个打代码用不到配置，完整的配置运行下面的命令，如果你不懂vim如何配置，就不要执行，使用精简的就可以。
@@ -117,7 +98,7 @@ https://cdn.jsdelivr.net/gh/rainboylvx/RainboyVim/coc-package.json
 ```
 # 安装.vimrc
 curl -fLo ~/.vimrc \
-https://cdn.jsdelivr.net/gh/rainboylvx/RainboyVim/vimrc
+https://gitee.com/Rainboy/RainboyVim/raw/master/vimrc
 ```
 
 ### 3.2 启动vim并安装对应的插件

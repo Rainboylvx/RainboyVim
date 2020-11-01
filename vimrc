@@ -50,6 +50,7 @@ Plug 'luochen1990/rainbow'                                        " 彩虹括号
 Plug 'vim-scripts/DrawIt'                                         " Ascii 画图
 Plug '907th/vim-auto-save'                                        " 自动保存
 Plug 'leafgarland/typescript-vim',{'for':'typescript'}            " typescript 高亮
+Plug 'hotoo/pangu.vim',{'for':'markdown'}                         " 自动格式化、标准化中文排版。 使用 :pangu
 
 "Plug 'skywind3000/gutentags_plus'
 "Plug 'majutsushi/tagbar'                  "tagbar

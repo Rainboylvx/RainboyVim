@@ -28,7 +28,6 @@ Plug 'octol/vim-cpp-enhanced-highlight'                           " cpp 代码�
 Plug 'Valloric/ListToggle'                                        " list windows(quickfix location-list) quick toggle
 Plug 'nathanaelkane/vim-indent-guides'                            " 代码缩进
 Plug 'kshenoy/vim-signature'                                      " 书签
-Plug 'Yggdroot/LeaderF',{ 'do': './install.sh' }                  " tagbar
 Plug 'danro/rename.vim'                                           " 重命名 很好用
 Plug 'Lokaltog/vim-easymotion'                                    " 快速移动
 Plug 'junegunn/vim-easy-align'                                    " 文本对齐

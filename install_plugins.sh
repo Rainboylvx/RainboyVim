@@ -1,0 +1,29 @@
+GH_PROXY="https://g.ioiox.com/"
+git clone --depth 1 -C $HOME/.vim/plugged ${GH_PROXY}https://github.com/Rainboylvx/RainboyVim
+git clone --depth 1 -C $HOME/.vim/plugged ${GH_PROXY}https://github.com/Yggdroot/indentLine
+git clone --depth 1 -C $HOME/.vim/plugged ${GH_PROXY}https://github.com/Rainboylvx/rSnip
+git clone --depth 1 -C $HOME/.vim/plugged ${GH_PROXY}https://github.com/yianwillis/vimcdoc
+git clone --depth 1 -C $HOME/.vim/plugged ${GH_PROXY}https://github.com/romainl/vim-cool
+git clone --depth 1 -C $HOME/.vim/plugged ${GH_PROXY}https://github.com/thinca/vim-quickrun
+git clone --depth 1 -C $HOME/.vim/plugged ${GH_PROXY}https://github.com/ludovicchabant/vim-gutentags
+git clone --depth 1 -C $HOME/.vim/plugged ${GH_PROXY}https://github.com/morhetz/gruvbox
+git clone --depth 1 -C $HOME/.vim/plugged ${GH_PROXY}https://github.com/digitaltoad/vim_Pug
+git clone --depth 1 -C $HOME/.vim/plugged ${GH_PROXY}https://github.com/bling/vim-airline
+git clone --depth 1 -C $HOME/.vim/plugged ${GH_PROXY}https://github.com/vim-airline/vim-airline-themes
+git clone --depth 1 -C $HOME/.vim/plugged ${GH_PROXY}https://github.com/Linfee/ultisnips-zh-doc
+git clone --depth 1 -C $HOME/.vim/plugged ${GH_PROXY}https://github.com/SirVer/ultisnips
+git clone --depth 1 -C $HOME/.vim/plugged ${GH_PROXY}https://github.com/Valloric/MatchTagAlways
+git clone --depth 1 -C $HOME/.vim/plugged ${GH_PROXY}https://github.com/octol/vim-cpp-enhanced-highlight
+git clone --depth 1 -C $HOME/.vim/plugged ${GH_PROXY}https://github.com/Valloric/ListToggle
+git clone --depth 1 -C $HOME/.vim/plugged ${GH_PROXY}https://github.com/nathanaelkane/vim-indent-guides
+git clone --depth 1 -C $HOME/.vim/plugged ${GH_PROXY}https://github.com/kshenoy/vim-signature
+git clone --depth 1 -C $HOME/.vim/plugged ${GH_PROXY}https://github.com/danro/rename.vim
+git clone --depth 1 -C $HOME/.vim/plugged ${GH_PROXY}https://github.com/Lokaltog/vim-easymotion
+git clone --depth 1 -C $HOME/.vim/plugged ${GH_PROXY}https://github.com/junegunn/vim-easy-align
+git clone --depth 1 -C $HOME/.vim/plugged ${GH_PROXY}https://github.com/scrooloose/nerdcommenter
+git clone --depth 1 -C $HOME/.vim/plugged ${GH_PROXY}https://github.com/scrooloose/nerdtree
+git clone --depth 1 -C $HOME/.vim/plugged ${GH_PROXY}https://github.com/vim-scripts/taglist.vim
+git clone --depth 1 -C $HOME/.vim/plugged ${GH_PROXY}https://github.com/gcmt/wildfire.vim
+git clone --depth 1 -C $HOME/.vim/plugged ${GH_PROXY}https://github.com/luochen1990/rainbow
+git clone --depth 1 -C $HOME/.vim/plugged ${GH_PROXY}https://github.com/907th/vim-auto-save
+git clone --depth 1 -b release -C $HOME/.vim/plugged ${GH_PROXY}https://github.com/neoclide/coc.nvim

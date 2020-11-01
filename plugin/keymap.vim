@@ -23,9 +23,9 @@ function! s:check_is_last() abort
     return !col || col == col('.')-1
 endfunction
 :inoremap { {}<esc>i
-au FileType c,cpp,javascript :inoremap <silent><expr> { 
-            \ <SID>check_is_last() ? "{\n}<esc>O" :
-            \ "{}<esc>i"
+"au FileType c,cpp,javascript :inoremap <silent><expr> { 
+            "\ <SID>check_is_last() ? "{\n}<esc>O" :
+            "\ "{}<esc>i"
 
 au FileType scheme,racket,lisp,clojure :inoremap ' '
 au FileType scheme,racket,lisp,clojure :inoremap ` `

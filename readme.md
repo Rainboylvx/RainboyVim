@@ -35,18 +35,11 @@ yarn config set registry https://registry.npm.taobao.org/
 ## 2. 安装字体
 
 ### 2.1 下载字体
-```bash
-wget -P ~/.local/share/fonts/FiraCode \
-https://github.com/ryanoasis/nerd-fonts/raw/master/patched-fonts/FiraCode/Regular/complete/Fira%20Code%20Regular%20Nerd%20Font%20Complete%20Mono%20Windows%20Compatible.ttf
-```
-
-注意：如果下载过慢或不能下载，使用下面命令安装
 
 ```bash
 wget -P ~/.local/share/fonts/FiraCode \
 https://cdn.jsdelivr.net/gh/ryanoasis/nerd-fonts/patched-fonts/FiraCode/Regular/complete/Fira%20Code%20Regular%20Nerd%20Font%20Complete%20Mono%20Windows%20Compatible.ttf
 ```
-
 
 ### 2.2 安装字体
 
@@ -77,8 +70,7 @@ fc-list |grep FiraCode
 ```bash
 # 安装vim-plug 插件
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
-https://gitee.com/yaozhijin/vim-plug/raw/master/plug.vim
-#https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+https://raw.staticdn.net/junegunn/vim-plug/master/plug.vim
 
 # 安装.vimrc
 curl -fLo ~/.vimrc \
@@ -109,7 +101,7 @@ https://gitee.com/Rainboy/RainboyVim/raw/master/vimrc
 ```bash
 vim -c PlugInstall -c "qa"
 ```
-会自动启动vim并安装插件。可能时间有点长，等待。如果失败了尝试下面的方法
+会自动启动vim并安装插件。可能时间有点长，等待。如果失败了尝试下面的方法，询问你的时候你输入`yes`
 
 ```bash
 sh -c "$(curl -fsSL https://gitee.com/Rainboy/RainboyVim/raw/master/install_plugins.sh)"

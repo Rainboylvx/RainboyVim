@@ -8,7 +8,6 @@ git -C $HOME/.vim/plugged clone --depth 1  ${GH_PROXY}https://github.com/romainl
 git -C $HOME/.vim/plugged clone --depth 1  ${GH_PROXY}https://github.com/thinca/vim-quickrun
 git -C $HOME/.vim/plugged clone --depth 1  ${GH_PROXY}https://github.com/ludovicchabant/vim-gutentags
 git -C $HOME/.vim/plugged clone --depth 1  ${GH_PROXY}https://github.com/morhetz/gruvbox
-git -C $HOME/.vim/plugged clone --depth 1  ${GH_PROXY}https://github.com/digitaltoad/vim_Pug
 git -C $HOME/.vim/plugged clone --depth 1  ${GH_PROXY}https://github.com/bling/vim-airline
 git -C $HOME/.vim/plugged clone --depth 1  ${GH_PROXY}https://github.com/vim-airline/vim-airline-themes
 git -C $HOME/.vim/plugged clone --depth 1  ${GH_PROXY}https://github.com/Linfee/ultisnips-zh-doc

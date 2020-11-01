@@ -17,7 +17,6 @@ Plug 'romainl/vim-cool'                                           " 搜索高亮
 Plug 'thinca/vim-quickrun'                                        " 运行 Run commands quickly 更快
 Plug 'ludovicchabant/vim-gutentags'                               " ctags,gtags,暂时用不到
 Plug 'morhetz/gruvbox'                                            " gruvbox主题
-Plug 'digitaltoad/vim-pug'                                        " pug模板
 Plug 'bling/vim-airline'                                          " airline
 Plug 'vim-airline/vim-airline-themes'                             " airline themes
 Plug 'Linfee/ultisnips-zh-doc'                                    " ultisnips-zh-doc

@@ -101,7 +101,7 @@ https://gitee.com/Rainboy/RainboyVim/raw/master/vimrc
 ```bash
 vim -c PlugInstall -c "qa"
 ```
-会自动启动vim并安装插件。可能时间有点长，等待。如果失败了尝试下面的方法，询问你的时候你输入`yes`
+会自动启动vim并安装插件。可能时间有点长，等待。如果失败了尝试下面的方法。
 
 ```bash
 sh -c "$(curl -fsSL https://gitee.com/Rainboy/RainboyVim/raw/master/install_plugins.sh)"

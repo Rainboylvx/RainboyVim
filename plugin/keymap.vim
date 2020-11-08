@@ -24,9 +24,11 @@ function! s:check_is_last() abort
 endfunction
 :inoremap { {}<esc>i
 
-":inoremap <silent><expr> <c-{>
-            "\ <SID>check_is_last() ? "{\n}<esc>O" :
-            "\ "{}<esc>i"
+" alt+p
+execute "set <M-p>=\ep"
+:inoremap <silent><expr> <M-p>
+            \ <SID>check_is_last() ? "{\n}<esc>O" :
+            \ "{}<esc>i"
 
 "au FileType c,cpp,javascript :inoremap <silent><expr> { 
             "\ <SID>check_is_last() ? "{\n}<esc>O" :

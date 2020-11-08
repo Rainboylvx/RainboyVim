@@ -122,6 +122,18 @@ yarn
 vim
 ```
 
+## 快捷键说明
+
+| 快捷键                                                              | 工作于模式    | 说明       |
+|---------------------------------------------------------------------|---------------|------------|
+| <kbd>ctrl</kbd><kbd>+</kbd><kbd>h</kbd>                             | insert        | 到行首     |
+| <kbd>ctrl</kbd><kbd>+</kbd><kbd>l</kbd>                             | insert        | 到行尾     |
+| <kbd>alt</kbd><kbd>+</kbd><kbd>p</kbd>                              | insert        | 智能创建{} |
+| <kbd>alt</kbd>(<kbd>h</kbd>,<kbd>j</kbd>,<kbd>k</kbd>,<kbd>l</kbd>) | insert        | 上下左右   |
+| <kbd>alt</kbd><kbd>+</kbd><kbd>;</kbd>                              | insert,normal | 行尾创建;  |
+
+
+
 ## 其它
 
 需要安装的插件

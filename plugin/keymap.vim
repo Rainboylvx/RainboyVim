@@ -23,6 +23,11 @@ function! s:check_is_last() abort
     return !col || col == col('.')-1
 endfunction
 :inoremap { {}<esc>i
+
+":inoremap <silent><expr> <c-{>
+            "\ <SID>check_is_last() ? "{\n}<esc>O" :
+            "\ "{}<esc>i"
+
 "au FileType c,cpp,javascript :inoremap <silent><expr> { 
             "\ <SID>check_is_last() ? "{\n}<esc>O" :
             "\ "{}<esc>i"
@@ -44,8 +49,14 @@ endf
 
 " ======= 自定义快捷键 ======= "
 
-" Ctrl +;            行尾加;
-imap <a-i> <c-l>;
+" alt+;            行尾加;
+execute "set <M-;>=\e;"
+imap <M-;> <c-l>;
+nmap <M-;> i<c-l>;
+imap <leader>; <c-l>;
+nmap <leader>; i<c-l>;
+
+
 
 " Ctrl + ]            多选择跳转
 nmap <c-]> g<c-]>
@@ -100,16 +111,21 @@ map <c-up> <c-w>=
 nmap <c-down> :vertical resize<enter>
 
 " Alt  + H            光标左移一格
-imap <m-h> <left>
+execute "set <M-h>=\eh"
+imap <M-h> <Left>
+"imap <m-h> <left>
 
 " Alt  + J            光标下移一格
-imap <m-j> <down>
+execute "set <M-j>=\ej"
+imap <M-j> <Down>
 
 " Alt  + K            光标上移一格
-imap <m-k> <up>
+execute "set <M-k>=\ek"
+imap <M-k> <Up>
 
 " Alt  + L            光标右移一格
-imap <m-l> <right>
+execute "set <M-l>=\el"
+imap <M-l> <Right>
 
 " \c                  复制至公共剪贴板
 vmap <leader>c "+y

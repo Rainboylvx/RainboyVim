@@ -2,6 +2,10 @@ snippet pcs_site "pcs_site变量" i
 <%- USER.pcs_site %>$0
 endsnippet
 
+snippet uuid "book uuid _id" b
+_id: "`date +%s%N | md5sum | head -c 10`"
+endsnippet
+
 #exbook
 snippet pcs "pcs info" b
 ---

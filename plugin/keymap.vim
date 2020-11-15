@@ -29,8 +29,8 @@ execute "set <M-i>=\ei"
 ":inoremap <silent><expr> <M-p>
             "\ <SID>check_is_last() ? "{\n}<esc>O" :
             "\ "{}<esc>i"
-:inoremap <M-i> <esc>A{}<esc>i<CR><esc>O
-:noremap <M-i>  A{}<esc>i<CR><esc>O
+:inoremap <silent><expr> <M-i> "<esc>A{\n}<esc>O"
+:nnoremap <silent><expr> <M-i> "A{\n}<esc>O"
 
 "au FileType c,cpp,javascript :inoremap <silent><expr> { 
             "\ <SID>check_is_last() ? "{\n}<esc>O" :
@@ -49,7 +49,6 @@ function ClosePair(char)
         return a:char
     endif
 endf
-
 
 " ======= 自定义快捷键 ======= "
 

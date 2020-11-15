@@ -22,7 +22,6 @@ Plug 'vim-airline/vim-airline-themes'                             " airline them
 Plug 'Linfee/ultisnips-zh-doc'                                    " ultisnips-zh-doc
 Plug 'SirVer/ultisnips'                                           " ultisnips
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
-Plug 'Valloric/MatchTagAlways'
 Plug 'octol/vim-cpp-enhanced-highlight'                           " cpp 代码高亮
 Plug 'Valloric/ListToggle'                                        " list windows(quickfix location-list) quick toggle
 Plug 'nathanaelkane/vim-indent-guides'                            " 代码缩进
@@ -36,6 +35,7 @@ Plug 'vim-scripts/taglist.vim'                                    " taglist
 Plug 'gcmt/wildfire.vim'                                          " 括号内选择
 Plug 'luochen1990/rainbow'                                        " 彩虹括号
 Plug '907th/vim-auto-save'                                        " 自动保存
+Plug 'wincent/terminus'                                           "Cursor shape,Improved mouse support
 
 "Plug 'skywind3000/gutentags_plus'
 "Plug 'majutsushi/tagbar'                  "tagbar

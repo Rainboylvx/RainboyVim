@@ -26,7 +26,7 @@ Plug 'vim-airline/vim-airline-themes'                             " airline them
 Plug 'Linfee/ultisnips-zh-doc'                                    " ultisnips-zh-doc
 Plug 'SirVer/ultisnips'                                           " ultisnips
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
-Plug 'Valloric/MatchTagAlways'
+Plug 'Valloric/MatchTagAlways',{'for':['html','xml']}             " MatchTagAlways
 Plug 'octol/vim-cpp-enhanced-highlight'                           " cpp 代码高亮
 Plug 'wannesm/wmgraphviz.vim'                                     " graphviz :GraphvizShow
 Plug 'Valloric/ListToggle'                                        " list windows(quickfix location-list) quick toggle
@@ -51,6 +51,8 @@ Plug 'vim-scripts/DrawIt'                                         " Ascii 画图
 Plug '907th/vim-auto-save'                                        " 自动保存
 Plug 'leafgarland/typescript-vim',{'for':'typescript'}            " typescript 高亮
 Plug 'hotoo/pangu.vim',{'for':'markdown'}                         " 自动格式化、标准化中文排版。 使用 :pangu
+Plug 'wincent/terminus'                                           "Cursor shape,Improved mouse support
+
 
 "Plug 'skywind3000/gutentags_plus'
 "Plug 'majutsushi/tagbar'                  "tagbar

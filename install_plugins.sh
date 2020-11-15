@@ -12,7 +12,6 @@ git -C $HOME/.vim/plugged clone --depth 1  ${GH_PROXY}bling/vim-airline
 git -C $HOME/.vim/plugged clone --depth 1  ${GH_PROXY}vim-airline/vim-airline-themes
 git -C $HOME/.vim/plugged clone --depth 1  ${GH_PROXY}Linfee/ultisnips-zh-doc
 git -C $HOME/.vim/plugged clone --depth 1  ${GH_PROXY}SirVer/ultisnips
-git -C $HOME/.vim/plugged clone --depth 1  ${GH_PROXY}Valloric/MatchTagAlways
 git -C $HOME/.vim/plugged clone --depth 1  ${GH_PROXY}octol/vim-cpp-enhanced-highlight
 git -C $HOME/.vim/plugged clone --depth 1  ${GH_PROXY}Valloric/ListToggle
 git -C $HOME/.vim/plugged clone --depth 1  ${GH_PROXY}nathanaelkane/vim-indent-guides

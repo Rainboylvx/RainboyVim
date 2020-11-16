@@ -70,7 +70,7 @@ fc-list |grep FiraCode
 ```bash
 # 安装vim-plug 插件
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
-https://raw.staticdn.net/junegunn/vim-plug/master/plug.vim
+https://raw.sevencdn.com/junegunn/vim-plug/master/plug.vim
 
 # 安装.vimrc
 curl -fLo ~/.vimrc \

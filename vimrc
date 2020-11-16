@@ -40,6 +40,7 @@ Plug 'Lokaltog/vim-easymotion'                                    " 快速移动
 Plug 'junegunn/vim-easy-align'                                    " 文本对齐
 Plug 'scrooloose/nerdcommenter'                                   " 代码注释
 Plug 'scrooloose/nerdtree'                                        " 工程文件浏览
+Plug 'ryanoasis/vim-devicons'                                     "Adds filetype glyphs (icons) to various vim plugins.
 Plug 'vim-scripts/taglist.vim'                                    " taglist
 Plug 'dhruvasagar/vim-table-mode',{'for':['markdown']}            " table 生成
 Plug 'plasticboy/vim-markdown'                                    " markdown 语法高亮

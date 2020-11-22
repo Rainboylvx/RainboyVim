@@ -128,9 +128,10 @@ vim
 |----------------------------------------------------------------------|---------------|--------------|
 | <kbd>ctrl</kbd>+<kbd>h</kbd>                                         | insert        | 到行首       |
 | <kbd>ctrl</kbd>+<kbd>l</kbd>                                         | insert        | 到行尾       |
-| <kbd>alt</kbd>+<kbd>p</kbd>                                          | insert,normal | 行尾创建{\n} |
+| <kbd>alt</kbd>+<kbd>i</kbd>                                          | insert,normal | 行尾创建{\n} |
 | <kbd>alt</kbd>+(<kbd>h</kbd>,<kbd>j</kbd>,<kbd>k</kbd>,<kbd>l</kbd>) | insert        | 上下左右     |
 | <kbd>alt</kbd>+<kbd>;</kbd>                                          | insert,normal | 行尾创建;    |
+| <kbd>q</kbd><kbd>q</kbd>                                             | normal        | 快速退出     |
 
 
 

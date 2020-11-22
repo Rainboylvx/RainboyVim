@@ -16,9 +16,10 @@
 |---------------|---------------|--------------|
 | ctrl+h        | insert        | 到行首       |
 | ctrl+l        | insert        | 到行尾       |
-| alt+p         | insert,normal | 行尾创建{\n} |
+| alt+i         | insert,normal | 行尾创建{\n} |
 | alt+(h,j,k,l) | insert        | 上下左右     |
 | alt+;         | insert,normal | 行尾创建;    |
+| qq            | normal        | 快速退出     |
 
 
 

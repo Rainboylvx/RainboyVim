@@ -60,6 +60,13 @@ imap <leader>; <c-l>;
 nmap <leader>; i<c-l>;
 
 
+" ======= 快速退出 ======= "
+"nnoremap <c-q> :qa<cr>
+nnoremap qq :qa<cr>
+"inoremap <c-q> <esc>:qa<cr>
+
+
+
 
 " Ctrl + ]            多选择跳转
 nmap <c-]> g<c-]>

@@ -39,32 +39,6 @@ let g:gutentags_enabled =0
 "=================== emmt   ==================
 let g:user_emmet_expandabbr_key='<C-y><C-y>'
 
-"=================== ale   ==================
-"let g:ale_linters = {
-            "\   'cpp': ['gcc','cppcheck'],
-            "\}
-"let g:ale_sign_error = 'E'
-"let g:ale_sign_warning = 'W'
-"let g:ale_sign_column_always =1
-""let g:ale_linters_explicit = 1
-""let g:ale_completion_delay = 500
-""let g:ale_echo_delay = 20
-""let g:ale_lint_delay = 500
-""let g:ale_echo_msg_format = '[%linter%] %code: %%s'
-""let g:ale_lint_on_text_changed = 'normal'
-""let g:ale_lint_on_insert_leave = 1
-"let g:airline#extensions#ale#enabled = 1
-
-"let g:ale_echo_msg_error_str = 'E'
-"let g:ale_echo_msg_warning_str = 'W'
-"let g:ale_echo_msg_format = '[%linter%] %s [%severity%]'
-
-"let g:ale_c_gcc_options = '-Wall -O2 -std=c99'
-"let g:ale_cpp_gcc_options = '-Wall -O2 -std=c++14'
-"let g:ale_c_cppcheck_options = ''
-"let g:ale_cpp_cppcheck_options = ''
-
-
 "=================== LeaderF ================
 
 let g:Lf_ShortcutF = '<c-p>'
@@ -179,30 +153,6 @@ nmap <leader>w :bw<enter>
 "和最近的buffer
 nmap <leader>t :b#<enter>
 
-"sb n 分割
-"
-
-"=============== WMctrl全屏 ==============
-" 将外部命令 wmctrl 控制窗口最大化的命令行参数封装成一个 vim 的函数
-let g:fullscreen = 0
-function! ToggleFullscreen()
-    if g:fullscreen == 1
-        let g:fullscreen = 0
-        let mod = "remove"
-    else
-        let g:fullscreen = 1
-        let mod = "add"
-    endif
-    call system("wmctrl -ir " . v:windowid . " -b " . mod . ",fullscreen")
-endfunction
-" 全屏开/关快捷键
-map <silent> <F11> :call ToggleFullscreen()<CR>
-" 启动 vim 时自动全屏
-if has("gui_running")
-    autocmd VimEnter * call ToggleFullscreen()
-endif
-
-
 
 "===================== NERDTree
 " 使用 NERDTree 插件查看工程文件。设置快捷键，速记：file list
@@ -219,6 +169,7 @@ let NERDTreeMinimalUI=1
 "
 
 let NERDTreeIgnore=['node_modules$', '\~$','^\.','^dist$']
+
 "============= ListToggle ============
 let Tlist_Use_Right_Window = 1  " 在右侧使用taglist
 let Tlist_WinWidth=50           " 宽度
@@ -272,18 +223,6 @@ let g:UltiSnipsExpandTrigger="<tab>"
 ""inoremap <leader><tab> <C-R>=(Ulti_ExpandOrJump_and_getRes() > 0)?"":IMAP_Jumpfunc('', 0)<CR>
 
 
-
-"====== MiniBufExplorer
-" 显示/隐藏 MiniBufExplorer 窗口
-map <Leader>bl :MBEToggle<cr>
-" buffer 切换快捷键
-map <C-Tab> :MBEbn<cr>
-map <C-S-Tab> :MBEbp<cr>
-
-
-"----------nerdtree-git-plugin
-
-
 "============ vim - table
 let g:table_mode_corner="|"     "兼容Markdown Table
 
@@ -329,6 +268,7 @@ let g:WMGraphviz_outpt = 'png'
 	\	'parentheses': ['start=/(/ end=/)/ fold', 'start=/\[/ end=/\]/ fold', 'start=/{/ end=/}/ fold'],
 	\	'separately': {
 	\		'*': {},
+	\		'nerdtree': 0,
 	\		'tex': {
 	\			'parentheses': ['start=/(/ end=/)/', 'start=/\[/ end=/\]/'],
 	\		},
@@ -349,7 +289,6 @@ let g:rainbow_active = 1
 
 "Pyclewn
 let g:pyclewn_terminal = "xterm, -e"
-
 
 
 "================== Markdown-preview
@@ -439,3 +378,10 @@ else
   inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
 endif
 "============= coc.nvim end  ============
+
+"============= devicons ============
+let g:webdevicons_enable = 1
+let g:WebDevIconsUnicodeDecorateFolderNodes = 1
+let g:DevIconsEnableFoldersOpenClose = 1
+let WebDevIconsUnicodeDecorateFolderNodesExactMatches = 1
+"============= devicons end  ============

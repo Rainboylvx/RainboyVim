@@ -12,7 +12,7 @@ let $PLUG_DIR = expand("$HOME/.vim/plugged")
 call plug#begin($PLUG_DIR) " plug 安装地址
 
 "----------管理插件----------
-Plug 'Rainboylvx/RainboyVim'                                        " noi code snippets
+Plug 'Rainboylvx/RainboyVim'                                        " 
 Plug 'Yggdroot/indentLine',{'for':['c','cpp']}                      " 缩进参考线
 Plug 'Rainboylvx/rSnip'                                             " noi code snippets
 Plug 'yianwillis/vimcdoc'                                           " 中文文档
@@ -41,6 +41,7 @@ Plug 'junegunn/vim-easy-align'                                      " 文本对�
 Plug 'scrooloose/nerdcommenter'                                     " 代码注释
 Plug 'scrooloose/nerdtree',{ 'on':  'NERDTreeToggle' }              " 工程文件浏览
 Plug 'ryanoasis/vim-devicons'                                       " Adds filetype glyphs (icons) to various vim plugins.
+Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 Plug 'majutsushi/tagbar',{ 'on':  'TagbarToggle' }                  " tagbar
 Plug 'vim-scripts/taglist.vim'                                      " taglist
 Plug 'dhruvasagar/vim-table-mode',{'for':['markdown']}              " table 生成
@@ -48,7 +49,7 @@ Plug 'plasticboy/vim-markdown'                                      " markdown �
 Plug 'Chiel92/vim-autoformat',{'for':['typescript','javascript']}   " 自动格式化
 Plug 'gcmt/wildfire.vim'                                            " 括号内选择
 Plug 'lilydjwg/fcitx.vim'
-Plug 'luochen1990/rainbow'                                          " 彩虹括号
+"Plug 'luochen1990/rainbow'                                          " 彩虹括号
 Plug 'vim-scripts/DrawIt'                                           " Ascii 画图
 Plug '907th/vim-auto-save'                                          " 自动保存
 Plug 'leafgarland/typescript-vim',{'for':'typescript'}              " typescript 高亮

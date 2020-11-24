@@ -22,7 +22,7 @@
   //"tsserver.log": "verbose"
   "suggest.floatEnable": false,
   "suggest.snippetIndicator":"  \uf942",
-  "diagnostic.errorSign":"",
-  "diagnostic.warningSign":""
+  "diagnostic.errorSign":"🗶",
+  "diagnostic.warningSign":"⚠"
 
 }

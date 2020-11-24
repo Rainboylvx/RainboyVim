@@ -170,6 +170,7 @@ let NERDTreeMinimalUI=1
 
 let NERDTreeIgnore=['node_modules$', '\~$','^\.','^dist$']
 
+
 "============= ListToggle ============
 let Tlist_Use_Right_Window = 1  " 在右侧使用taglist
 let Tlist_WinWidth=50           " 宽度
@@ -225,10 +226,8 @@ let g:UltiSnipsExpandTrigger="<tab>"
 
 "============ vim - table
 let g:table_mode_corner="|"     "兼容Markdown Table
+nmap <Leader>tm :TableModeToggle<cr>
 
-"============ vim-markdown
-"diable ge map
-map <Plug> <Plug>Markdown_OpenUrlUnderCursor
 
 
 "============ easymotion
@@ -251,11 +250,14 @@ vmap <S-SPACE> <Plug>(wildfire-water)
 let g:wildfire_objects = ["i'", 'i"', "i)", "i]", "i}", "i>", "ip"]
 
 "============ Vim markdown =========
+"diable ge map
+map <Plug> <Plug>Markdown_OpenUrlUnderCursor
 let g:vim_markdown_frontmatter=1
 let g:vim_markdown_math=0
 let g:vim_markdown_conceal = 0
 let g:vim_markdown_toc_autofit = 1
 let g:vim_markdown_new_list_item_indent = 2
+set conceallevel=0
 
 "============ wmgraphiz.vim
 let g:WMGraphviz_outpt = 'png'
@@ -290,11 +292,6 @@ let g:rainbow_active = 1
 "Pyclewn
 let g:pyclewn_terminal = "xterm, -e"
 
-
-"================== Markdown-preview
-"let g:mkdp_path_to_chrome = "C:/Program Files (x86)/Google/Chrome/Application/chrome.exe"
-"
-"
 
 "================== typescript 相关
 "let g:typescript_indent_disable = 0

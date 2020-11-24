@@ -1,6 +1,15 @@
+function! GetCurrentBufferPath()
+       let n = expand("%:p")
+       call setreg('+', n)
+       echo "currentBuffPath=".n." and Yank to reg+."
+       "if n != {}
+           "call setreg('"', n.path.str())
+       "endif
+endfunction
 " ctrl +s 保存
 ""imap <F2> <esc>:w<enter>a
 imap <F1> <esc>
+"nmap <F4> :call GetCurrentBufferPath()<cr>
 "imap <F3> <esc>:w<enter><esc>:shell<enter>
 "nmap <F3> :w<enter>:shell<enter>
 
@@ -446,3 +455,9 @@ func! Gdb()
     set makeprg = gdb
 endfunc
 
+
+"============== xfce4-terminal
+command! Terminal :call system("xfce4-terminal --working-directory='".expand("%:p:h")."' &")
+noremap  <silent> <F4> :Terminal<CR>
+vnoremap <silent> <F4> <ESC>:Terminal<CR>
+inoremap <silent> <F4> <ESC>:Terminal<CR>

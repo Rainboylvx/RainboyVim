@@ -48,7 +48,6 @@ Plug 'dhruvasagar/vim-table-mode',{ 'on':  'TableModeToggle' }      " table 生�
 Plug 'plasticboy/vim-markdown'                                      " markdown 语法高亮
 Plug 'Chiel92/vim-autoformat',{'for':['typescript','javascript']}   " 自动格式化
 Plug 'gcmt/wildfire.vim'                                            " 括号内选择
-Plug 'lilydjwg/fcitx.vim'
 "Plug 'luochen1990/rainbow'                                          " 彩虹括号
 Plug 'vim-scripts/DrawIt'                                           " Ascii 画图
 Plug '907th/vim-auto-save',{'for':['markdown','cpp']}               " 自动保存
@@ -57,6 +56,7 @@ Plug 'hotoo/pangu.vim',{'for':'markdown'}                           " 自动格�
 Plug 'wincent/terminus'                                             "Cursor shape,Improved mouse support
 
 
+Plug 'lilydjwg/fcitx.vim'
 "Plug 'skywind3000/gutentags_plus'
 "Plug 'Xuyuanp/nerdtree-git-plugin'        "
 "Plug 'posva/vim-vue'                      "vue高亮

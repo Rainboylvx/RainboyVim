@@ -63,10 +63,10 @@ endf
 
 " alt+;            行尾加;
 execute "set <M-;>=\e;"
-imap <M-;> <c-l>;
-nmap <M-;> i<c-l>;
-imap <leader>; <c-l>;
-nmap <leader>; i<c-l>;
+imap <M-;> <esc>A;<esc>o
+nmap <M-;> A;<esc>o
+imap <leader>; <c-l>;<esc>o
+nmap <leader>; i<c-l>;<esc>o
 
 
 " ======= 快速退出 ======= "

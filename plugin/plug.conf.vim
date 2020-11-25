@@ -207,7 +207,7 @@ let g:SignatureMap = {
             \ }
 
 "============= ultisnipptes ==========
-let g:UltiSnipsSnippetDirectories=["UltiSnips",path.'/mysnippets']
+let g:UltiSnipsSnippetDirectories=["UltiSnips","mysnippets"]
 "" UltiSnips 的 tab 键与 YCM 冲突，重新设定
 let g:UltiSnipsExpandTrigger="<tab>"
 "let g:UltiSnipsExpandTrigger="<leader><tab>"

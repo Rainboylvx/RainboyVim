@@ -54,6 +54,7 @@ Plug '907th/vim-auto-save',{'for':['markdown','cpp']}               " 自动保�
 Plug 'leafgarland/typescript-vim',{'for':'typescript'}              " typescript 高亮
 Plug 'hotoo/pangu.vim',{'for':'markdown'}                           " 自动格式化、标准化中文排版。 使用 :pangu
 Plug 'wincent/terminus'                                             "Cursor shape,Improved mouse support
+Plug 'mhinz/vim-startify'
 
 
 Plug 'lilydjwg/fcitx.vim'

@@ -382,3 +382,11 @@ let g:WebDevIconsUnicodeDecorateFolderNodes = 1
 let g:DevIconsEnableFoldersOpenClose = 1
 let WebDevIconsUnicodeDecorateFolderNodesExactMatches = 1
 "============= devicons end  ============
+
+
+"============= startify =============
+"let g:startify_custom_header = 
+""================== RainboyVim by Rainboy =================="
+let g:startify_custom_header = [
+        \'================== RainboyVim by Rainboy =================='
+        \ ]

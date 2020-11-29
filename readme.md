@@ -122,6 +122,15 @@ yarn
 vim
 ```
 
+## 如何更新
+
+```
+curl -fLo ~/.vimrc \
+https://gitee.com/Rainboy/RainboyVim/raw/master/minVimrc
+
+vim -c PlugInstall -c PlugUpdate -c qa
+```
+
 ## 快捷键说明
 
 | 快捷键                                                               | 工作于模式    | 说明         |

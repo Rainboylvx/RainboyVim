@@ -167,15 +167,9 @@ let NERDTreeShowHidden=1
 let NERDTreeMinimalUI=1
 " 删除文件时自动删除文件对应 buffer
 "
+map <F2> :NERDTreeToggle<CR>
 
 let NERDTreeIgnore=['node_modules$', '\~$','^\.','^dist$']
-
-
-"============= ListToggle ============
-let Tlist_Use_Right_Window = 1  " 在右侧使用taglist
-let Tlist_WinWidth=50           " 宽度
-map <F2> :Tlist <CR>
-
 
 "============= ListToggle ============
 let g:lt_location_list_toggle_map = '<leader>l'
@@ -303,7 +297,7 @@ let g:pyclewn_terminal = "xterm, -e"
 
 "================== tagbar
 "au BufWrite *.ts :Autoformat
-noremap <F2> :TagbarToggle<CR>
+noremap <F3> :TagbarToggle<CR>
 let g:tagbar_sort             = 0 " tags sorted by order in the file
 let g:tagbar_help_visibility  = 0 " dot not show help
 let g:tagbar_show_linenumbers = -1

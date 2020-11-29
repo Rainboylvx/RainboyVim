@@ -63,10 +63,22 @@ endf
 
 " alt+;            行尾加;
 execute "set <M-;>=\e;"
-imap <M-;> <esc>A;<esc>o
-nmap <M-;> A;<esc>o
+inoremap <silent><expr><M-;> match(getline("."),";\\s*$") ==-1 ? "<esc>g_a;<esc>o" : "<esc>o"
+"noremap <expr><M-;> AddSemicolonAtLineEnd()
+"noremap <silent><M-;> :call <SID>AddSemicolonAtLineEnd()<cr>
+noremap <M-;> :call <SID>AddSemicolonAtLineEnd()<cr>
 imap <leader>; <c-l>;<esc>o
 nmap <leader>; i<c-l>;<esc>o
+
+function! s:AddSemicolonAtLineEnd() abort
+    let orighinalPos = getpos(".")
+    normal! g_
+    let char = getline(".")[col(".")-1]
+    if char != ';'
+        normal! a;
+    endif
+    call setpos(".",orighinalPos)
+endfunction
 
 
 " ======= 快速退出 ======= "
@@ -175,7 +187,6 @@ nmap <leader>bn :Tab /
 
 " \fl                显示函数列表
 nmap <leader>fl :NERDTreeToggle<cr>
-map <F3> :NERDTreeToggle<CR>
 
 
 
@@ -309,13 +320,13 @@ endif
 "------------------------------------------------------------------------------
 "  < 编译、连接、运行配置 >
 "------------------------------------------------------------------------------
+" F8 一键保存并编译
+map <F8> :call Compile()<CR>
+imap <F8> <ESC>:call Compile()<CR>
+
 " F9 一键保存、编译、连接存并运行
-map <F8> :call Run()<CR>
-imap <F8> <ESC>:call Run()<CR>
- 
-" Ctrl + F9 一键保存并编译
-map <c-F8> :call Compile()<CR>
-imap <c-F8> <ESC>:call Compile()<CR>
+map <F9> :call Run()<CR>
+imap <F9> <ESC>:call Run()<CR>
  
 " Ctrl + F10  编译并调试
 map <c-F10> :call Gdb()<CR>
@@ -323,6 +334,15 @@ imap <c-F10> <ESC>:call Gdb()<CR>
 
 let s:LastShellReturn_C = 0
 let s:ShowWarning = 1
+
+function! ToggleQuickFix()
+    if empty(filter(getwininfo(), 'v:val.quickfix'))
+        copen
+    else
+        cclose
+    endif
+endfunction
+nnoremap <silent> <F7> :call ToggleQuickFix()<cr>
 
 func! Compile()
     "保存
@@ -332,6 +352,7 @@ func! Compile()
     exe ":ccl"
     exe ":update"
 
+    let v:statusmsg = ''
     "判断当前路径
     if expand("%:p:h")!=getcwd()
         echohl WarningMsg | echo "Fail to make! This file is not in the current dir! Press <F7> to redirect to the dir of this file." | echohl None
@@ -362,10 +383,9 @@ func! Compile()
         if g:iswindows==1
             set makeprg=g++\ -g\ -o\ %<.exe\ %
         else
+            "exe ":setlocal makeprg=g++ -g -o 1 1.cpp"
             set makeprg=g++\ -g\ -o\ %<\ %
         endif
-        "elseif &filetype=="cs"
-        "set makeprg=csc\ \/nologo\ \/out:%<.exe\ %
     endif
 
     
@@ -420,30 +440,34 @@ func! Compile()
 endfunc
 
 
+
 func! Run()
     call Compile()
-    if s:LastShellReturn_C != 0
-        return
-    endif
-    execute "normal :"
+    exe "silent !./1 < in > out"
+    redraw!
+    "if s:LastShellReturn_C != 0
+        "return
+    "endif
 
 
     let sourcefileename=expand("%:t")
-    if(g:iswindows==1)
-        let outfilename=substitute(sourcefileename,'\(\.[^.]*\)' ,'.exe','g')
-        let toexename=outfilename
-    else
-        let outfilename=substitute(sourcefileename,'\(\.[^.]*\)' ,'','g')
-        let toexename=outfilename
-    endif
-    if filereadable(outfilename)
-        if(g:iswindows==1)
-            execute "!".toexename
-        else
-            execute "!./".toexename
-        endif
-    endif
-    execute "copen"
+    "if(g:iswindows==1)
+        "let outfilename=substitute(sourcefileename,'\(\.[^.]*\)' ,'.exe','g')
+        "let toexename=outfilename
+    "else
+        "let outfilename=substitute(sourcefileename,'\(\.[^.]*\)' ,'','g')
+        "let toexename=outfilename
+    "endif
+    "if filereadable(outfilename)
+        "if(g:iswindows==1)
+            "execute "!".toexename
+        "else
+            ""exe ":!clear"
+            "execute "!clear;./".toexename
+        "endif
+    "endif
+    "redraw!
+    "echohl WarningMsg | echo " running finish"
 endfunc
 
 func! Gdb()

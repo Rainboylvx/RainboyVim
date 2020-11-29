@@ -237,7 +237,7 @@ if has("gui_running")
         "set guifont=Consolas_for_Powerline_FixedD:h14
         "set guifont=Anonymice\ Powerline:h14
     else
-        set guifont=DejaVu\ Sans\ Mono\ for\ Powerline\ 20
+        set guifont=FiraCode\ Nerd\ Font\ Mono\ 16
         " set guifont=DejaVu\ Sans\ Mono\ for\ Powerline\ Nerd\ Font\ Complete\ 13
         "set guifont=Monospace\ 16
     endif	

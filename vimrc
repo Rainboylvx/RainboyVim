@@ -2,9 +2,8 @@ set nocompatible
 set regexpengine=1
 set history=100
 let mapleader="\\"
-let g:global_author=system('whoami')
-
-
+let g:global_author = "Rainboy"
+let g:global_email  = "rainboylvx@qq.com"
 
 " ============ Plugin Manager ============
 filetype off
@@ -55,6 +54,7 @@ Plug 'leafgarland/typescript-vim',{'for':'typescript'}              " typescript
 Plug 'hotoo/pangu.vim',{'for':'markdown'}                           " 自动格式化、标准化中文排版。 使用 :pangu
 Plug 'wincent/terminus'                                             "Cursor shape,Improved mouse support
 Plug 'mhinz/vim-startify'
+"Plug 'skywind3000/vim-terminal-help'
 
 
 Plug 'lilydjwg/fcitx.vim'

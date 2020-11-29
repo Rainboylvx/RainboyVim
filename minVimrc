@@ -2,7 +2,9 @@ set nocompatible
 set regexpengine=1
 set history=100
 let mapleader="\\"
-let g:global_author=system('whoami')
+let g:global_author = "change it at ~/.vimrc"
+let g:global_email  = "change it at ~/.vimrc"
+
 " ============ Plugin Manager ============
 filetype off
 let $PLUG_DIR = expand("$HOME/.vim/plugged")

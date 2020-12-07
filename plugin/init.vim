@@ -270,3 +270,21 @@ endif
 
 "============================ 透明 ============================
 "hi Normal  ctermfg=252 ctermbg=none
+hi Normal ctermfg=255 ctermbg=NONE guifg=#ffffff guibg=NONE guisp=NONE cterm=NONE gui=NONE
+hi Terminal ctermfg=255 ctermbg=NONE guifg=NONE guibg=NONE guisp=NONE cterm=NONE gui=NONE
+if has("termguicolors")     " set true colors
+    set t_8f=[38;2;%lu;%lu;%lum
+    set t_8b=[48;2;%lu;%lu;%lum
+    "set termguicolors
+endif
+
+" map <C-@> to toggle
+tnoremap <silent> <C-@> <C-w>:ToggleTerminal<CR>
+nnoremap <silent> <C-@> :ToggleTerminal<CR>
+
+" set your favorite shell
+let g:toggle_terminal#command = 'zsh'
+
+" set terminal window position
+" (see possible options at :help vertical)
+let g:toggle_terminal#position = 'topleft'

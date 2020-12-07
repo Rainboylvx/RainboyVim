@@ -379,8 +379,9 @@ let WebDevIconsUnicodeDecorateFolderNodesExactMatches = 1
 
 
 "============= startify =============
-"let g:startify_custom_header = 
-""================== RainboyVim by Rainboy =================="
 let g:startify_custom_header = [
         \'================== RainboyVim by Rainboy =================='
         \ ]
+
+""================== terminus =================="
+let g:TerminusMouse=0 "disable mouse

@@ -33,13 +33,6 @@ function! s:check_is_last() abort
 endfunction
 :inoremap { {}<esc>i
 
-" alt+i
-execute "set <M-i>=\ei"
-":inoremap <silent><expr> <M-p>
-            "\ <SID>check_is_last() ? "{\n}<esc>O" :
-            "\ "{}<esc>i"
-:inoremap <silent><expr> <M-i> "<esc>A{\n}<esc>O"
-:nnoremap <silent><expr> <M-i> "A{\n}<esc>O"
 
 "au FileType c,cpp,javascript :inoremap <silent><expr> { 
             "\ <SID>check_is_last() ? "{\n}<esc>O" :
@@ -61,30 +54,12 @@ endf
 
 " ======= 自定义快捷键 ======= "
 
-" alt+;            行尾加;
-execute "set <M-;>=\e;"
-inoremap <silent><expr><M-;> match(getline("."),";\\s*$") ==-1 ? "<esc>g_a;<esc>o" : "<esc>o"
-"noremap <expr><M-;> AddSemicolonAtLineEnd()
-"noremap <silent><M-;> :call <SID>AddSemicolonAtLineEnd()<cr>
-noremap <M-;> :call <SID>AddSemicolonAtLineEnd()<cr>
-imap <leader>; <c-l>;<esc>o
-nmap <leader>; i<c-l>;<esc>o
-
-function! s:AddSemicolonAtLineEnd() abort
-    let orighinalPos = getpos(".")
-    normal! g_
-    let char = getline(".")[col(".")-1]
-    if char != ';'
-        normal! a;
-    endif
-    call setpos(".",orighinalPos)
-endfunction
 
 
 " ======= 快速退出 ======= "
 "nnoremap <c-q> :qa<cr>
 nnoremap qq :qa<cr>
-"inoremap <c-q> <esc>:qa<cr>
+"inoremap <c-q> <esc>:wqa<cr>
 
 
 
@@ -111,6 +86,65 @@ map <c-k> <c-w><c-k>
 " Ctrl + L            光标移当前行行尾[插入模式]、切换右窗口[Normal模式]
 imap <c-l> <esc>A
 map <c-l> <c-w><c-l>
+
+
+"================== ALT快捷键 ==================
+" alt+i
+if !has("nvim")
+    execute "set <M-i>=\ei"
+endif
+":inoremap <silent><expr> <M-p>
+            "\ <SID>check_is_last() ? "{\n}<esc>O" :
+            "\ "{}<esc>i"
+:inoremap <silent><expr> <M-i> "<esc>A{\n}<esc>O"
+:nnoremap <silent><expr> <M-i> "A{\n}<esc>O"
+
+
+" alt+;            行尾加;
+if !has("nvim")
+    execute "set <M-;>=\e;"
+endif
+inoremap <silent><expr><M-;> match(getline("."),";\\s*$") ==-1 ? "<esc>g_a;<esc>o" : "<esc>o"
+"noremap <expr><M-;> AddSemicolonAtLineEnd()
+"noremap <silent><M-;> :call <SID>AddSemicolonAtLineEnd()<cr>
+noremap <M-;> :call <SID>AddSemicolonAtLineEnd()<cr>
+imap <leader>; <c-l>;<esc>o
+nmap <leader>; i<c-l>;<esc>o
+
+function! s:AddSemicolonAtLineEnd() abort
+    let orighinalPos = getpos(".")
+    normal! g_
+    let char = getline(".")[col(".")-1]
+    if char != ';'
+        normal! a;
+    endif
+    call setpos(".",orighinalPos)
+endfunction
+
+" Alt  + H            光标左移一格
+if !has("nvim")
+    execute "set <M-h>=\eh"
+endif
+imap <M-h> <Left>
+"imap <m-h> <left>
+
+" Alt  + J            光标下移一格
+if !has("nvim")
+    execute "set <M-j>=\ej"
+endif
+imap <M-j> <Down>
+
+" Alt  + K            光标上移一格
+if !has("nvim")
+    execute "set <M-k>=\ek"
+endif
+imap <M-k> <Up>
+
+" Alt  + L            光标右移一格
+if !has("nvim")
+    execute "set <M-l>=\el"
+endif
+imap <M-l> <Right>
 
 
 "================== 窗口操作快捷键 ==================
@@ -141,22 +175,6 @@ map <c-up> <c-w>=
 " ctrl + down         将当前窗口的宽度调到最大
 nmap <c-down> :vertical resize<enter>
 
-" Alt  + H            光标左移一格
-execute "set <M-h>=\eh"
-imap <M-h> <Left>
-"imap <m-h> <left>
-
-" Alt  + J            光标下移一格
-execute "set <M-j>=\ej"
-imap <M-j> <Down>
-
-" Alt  + K            光标上移一格
-execute "set <M-k>=\ek"
-imap <M-k> <Up>
-
-" Alt  + L            光标右移一格
-execute "set <M-l>=\el"
-imap <M-l> <Right>
 
 " \c                  复制至公共剪贴板
 vmap <leader>c "+y

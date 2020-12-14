@@ -58,7 +58,7 @@ endf
 
 " ======= 快速退出 ======= "
 "nnoremap <c-q> :qa<cr>
-nnoremap qq :qa<cr>
+nnoremap qq :wqa<cr>
 "inoremap <c-q> <esc>:wqa<cr>
 
 

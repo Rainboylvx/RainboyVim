@@ -187,23 +187,23 @@ set viminfo+=!
 
 
 " ---根据后缀名指定文件类型
-au BufRead,BufNewFile *.h           setlocal ft=c
-au BufRead,BufNewFile *.i           setlocal ft=c
-au BufRead,BufNewFile *.m           setlocal ft=objc
-au BufRead,BufNewFile *.di          setlocal ft=d
-au BufRead,BufNewFile *.ss          setlocal ft=scheme
-au BufRead,BufNewFile *.cl          setlocal ft=lisp
-au BufRead,BufNewFile *.phpt        setlocal ft=php
-au BufRead,BufNewFile *.inc         setlocal ft=php
-au BufRead,BufNewFile *.sql         setlocal ft=mysql
-au BufRead,BufNewFile *.tpl         setlocal ft=smarty
-au BufRead,BufNewFile *.txt         setlocal ft=txt
-au BufRead,BufNewFile *.log         setlocal ft=conf
-au BufRead,BufNewFile hosts         setlocal ft=conf
-au BufRead,BufNewFile *.conf        setlocal ft=nginx
-au BufRead,BufNewFile http*.conf    setlocal ft=apache
-au BufRead,BufNewFile php-fpm*.conf setlocal ft=dosini
-au BufRead,BufNewFile *.ini         setlocal ft=dosini
+"au BufRead,BufNewFile *.h           setlocal ft=c
+"au BufRead,BufNewFile *.i           setlocal ft=c
+"au BufRead,BufNewFile *.m           setlocal ft=objc
+"au BufRead,BufNewFile *.di          setlocal ft=d
+"au BufRead,BufNewFile *.ss          setlocal ft=scheme
+"au BufRead,BufNewFile *.cl          setlocal ft=lisp
+"au BufRead,BufNewFile *.phpt        setlocal ft=php
+"au BufRead,BufNewFile *.inc         setlocal ft=php
+"au BufRead,BufNewFile *.sql         setlocal ft=mysql
+"au BufRead,BufNewFile *.tpl         setlocal ft=smarty
+"au BufRead,BufNewFile *.txt         setlocal ft=txt
+"au BufRead,BufNewFile *.log         setlocal ft=conf
+"au BufRead,BufNewFile hosts         setlocal ft=conf
+"au BufRead,BufNewFile *.conf        setlocal ft=nginx
+"au BufRead,BufNewFile http*.conf    setlocal ft=apache
+"au BufRead,BufNewFile php-fpm*.conf setlocal ft=dosini
+"au BufRead,BufNewFile *.ini         setlocal ft=dosini
 
 
 

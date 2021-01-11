@@ -1,0 +1,16 @@
+snippet tt "template" b
+CXX=g++
+CFLAGS="-lboost_system"
+
+SRC=$(wildcard *.cpp)
+TARGET=$(patsubst %.cpp,%,$(SRC))
+
+all: $(TARGET)
+	@echo done
+
+% : %.cpp
+	$(CXX) $(CFLAGS) -o $@ $<
+
+clean:
+	rm -rf $(TARGET)
+endsnippet

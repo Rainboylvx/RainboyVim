@@ -33,6 +33,8 @@ Plug 'vim-scripts/a.vim'                                            " .h .c 快�
 Plug 'nathanaelkane/vim-indent-guides'                              " 代码缩进
 Plug 'kshenoy/vim-signature'                                        " 书签
 Plug 'Yggdroot/LeaderF',{ 'do': './install.sh' }                    " 
+"Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'                                             " fzf
 Plug 'mattn/emmet-vim'                                              " expanding html abbreivtion
 Plug 'danro/rename.vim'                                             " 重命名 很好用
 Plug 'Lokaltog/vim-easymotion'                                      " 快速移动

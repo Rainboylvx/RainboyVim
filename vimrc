@@ -51,6 +51,7 @@ Plug 'Chiel92/vim-autoformat',{'for':['typescript','javascript']}   " 自动格�
 Plug 'gcmt/wildfire.vim'                                            " 括号内选择
 "Plug 'luochen1990/rainbow'                                          " 彩虹括号
 Plug 'vim-scripts/DrawIt'                                           " Ascii 画图
+Plug 'gyim/vim-boxdraw' 
 Plug '907th/vim-auto-save',{'for':['markdown','cpp']}               " 自动保存
 Plug 'leafgarland/typescript-vim',{'for':'typescript'}              " typescript 高亮
 Plug 'hotoo/pangu.vim',{'for':'markdown'}                           " 自动格式化、标准化中文排版。 使用 :pangu

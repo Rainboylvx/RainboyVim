@@ -167,7 +167,8 @@ let NERDTreeShowHidden=1
 let NERDTreeMinimalUI=1
 " 删除文件时自动删除文件对应 buffer
 "
-map <F2> :NERDTreeToggle<CR>
+"map <F2> :NERDTreeToggle<CR>
+nmap <F2> :CocCommand explorer<CR>
 
 let NERDTreeIgnore=['node_modules$', '\~$','^\.','^dist$']
 
@@ -219,7 +220,7 @@ let g:UltiSnipsExpandTrigger="<tab>"
 
 
 "============ vim - table
-let g:table_mode_corner="|"     "兼容Markdown Table
+"let g:table_mode_corner="|"     "兼容Markdown Table
 nmap <Leader>tm :TableModeToggle<cr>
 
 

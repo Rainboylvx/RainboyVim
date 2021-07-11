@@ -57,6 +57,7 @@ Plug 'hotoo/pangu.vim',{'for':'markdown'}                           " 自动格�
 Plug 'wincent/terminus'                                             "Cursor shape,Improved mouse support
 Plug 'mhinz/vim-startify'
 Plug 'pakutoma/toggle-terminal'
+Plug 'ap/vim-css-color',{'for':['scss','css']}                      "Preview colours in source code while editing
 "Plug 'skywind3000/vim-terminal-help'
 
 

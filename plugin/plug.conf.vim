@@ -37,7 +37,15 @@ endif
 let g:gutentags_enabled =0
 
 "=================== emmt   ==================
-let g:user_emmet_expandabbr_key='<C-y><C-y>'
+"let g:user_emmet_expandabbr_key='<C-y><C-y>'
+
+"https://stackoverflow.com/a/37151127
+"https://stackoverflow.com/a/34835408
+let g:user_emmet_expandabbr_key='<Tab>'
+augroup EmmetSettings
+  autocmd! FileType html imap <tab> <plug>(emmet-expand-abbr)
+augroup END
+
 
 "=================== LeaderF ================
 
@@ -338,6 +346,8 @@ xmap ga <Plug>(EasyAlign)
 
 
 "============= coc.nvim ============
+
+
 " use <tab> for trigger completion and navigate to the next complete item
 function! s:check_back_space() abort
   let col = col('.') - 1

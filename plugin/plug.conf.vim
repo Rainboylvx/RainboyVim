@@ -41,7 +41,7 @@ let g:gutentags_enabled =0
 
 "https://stackoverflow.com/a/37151127
 "https://stackoverflow.com/a/34835408
-let g:user_emmet_expandabbr_key='<Tab>'
+let g:user_emmet_expandabbr_key='<c-y><c-y>'
 augroup EmmetSettings
   autocmd! FileType html imap <tab> <plug>(emmet-expand-abbr)
 augroup END

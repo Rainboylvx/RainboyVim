@@ -5,6 +5,20 @@ let mapleader="\\"
 let g:global_author = "Rainboy"
 let g:global_email  = "rainboylvx@qq.com"
 
+
+let g:coc_global_extensions = [
+\ 'coc-ultisnips',
+\ 'coc-json',
+\ 'coc-tsserver',
+\ 'coc-html',
+\ 'coc-css',
+\ 'coc-yaml',
+\ 'coc-highlight',
+\ 'coc-explorer',
+\ 'coc-vetur',
+\ 'coc-python'
+\ ]
+
 " ============ Plugin Manager ============
 filetype off
 let $PLUG_DIR = expand("$HOME/.vim/plugged")
@@ -75,4 +89,5 @@ syntax enable
 filetype on
 filetype plugin on
 filetype plugin indent on        " 必须 加载vim自带和插件相应的语法和文件类型相关脚本
+
 

@@ -58,6 +58,7 @@ Plug 'scrooloose/nerdtree',{ 'on':  'NERDTreeToggle' }              " 工程文�
 Plug 'ryanoasis/vim-devicons'                                       " Adds filetype glyphs (icons) to various vim plugins.
 Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 Plug 'majutsushi/tagbar',{ 'on':  'TagbarToggle' }                  " tagbar
+Plug 'liuchengxu/vista.vim'                 "View and search LSP symbols, tags in Vim/NeoVim.
 Plug 'vim-scripts/taglist.vim'                                      " taglist
 Plug 'dhruvasagar/vim-table-mode',{ 'on':  'TableModeToggle' }      " table 生成
 Plug 'plasticboy/vim-markdown'                                      " markdown 语法高亮

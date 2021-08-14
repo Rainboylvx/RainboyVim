@@ -306,12 +306,15 @@ let g:pyclewn_terminal = "xterm, -e"
 
 "================== tagbar
 "au BufWrite *.ts :Autoformat
-noremap <F3> :TagbarToggle<CR>
+noremap <F4> :TagbarToggle<CR>
 let g:tagbar_sort             = 0 " tags sorted by order in the file
 let g:tagbar_help_visibility  = 0 " dot not show help
 let g:tagbar_show_linenumbers = -1
 "let g:tagbar_show_data_type = 1
 "let g:tagbar_width=26
+"
+" =============== replace tab vista
+noremap <F3> :Vista<CR>
 
 
 "======== indentLine

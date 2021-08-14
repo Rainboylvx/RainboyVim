@@ -193,6 +193,9 @@ imap <leader>v <esc>"+p
 nmap <leader>v "+p
 vmap <leader>v "+p
 
+" \b                  从*剪贴板粘贴
+nmap <leader>b "*p
+
 if exists("g:WSL")
     nmap <leader>v :read !/mnt/c/Windows/System32/paste.exe <cr>
 endif

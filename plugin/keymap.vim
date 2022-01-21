@@ -13,6 +13,11 @@ imap <F1> <esc>
 "imap <F3> <esc>:w<enter><esc>:shell<enter>
 "nmap <F3> :w<enter>:shell<enter>
 
+"====
+nnoremap <A-j> :m .+1<CR>==
+nnoremap <A-k> :m .-2<CR>==
+vnoremap <A-j> :m '>+1<CR>gv=gv
+vnoremap <A-k> :m '<-2<CR>gv=gv
 
 inoremap ` ``<esc>i
 " ======= 引号 && 括号自动匹配 ======= "
@@ -345,9 +350,9 @@ endif
 map <F8> :call Compile()<CR>
 imap <F8> <ESC>:call Compile()<CR>
 
-" F9 一键保存、编译、连接存并运行
-map <F9> :call Run()<CR>
-imap <F9> <ESC>:call Run()<CR>
+" F12 一键保存、编译、连接存并运行
+map <F12> :call Run()<CR>
+imap <F12> <ESC>:call Run()<CR>
  
 " Ctrl + F10  编译并调试
 map <c-F10> :call Gdb()<CR>
@@ -394,6 +399,7 @@ func! Compile()
         return
     endif
 
+    exe "!b %"
     if &filetype=="c"
         if g:iswindows==1
             set makeprg=gcc\ -g\ -o\ %<.exe\ %
@@ -463,6 +469,8 @@ endfunc
 
 
 func! Run()
+    exec ":term b %"
+    return
     call Compile()
     exe "silent !./1 < in > out"
     redraw!

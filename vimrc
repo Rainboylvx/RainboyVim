@@ -61,7 +61,7 @@ Plug 'majutsushi/tagbar',{ 'on':  'TagbarToggle' }                  " tagbar
 Plug 'liuchengxu/vista.vim'                 "View and search LSP symbols, tags in Vim/NeoVim.
 Plug 'vim-scripts/taglist.vim'                                      " taglist
 Plug 'dhruvasagar/vim-table-mode',{ 'on':  'TableModeToggle' }      " table 生成
-Plug 'plasticboy/vim-markdown'                                      " markdown 语法高亮
+"Plug 'plasticboy/vim-markdown'                                      " markdown 语法高亮
 Plug 'Chiel92/vim-autoformat',{'for':['typescript','javascript']}   " 自动格式化
 Plug 'gcmt/wildfire.vim'                                            " 括号内选择
 "Plug 'luochen1990/rainbow'                                          " 彩虹括号
@@ -71,12 +71,13 @@ Plug 'leafgarland/typescript-vim',{'for':'typescript'}              " typescript
 Plug 'hotoo/pangu.vim',{'for':'markdown'}                           " 自动格式化、标准化中文排版。 使用 :pangu
 Plug 'wincent/terminus'                                             "Cursor shape,Improved mouse support
 Plug 'mhinz/vim-startify'
-Plug 'pakutoma/toggle-terminal'
+Plug 'caenrique/nvim-toggle-terminal'
 Plug 'ap/vim-css-color',{'for':['scss','css']}                      "Preview colours in source code while editing
 "Plug 'skywind3000/vim-terminal-help'
 
 
 Plug 'lilydjwg/fcitx.vim',{ 'branch': 'fcitx4' }
+Plug 'junegunn/goyo.vim'
 "Plug 'skywind3000/gutentags_plus'
 "Plug 'Xuyuanp/nerdtree-git-plugin'        "
 "Plug 'posva/vim-vue'                      "vue高亮

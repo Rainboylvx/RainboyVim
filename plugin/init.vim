@@ -24,7 +24,15 @@ set softtabstop=4             " 让vim把连续数量的制表符视为一个空
 "=========== Vim 主题相关 ===========
 set background=dark
 "set background=light
-colorscheme gruvbox
+"colorscheme doom-one
+try
+  colorscheme doom-one
+  catch
+  try
+    colorscheme gruvbox
+    catch
+  endtry
+endtry
 
 
 " ---对部分语言设置单独的缩进

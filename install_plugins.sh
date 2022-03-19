@@ -25,4 +25,5 @@ git -C $HOME/.vim/plugged clone --depth 1  ${GH_PROXY}vim-scripts/taglist.vim
 git -C $HOME/.vim/plugged clone --depth 1  ${GH_PROXY}gcmt/wildfire.vim
 git -C $HOME/.vim/plugged clone --depth 1  ${GH_PROXY}luochen1990/rainbow
 git -C $HOME/.vim/plugged clone --depth 1  ${GH_PROXY}907th/vim-auto-save
+git -C $HOME/.vim/plugged clone --depth 1  ${GH_PROXY}liuchengxu/vista.vim
 git -C $HOME/.vim/plugged clone --depth 1 -b release  ${GH_PROXY}neoclide/coc.nvim

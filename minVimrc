@@ -38,6 +38,7 @@ Plug 'gcmt/wildfire.vim'                                          " 括号内选
 Plug 'luochen1990/rainbow'                                        " 彩虹括号
 Plug '907th/vim-auto-save'                                        " 自动保存
 Plug 'wincent/terminus'                                           "Cursor shape,Improved mouse support
+Plug 'liuchengxu/vista.vim'                 "View and search LSP symbols, tags in Vim/NeoVim.
 
 "Plug 'skywind3000/gutentags_plus'
 "Plug 'majutsushi/tagbar'                  "tagbar

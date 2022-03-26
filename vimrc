@@ -34,8 +34,11 @@ Plug 'Rainboylvx/rSnip'                                             " noi code s
 Plug 'romainl/vim-cool'                                             " 搜索高亮
 Plug 'thinca/vim-quickrun'                                          " 运行 Run commands quickly 更快
 Plug 'ludovicchabant/vim-gutentags'                                 " ctags,gtags,暂时用不到
-"Plug 'morhetz/gruvbox'                                              " gruvbox主题
-Plug 'romgrk/doom-one.vim'                                          " doom 主题
+if has('nvim')
+    Plug 'romgrk/doom-one.vim'                                          " doom 主题
+else
+    Plug 'morhetz/gruvbox'                                              " gruvbox主题
+endif
 Plug 'digitaltoad/vim-pug'                                          " pug模板
 Plug 'bling/vim-airline'                                            " airline
 Plug 'vim-airline/vim-airline-themes'                               " airline themes
@@ -80,7 +83,11 @@ Plug 'ap/vim-css-color',{'for':['scss','css']}                      "Preview col
 
 Plug 'lilydjwg/fcitx.vim',{ 'branch': 'fcitx4' }
 Plug 'junegunn/goyo.vim'                " 使文字变成 文字中央
-Plug 'romgrk/barbar.nvim'               " tab bar 
+
+if has('nvim')
+    Plug 'romgrk/barbar.nvim'               " tab bar 
+endif
+
 "Plug 'mattn/webapi-vim'
 "Plug 'mattn/pastebin-vim'
 "Plug 'skywind3000/gutentags_plus'

@@ -92,8 +92,11 @@ let g:Lf_MruWildIgnore = {
 "=================== airline ================
 
 "启用tabline
-"let g:airline#extensions#tabline#enabled = 1
+if !has("nvim")
+let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#gutentags#enabled = 1
+endif
+
 
 "let g:airline#extensions#disable_rtp_load = 1
 "let g:airline_extensions = ['branch', 'tabline']

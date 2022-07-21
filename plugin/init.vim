@@ -38,8 +38,8 @@ endtry
 " ---对部分语言设置单独的缩进
 "au FileType javascript,html,vue,ruby,eruby,slim,coffee,jade,sh set shiftwidth=2
 "au FileType javascript,html,vue,ruby,eruby,slim,coffee,jade,sh set tabstop=2
-au FileType javascript set shiftwidth=2
-au FileType javascript set tabstop=2
+au FileType javascript,html,vue,markdown set shiftwidth=2
+au FileType javascript,html,vue,markdown set tabstop=2
 
 au BufNewFile,BufRead *.ejs set filetype=html
 

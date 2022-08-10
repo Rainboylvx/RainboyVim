@@ -34,13 +34,14 @@ Plug 'Rainboylvx/rSnip'                                             " noi code s
 Plug 'romainl/vim-cool'                                             " 搜索高亮
 Plug 'thinca/vim-quickrun'                                          " 运行 Run commands quickly 更快
 Plug 'ludovicchabant/vim-gutentags'                                 " ctags,gtags,暂时用不到
-if has('nvim')
-    Plug 'romgrk/doom-one.vim'                                          " doom 主题
-else
-    Plug 'morhetz/gruvbox'                                              " gruvbox主题
-endif
+
+" Theme 主题
+"Plug 'romgrk/doom-one.vim'                                         " doom 主题
+"Plug 'romgrk/barbar.nvim'                                          " 与doom 主题 配合使用,显示buf 标签
+Plug 'morhetz/gruvbox'                                              " gruvbox主题
+
 Plug 'digitaltoad/vim-pug'                                          " pug模板
-Plug 'bling/vim-airline'                                            " airline
+Plug 'vim-airline/vim-airline'                                      " airline
 Plug 'vim-airline/vim-airline-themes'                               " airline themes
 Plug 'Linfee/ultisnips-zh-doc'                                      " ultisnips-zh-doc
 Plug 'SirVer/ultisnips'                                             " ultisnips
@@ -60,14 +61,17 @@ Plug 'danro/rename.vim'                                             " 重命名 
 Plug 'Lokaltog/vim-easymotion'                                      " 快速移动
 Plug 'junegunn/vim-easy-align'                                      " 文本对齐
 Plug 'scrooloose/nerdcommenter'                                     " 代码注释
-Plug 'scrooloose/nerdtree',{ 'on':  'NERDTreeToggle' }              " 工程文件浏览
+
+" 被 coc-explorer 取代
+"Plug 'scrooloose/nerdtree',{ 'on':  'NERDTreeToggle' }              " 工程文件浏览
+"Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
+
 "Plug 'ryanoasis/vim-devicons'                                       " Adds filetype glyphs (icons) to various vim plugins.
-Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 Plug 'majutsushi/tagbar',{ 'on':  'TagbarToggle' }                  " tagbar
 Plug 'liuchengxu/vista.vim'                 "View and search LSP symbols, tags in Vim/NeoVim.
 Plug 'vim-scripts/taglist.vim'                                      " taglist
 Plug 'dhruvasagar/vim-table-mode',{ 'on':  'TableModeToggle' }      " table 生成
-"Plug 'plasticboy/vim-markdown'                                      " markdown 语法高亮
+Plug 'preservim/vim-markdown',{'for':'markdown'}                  " markdown 语法高亮
 Plug 'Chiel92/vim-autoformat',{'for':['typescript','javascript']}   " 自动格式化
 Plug 'gcmt/wildfire.vim'                                            " 括号内选择
 "Plug 'luochen1990/rainbow'                                          " 彩虹括号
@@ -79,16 +83,14 @@ Plug 'wincent/terminus'                                             "Cursor shap
 Plug 'mhinz/vim-startify'
 "Plug 'caenrique/nvim-toggle-terminal'
 Plug 'ap/vim-css-color',{'for':['scss','css']}                      "Preview colours in source code while editing
+Plug 'voldikss/vim-floaterm'                                        "floaterm
 "Plug 'skywind3000/vim-terminal-help'
 
 Plug 'lilydjwg/fcitx.vim',{ 'branch': 'fcitx4' }
 Plug 'junegunn/goyo.vim'                " 使文字变成 文字中央
 
-if has('nvim')
-    Plug 'romgrk/barbar.nvim'               " tab bar 
-endif
 
-"Plug 'mattn/webapi-vim'
+"Plug 'mattn/webapi-vim'                            " 在vim中使用 webapi, 以后可以开发一个OJ上传代码的插件
 "Plug 'mattn/pastebin-vim'
 "Plug 'skywind3000/gutentags_plus'
 "Plug 'Xuyuanp/nerdtree-git-plugin'        "

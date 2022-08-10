@@ -91,12 +91,9 @@ let g:Lf_MruWildIgnore = {
 
 "=================== airline ================
 
-"启用tabline
-if !has("nvim")
+"display buffers
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#gutentags#enabled = 1
-endif
-
 
 "let g:airline#extensions#disable_rtp_load = 1
 "let g:airline_extensions = ['branch', 'tabline']
@@ -256,14 +253,29 @@ vmap <S-SPACE> <Plug>(wildfire-water)
 let g:wildfire_objects = ["i'", 'i"', "i)", "i]", "i}", "i>", "ip"]
 
 "============ Vim markdown =========
+"let g:vim_markdown_folding_disabled = 1
+"
+let g:vim_markdown_folding_level = 2
+
 "diable ge map
-map <Plug> <Plug>Markdown_OpenUrlUnderCursor
+"map <Plug> <Plug>Markdown_OpenUrlUnderCursor
 let g:vim_markdown_frontmatter=1
 let g:vim_markdown_math=0
-let g:vim_markdown_conceal = 0
-let g:vim_markdown_toc_autofit = 1
+
+
+"disable math conceal with LaTeX math syntax enabled
+"let g:tex_conceal = ""
+"let g:vim_markdown_math = 1
+
+"let g:vim_markdown_conceal = 0
+"Disabling conceal for code fences requires an additional setting:
+"let g:vim_markdown_conceal_code_blocks = 0
+
+"let g:vim_markdown_toc_autofit = 1
 let g:vim_markdown_new_list_item_indent = 2
-set conceallevel=0
+
+"ge command to follow named anchors in links of the form file#anchor
+let g:vim_markdown_follow_anchor = 1
 
 "============ wmgraphiz.vim
 let g:WMGraphviz_outpt = 'png'
@@ -594,4 +606,8 @@ let bufferline.letters =
 " Sets the name of unnamed buffers. By default format is "[Buffer X]"
 " where X is the buffer number. But only a static string is accepted here.
 let bufferline.no_name_title = v:null
+
+
+"================= floaterm
+let g:floaterm_keymap_toggle = '<F12>'
 

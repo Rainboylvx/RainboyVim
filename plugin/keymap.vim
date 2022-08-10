@@ -353,8 +353,9 @@ imap <F8> <ESC>:call Compile()<CR>
 " F12 一键保存、编译、连接存并运行
 "map <F12> :call Run()<CR>
 "imap <F12> <ESC>:call Run()<CR>
-noremap <F12> :vs \| :te b %<CR>
-inoremap <F12> <ESC>:vs \| :te b %<CR>
+
+noremap <F11> :vs \| :te b %<CR>
+inoremap <F11> <ESC>:vs \| :te b %<CR>
  
 " Ctrl + F10  编译并调试
 map <c-F10> :call Gdb()<CR>

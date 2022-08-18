@@ -11,9 +11,11 @@
 
 "============================ 外观设定 ============================
 set number                     " 开启行号显示
-set relativenumber           " 开启相对行号
+set relativenumber             " 开启相对行号
 set copyindent                 " 复制的时候 缩进
 set preserveindent             " ?
+set colorcolumn=70,80          " screen columns that are highlight
+                               " useful for algin text
 
 set expandtab                 " 将制表符扩展为空格
 set tabstop=4                 " 设置编辑时制表符占用的空格
@@ -25,14 +27,15 @@ set softtabstop=4             " 让vim把连续数量的制表符视为一个空
 set background=dark
 "set background=light
 "colorscheme doom-one
-try
-  colorscheme doom-one
-  catch
-  try
-    colorscheme gruvbox
-    catch
-  endtry
-endtry
+colorscheme gruvbox
+"try
+  "colorscheme doom-one
+  "catch
+  "try
+    "colorscheme gruvbox
+    "catch
+  "endtry
+"endtry
 
 
 " ---对部分语言设置单独的缩进

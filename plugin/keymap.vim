@@ -194,12 +194,12 @@ if exists("g:WSL")
 endif
 
 " \v                  从公共剪贴板粘贴
-imap <leader>v <esc>"+p
-nmap <leader>v "+p
-vmap <leader>v "+p
+inoremap <leader>v <esc>"+p
+nnoremap <leader>v "+p
+vnoremap <leader>v "+p
 
 " \b                  从*剪贴板粘贴
-nmap <leader>b "*p
+"nmap <leader>b "*p
 
 if exists("g:WSL")
     nmap <leader>v :read !/mnt/c/Windows/System32/paste.exe <cr>
@@ -306,6 +306,7 @@ autocmd BufRead *.dot nmap <F9> :w<CR>:!neato -n -Tpng -o %<.png % && start %<.p
 "autocmd BufRead *.dot imap ij <esc>o-<leader><Tab>
 
 
+
 "========== markdown 文件下的快捷键
 
 " 快捷键 把选中的公式用 $ $ 包起来
@@ -318,6 +319,23 @@ nmap <leader>m :.s/[a-zA-Z0-9\[\]+-=]\+/\$\0\$/<CR>
 
 "" code
 "autocmd BufRead *.md imap <c-c> ```c<enter><esc>O
+
+" sround visual text by **
+autocmd BufRead *.md vnoremap <leader>b c**<c-r>"**<esc>
+" sround visual text by *
+autocmd BufRead *.md vnoremap <leader>* c*<c-r>"*<esc>
+" sround visual text by `
+autocmd BufRead *.md vnoremap <leader>` c`<c-r>"`<esc>
+" sround visual text by $
+autocmd BufRead *.md vnoremap <leader>$ c$<c-r>"$<esc>
+
+" sround visual text by *
+"
+autocmd BufRead *.md nnoremap <leader>* viw<esc>a*<esc>hbi*<esc>lel
+autocmd BufRead *.md nnoremap <leader>` viw<esc>a`<esc>hbi`<esc>lel
+autocmd BufRead *.md nnoremap <leader>b viw<esc>a**<esc>hhbi**<esc>llel
+autocmd BufRead *.md nnoremap <leader>$ viw<esc>a$<esc>hbi$<esc>lel
+
 
 
 "=========== JavaScript下nodejs 编译

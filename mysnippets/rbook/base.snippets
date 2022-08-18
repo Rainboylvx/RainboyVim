@@ -136,6 +136,17 @@ snippet include "include" b
 <%- include("${1:1}.cpp") _%>
 endsnippet
 
+# details
+
+snippet details "details" b
+::: details
+\`\`\`${1:plaintext}
+<%- include("${2:1.cpp}") _%>
+\`\`\`
+:::
+$0
+endsnippet
+
 # blackboard line center warning info
 snippet blackboard "blackboard" b
 ::: blackboard

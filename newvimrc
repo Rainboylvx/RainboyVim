@@ -1,0 +1,39 @@
+set number
+set relativenumber
+
+"[Tabs & Spaces in Vim: How to Make Conscious Use of Both – all drops](https://alldrops.info/posts/vim-drops/2021-07-08_tabs-and-spaces-in-vim/)
+"
+set list
+"set listchars:multispace:ﲒ___
+"set listchars:multispace:ﲒ___
+"set listchars
+"set listchars=tab:▷▷⋮
+"set listchars=tab:>,trail:-,extends:>,precedes:<,nbsp:+
+set tabstop=4 "tells Vim to display 4 spaces on the screen wherever there is a Tab character.
+set shiftwidth=4
+set expandtab "tells Vim to insert 4 spaces instead of a Tab character when user press <Tab> on insert mode.
+"    hello wrld
+"    helo  hello 
+"
+
+fun! CompleteMonths(findstart,base)
+  if a:findstart
+    let line = getline('.') " 得到这一行
+    let start = col('.')-1
+    while start > 0 && line[start-1] =~ '\a'
+      let start -= 1
+    endwhile
+    return start
+  else
+    let res = []
+    for m in split("Jan Feb Mar Apr May Jun Jul Aug Sep Oct Nov Dec")
+      if m =~ '^'.. a:base
+        call add(res,m)
+      endif
+    endfor
+    return res
+  endif
+endfun
+set completefunc=CompleteMonths
+
+" Jan

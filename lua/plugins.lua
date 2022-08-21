@@ -6,6 +6,10 @@ return require('packer').startup(function(use)
   -- Simple plugins can be specified as strings
   use 'morhetz/gruvbox'
 
+  -- coc.nvim ,conquer of completion
+  use {'neoclide/coc.nvim', branch = 'release'}
+  use 'SirVer/ultisnips'
+
   -- UI
   use 'kyazdani42/nvim-web-devicons' -- icons
   use {'akinsho/bufferline.nvim', tag = "v2.*"} -- tab

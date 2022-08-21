@@ -6,4 +6,7 @@ return require('packer').startup(function(use)
   -- Simple plugins can be specified as strings
   use 'morhetz/gruvbox'
 
+  -- UI
+  use 'kyazdani42/nvim-web-devicons' -- icons
+  use 'nvim-lualine/lualine.nvim' -- status line
 end)

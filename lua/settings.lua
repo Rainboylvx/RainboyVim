@@ -66,6 +66,9 @@ local settings = {
     wildmenu = true, -- on TAB, complete options for system command
     wildignore = 'deps,.svn,CVS,.git,.hg,*.o,*.a,*.class,*.mo,*.la,*.so,*.obj,*.swp,*.jpg,*.png,*.xpm,*.gif,.DS_Store,*.aux,*.out,*.toc',
 
+    -- mouse
+    mouse = 'a',
+
 }
 for k,v in pairs(settings) do
 	vim.o[k] = v

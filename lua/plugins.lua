@@ -8,5 +8,6 @@ return require('packer').startup(function(use)
 
   -- UI
   use 'kyazdani42/nvim-web-devicons' -- icons
+  use {'akinsho/bufferline.nvim', tag = "v2.*"} -- tab
   use 'nvim-lualine/lualine.nvim' -- status line
 end)

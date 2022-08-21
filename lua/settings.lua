@@ -20,6 +20,8 @@ local settings = {
     scrolloff = 3, -- always show 3 rows from edge of the screen
     synmaxcol = 300, -- stop syntax highlight after x lines for performance
     cursorline = true, -- highlight the text line of cursor
+    colorcolumn= '80',         -- screen columns that are highlight
+                            -- useful for algin text
 
     list = true, -- display white characters
     listchars = 'trail:·,nbsp:◇,tab:→ ,extends:▸,precedes:◂,multispace:→   ',
@@ -75,5 +77,10 @@ for k,v in pairs(settings) do
 end
 
     -- theme
---vim.cmd("colorscheme murphy")
-vim.cmd("colorscheme gruvbox")
+-- vim.cmd("colorscheme murphy")
+-- vim.cmd("colorscheme gruvbox")
+local ok, result = pcall(
+  vim.cmd,
+  'colorscheme gruvbox'
+)
+if (not ok) then vim.cmd("colorscheme murphy") end

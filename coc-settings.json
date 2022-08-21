@@ -22,7 +22,16 @@
   //"tsserver.log": "verbose"
   "suggest.floatEnable": false,
   "suggest.snippetIndicator":"  \uf942",
-  "diagnostic.errorSign":"🗶",
-  "diagnostic.warningSign":"⚠"
+  "git.addedSign.text": "▐",
+  "git.changedSign.text": "▐",
+  "git.removedSign.text": "▐",
+  "git.topRemovedSign.text": "▐",
+  "git.changeRemovedSign.text": "▐",
+  "suggest.noselect": false,
+  "diagnostic.errorSign": "✘",
+  "diagnostic.warningSign": "⚠",
+  "diagnostic.infoSign": "●",
+  "diagnostic.hintSign": "○",
+  "diagnostic.checkCurrentLine": true
 
 }

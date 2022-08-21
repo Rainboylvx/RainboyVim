@@ -7,8 +7,8 @@ vim.cmd([[
 set updatetime=300
 inoremap <silent><expr> <TAB>
       \ coc#pum#visible() ? coc#pum#next(1):
-      \ CheckBackspace() ? "\<Tab>" :
-      \ coc#refresh()
+      \ UltiSnips#CanExpandSnippet() ? "\<c-r>=UltiSnips#ExpandSnippet()<cr>" :
+      \ "\<Tab>"
 inoremap <expr><S-TAB> coc#pum#visible() ? coc#pum#prev(1) : "\<C-h>"
 
 " Make <CR> to accept selected completion item or notify coc.nvim to format

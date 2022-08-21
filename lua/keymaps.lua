@@ -5,8 +5,8 @@ local term_opts = { silent = true }
 local keymap = vim.api.nvim_set_keymap
 
 -- Map <leader> to space
-vim.g.mapleader = ' '
-vim.g.maplocalleader = ' '
+vim.g.mapleader = '\\'
+vim.g.maplocalleader = '\\'
 -- Modes normal_mode = "n",
 --   insert_mode = "i",
 --   visual_mode = "v",

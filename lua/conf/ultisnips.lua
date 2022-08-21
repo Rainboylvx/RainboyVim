@@ -1,2 +1,2 @@
-vim.g['UltiSnipsSnippetDirectories'] =  { 'mysnippets'} 
+vim.g['UltiSnipsSnippetDirectories'] =  { 'mysnippets','UltiSnips'} 
 vim.g['UltiSnipsExpandTrigger'] = '<nop>'

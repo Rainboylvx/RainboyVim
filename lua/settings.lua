@@ -77,6 +77,11 @@ for k,v in pairs(settings) do
 	vim.o[k] = v
 end
 
+-- 其它定义
+--g:global_author` email: `!v g:global_email
+vim.g['global_author'] = 'Rainboy'
+vim.g['global_email'] = 'rainboylvx@qq.com'
+
     -- theme
 -- vim.cmd("colorscheme murphy")
 -- vim.cmd("colorscheme gruvbox")

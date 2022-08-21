@@ -19,6 +19,7 @@ local settings = {
     laststatus = 2,     -- always show status line
     scrolloff = 3, -- always show 3 rows from edge of the screen
     synmaxcol = 300, -- stop syntax highlight after x lines for performance
+    cursorline = true, -- highlight the text line of cursor
 
     list = true, -- display white characters
     listchars = 'trail:·,nbsp:◇,tab:→ ,extends:▸,precedes:◂,multispace:→   ',
@@ -71,4 +72,5 @@ for k,v in pairs(settings) do
 end
 
     -- theme
-vim.cmd("colorscheme murphy")
+--vim.cmd("colorscheme murphy")
+vim.cmd("colorscheme gruvbox")

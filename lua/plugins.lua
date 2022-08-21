@@ -10,4 +10,5 @@ return require('packer').startup(function(use)
   use 'kyazdani42/nvim-web-devicons' -- icons
   use {'akinsho/bufferline.nvim', tag = "v2.*"} -- tab
   use 'nvim-lualine/lualine.nvim' -- status line
+  use 'kyazdani42/nvim-tree.lua'
 end)

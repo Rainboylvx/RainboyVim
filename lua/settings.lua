@@ -3,7 +3,7 @@ local settings = {
     -- basic settings
     encoding = "utf-8",
     backspace = "indent,eol,start", -- backspace works on every char in insert mode
-    completeopt = "menu,noinsert",
+    completeopt = "menu",
     history = 1000,
     startofline = true,
 
@@ -56,8 +56,9 @@ local settings = {
     formatoptions = 'qnj1', -- q  - comment formatting; n - numbered lists; j - remove comment when joining lines; 1 - don't break after one-letter word
     expandtab = true, -- expand tab to spaces
 
+
 -- Backup files
-    backup = true, -- use backup files
+    backup = false, -- not use backup files
     writebackup = false,
     swapfile = false, -- do not use swap file
     undodir = HOME .. '/.vim/tmp/undo//',    -- undo files

@@ -23,7 +23,7 @@ keymap("n", "<C-l>", "<C-w>l", opts)
 -- Better motion
 
 --
-keymap("i", "<C-l>", "<esc>g_a", opts)
+keymap("i", "<C-l>", "<esc>A", opts)
 keymap("i", "<C-h>", "<esc>I", opts)
 keymap('n', '<A-j>', ':m .+1<cr>==',opts)   -- move current line down
 keymap('n', '<A-k>', ':m .-2<cr>==',opts)   -- move current line up
@@ -38,4 +38,7 @@ keymap("n", "<leader>v", '"+p', opts)
 keymap("v", "<leader>v", '"+p', opts)
 keymap("v", "<leader>c", '"+y', opts)
 keymap("n", "<leader>a", 'ggVG"+y', opts)
+
+-- 测试 
+-- keymap('i',"<c-l>",'<c-r>=ralgo#RalgoExpand()<cr>',opts)
 

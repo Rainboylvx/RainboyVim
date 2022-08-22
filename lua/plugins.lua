@@ -18,4 +18,15 @@ return require('packer').startup(function(use)
   use {'akinsho/bufferline.nvim', tag = "v2.*"} -- tab
   use 'nvim-lualine/lualine.nvim' -- status line
   use 'kyazdani42/nvim-tree.lua'
+
+  -- Treesittetr
+  use {
+      "nvim-treesitter/nvim-treesitter",
+      run = ":TSUpdate",
+  }
+
+  -- debugger
+  use 'mfussenegger/nvim-dap'
+  use 'theHamsta/nvim-dap-virtual-text'
+  use 'rcarriga/nvim-dap-ui'
 end)

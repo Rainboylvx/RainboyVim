@@ -15,11 +15,19 @@ return require('packer').startup(function(use)
   use 'goolord/alpha-nvim'
   ---- theme
   use 'morhetz/gruvbox'
+
   ---- display
   use 'kyazdani42/nvim-web-devicons' -- icons
   use {'akinsho/bufferline.nvim', tag = "v2.*"} -- tab
   use 'nvim-lualine/lualine.nvim' -- status line
   use 'kyazdani42/nvim-tree.lua'
+
+  -- adds indentation guides to all lines
+  use "lukas-reineke/indent-blankline.nvim" 
+
+  -- tools
+  use {"akinsho/toggleterm.nvim", tag = 'v2.*'}
+  use 'h-hg/fcitx.nvim' -- switch input method
 
   -- Treesittetr
   use {

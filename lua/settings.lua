@@ -24,7 +24,7 @@ local settings = {
                             -- useful for algin text
 
     list = true, -- display white characters
-    listchars = 'trail:·,nbsp:◇,tab:→ ,extends:▸,precedes:◂,multispace:→   ',
+    --listchars = 'trail:·,nbsp:◇,tab:→ ,extends:▸,precedes:◂,multispace:→   ',
 --listchars='eol:¬,space:·,lead: ,trail:·,nbsp:◇,tab:→-,extends:▸,precedes:◂,multispace:···⬝,leadmultispace:│   ',
 --listchars='eol:¬,space:·,lead: ,trail:·,nbsp:◇,tab:→-,extends:▸,precedes:◂,multispace:···⬝,leadmultispace:│   ,',
 -- o.formatoptions = 'qrn1' -- help fo-table

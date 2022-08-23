@@ -11,6 +11,8 @@ return require('packer').startup(function(use)
   use 'RainboyNoip/algorithms'
 
   -- UI
+  -- setup ui
+  use 'goolord/alpha-nvim'
   ---- theme
   use 'morhetz/gruvbox'
   ---- display
@@ -24,6 +26,10 @@ return require('packer').startup(function(use)
       "nvim-treesitter/nvim-treesitter",
       run = ":TSUpdate",
   }
+  -- outline
+  use 'liuchengxu/vista.vim'
+
+  use 'terrortylor/nvim-comment'
 
   -- debugger
   use 'mfussenegger/nvim-dap'

@@ -45,3 +45,7 @@ keymap('i','\'','\'\'<Left>')
 keymap('i','"','""<Left>')
 keymap('i','{','{}<Left>')
 keymap('i','(','()<Left>')
+keymap('i','[','[]<Left>')
+
+-- fold
+keymap('n','<space>','za')

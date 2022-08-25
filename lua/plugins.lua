@@ -37,7 +37,7 @@ return require('packer').startup(function(use)
   -- outline
   use 'liuchengxu/vista.vim'
 
-  use 'terrortylor/nvim-comment'
+  use 'numToStr/Comment.nvim'
 
   -- debugger
   use 'mfussenegger/nvim-dap'

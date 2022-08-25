@@ -29,8 +29,9 @@ local settings = {
 --listchars='eol:¬,space:·,lead: ,trail:·,nbsp:◇,tab:→-,extends:▸,precedes:◂,multispace:···⬝,leadmultispace:│   ,',
 -- o.formatoptions = 'qrn1' -- help fo-table
     foldenable = true,
-    foldlevel = 4, -- limit folding to 4 levels
+    foldlevel = 0, -- limit folding to 4 levels
     foldmethod = 'syntax', -- use language syntax to generate folds
+    foldclose ='all',
     wrap = true,
     showbreak= '↪', -- character to show when line is broken
 

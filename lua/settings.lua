@@ -30,8 +30,11 @@ local settings = {
 -- o.formatoptions = 'qrn1' -- help fo-table
     foldenable = true,
     foldlevel = 0, -- limit folding to 4 levels
-    foldmethod = 'syntax', -- use language syntax to generate folds
-    foldclose ='all',
+    -- foldmethod = 'syntax', -- use language syntax to generate folds
+    foldmethod = 'expr', --  syntax nvim-treesitter implemention not good
+    -- foldclose ='all',
+    foldopen = 'hor,insert,percent,search',
+    foldcolumn = '4',
     wrap = true,
     showbreak= '↪', -- character to show when line is broken
 

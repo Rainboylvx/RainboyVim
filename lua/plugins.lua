@@ -21,6 +21,7 @@ return require('packer').startup(function(use)
   use {'akinsho/bufferline.nvim', tag = "v2.*"} -- tab
   use 'nvim-lualine/lualine.nvim' -- status line
   use 'kyazdani42/nvim-tree.lua'
+  use 'chentoast/marks.nvim'      -- view mark
 
   -- adds indentation guides to all lines
   use "lukas-reineke/indent-blankline.nvim" 
@@ -40,7 +41,7 @@ return require('packer').startup(function(use)
   use 'numToStr/Comment.nvim'
 
   -- debugger
-  use 'mfussenegger/nvim-dap'
-  use 'theHamsta/nvim-dap-virtual-text'
-  use 'rcarriga/nvim-dap-ui'
+  -- use 'mfussenegger/nvim-dap'
+  -- use 'theHamsta/nvim-dap-virtual-text'
+  -- use 'rcarriga/nvim-dap-ui'
 end)

@@ -3,7 +3,7 @@ local settings = {
     -- basic settings
     encoding = "utf-8",
     backspace = "indent,eol,start", -- backspace works on every char in insert mode
-    completeopt = "menu",
+   -- completeopt = "menu",
     history = 1000,
     startofline = true,
 
@@ -32,9 +32,10 @@ local settings = {
     foldlevel = 0, -- limit folding to 4 levels
     -- foldmethod = 'syntax', -- use language syntax to generate folds
     foldmethod = 'expr', --  syntax nvim-treesitter implemention not good
+    foldexpr = 'nvim_treesitter#foldexpr()',
     -- foldclose ='all',
     foldopen = 'hor,insert,percent,search',
-    foldcolumn = '4',
+    foldcolumn = '8',
     wrap = true,
     showbreak= '↪', -- character to show when line is broken
 
@@ -94,3 +95,10 @@ local ok, result = pcall(
   'colorscheme gruvbox'
 )
 if (not ok) then vim.cmd("colorscheme murphy") end
+
+--https://vim.fandom.com/wiki/Avoid_scrolling_when_switch_buffers
+--https://vi.stackexchange.com/a/8997
+-- vim.cmd([[
+-- autocmd! BufWinLeave * let b:winview = winsaveview()
+-- autocmd! BufWinEnter * if exists('b:winview') | call winrestview(b:winview) | unlet b:winview
+-- ]])

@@ -3,3 +3,4 @@ fonts.scale
 .ccls-cache
 tags
 *.cpp
+*bak*

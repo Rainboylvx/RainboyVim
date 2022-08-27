@@ -1,34 +1,74 @@
 -- use https://github.com/wbthomason/packer.nvim
 return require('packer').startup(function(use)
   -- Packer can manage itself
-  use 'wbthomason/packer.nvim'
+  use {
+      'wbthomason/packer.nvim',
+      disable = false
+  }
 
   -- coc.nvim ,conquer of completion
-  use {'neoclide/coc.nvim', branch = 'release'}
-  use 'SirVer/ultisnips'
+  use {'neoclide/coc.nvim', branch = 'release',
+      disable = false
+  }
+  use {
+      'SirVer/ultisnips',
+      disable = false
+  }
 
   -- plugin written by me(Rainboy)
-  use 'RainboyNoip/algorithms'
+  use {
+      'RainboyNoip/algorithms',
+      disable = false
+  }
 
   -- UI
   -- setup ui
-  use 'goolord/alpha-nvim'
+  use {
+      'goolord/alpha-nvim',
+      disable = false
+  }
   ---- theme
-  use 'morhetz/gruvbox'
+  use {
+      'morhetz/gruvbox',
+      disable = false
+  }
 
   ---- display
-  use 'kyazdani42/nvim-web-devicons' -- icons
-  use {'akinsho/bufferline.nvim', tag = "v2.*"} -- tab
-  use 'nvim-lualine/lualine.nvim' -- status line
-  use 'kyazdani42/nvim-tree.lua'
-  use 'chentoast/marks.nvim'      -- view mark
+  use {
+      'kyazdani42/nvim-web-devicons', -- icons
+      disable = false
+  }
+  use {
+      'akinsho/bufferline.nvim', tag = "v2.*",
+      disable = false
+  } -- tab
+  use {
+      'nvim-lualine/lualine.nvim', -- status line
+      disable = false
+  }
+  use {
+      'kyazdani42/nvim-tree.lua',
+      disable = false
+  }
+  use {
+      'chentoast/marks.nvim',      -- view mark
+      disable = false
+  }
 
   -- adds indentation guides to all lines
-  use "lukas-reineke/indent-blankline.nvim" 
+  use {
+      "lukas-reineke/indent-blankline.nvim",
+      disable = false
+  }
 
   -- tools
-  use {"akinsho/toggleterm.nvim", tag = 'v2.*'}
-  use 'h-hg/fcitx.nvim' -- switch input method
+  use {"akinsho/toggleterm.nvim", tag = 'v2.*',
+      disable = false
+  }
+  use {
+      'h-hg/fcitx.nvim', -- switch input method
+      disable = false
+  }
 
   -- Treesittetr
   use {
@@ -36,9 +76,15 @@ return require('packer').startup(function(use)
       run = ":TSUpdate",
   }
   -- outline
-  use 'liuchengxu/vista.vim'
+  use {
+      'liuchengxu/vista.vim',
+      disable = false
+  }
 
-  use 'numToStr/Comment.nvim'
+  use {
+      'numToStr/Comment.nvim',
+      disable = false
+  }
 
   -- debugger
   -- use 'mfussenegger/nvim-dap'

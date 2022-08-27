@@ -8,7 +8,7 @@
       "initializationOptions": {
          "cache": { "directory": "/tmp/ccls/cache" },
          //"compilationDatabaseDirectory":"/home/rainboy/RainboyVim/extra",
-         "clang": { "extraArgs": ["-DLOCAL","-DDEBUG"]}
+         "clang": { "extraArgs": ["-std=c++20","-DLOCAL","-DDEBUG"]}
          // 如果使用noi_cpp_tools库 请注释上面那句话，并反注释下面这个句，并改写对应的路径
          //"clang": { "extraArgs": ["-DLOCAL","-DDEBUG","-include","/home/rainboy/mycode/noi_cpp_tools/cpp_tools.h"]}
        }

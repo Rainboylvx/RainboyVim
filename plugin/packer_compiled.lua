@@ -114,6 +114,11 @@ _G.packer_plugins = {
     path = "/home/rainboy/.local/share/nvim/site/pack/packer/start/lualine.nvim",
     url = "https://github.com/nvim-lualine/lualine.nvim"
   },
+  ["marks.nvim"] = {
+    loaded = true,
+    path = "/home/rainboy/.local/share/nvim/site/pack/packer/start/marks.nvim",
+    url = "https://github.com/chentoast/marks.nvim"
+  },
   ["nvim-tree.lua"] = {
     loaded = true,
     path = "/home/rainboy/.local/share/nvim/site/pack/packer/start/nvim-tree.lua",

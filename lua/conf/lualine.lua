@@ -10,3 +10,4 @@ require("lualine").setup({
     always_divide_middle = true,
   },
 })
+

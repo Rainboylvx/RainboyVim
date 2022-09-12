@@ -69,6 +69,15 @@ return require('packer').startup(function(use)
       'h-hg/fcitx.nvim', -- switch input method
       disable = false
   }
+  use {
+      'jbyuki/venn.nvim', -- Draw ASCII diagrams in Neovim
+      disable = false
+  }
+
+  use {
+      'anuvyklack/hydra.nvim', -- Create custom submodes and menus
+      disable = false
+  }
 
   -- Treesittetr
   use {

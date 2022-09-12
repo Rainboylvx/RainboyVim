@@ -30,20 +30,19 @@ local settings = {
 -- o.formatoptions = 'qrn1' -- help fo-table
     foldenable = true,
     foldlevel = 0, -- limit folding to 4 levels
-    -- foldmethod = 'syntax', -- use language syntax to generate folds
-    foldmethod = 'expr', --  syntax nvim-treesitter implemention not good
-    foldexpr = 'nvim_treesitter#foldexpr()',
+    foldmethod = 'syntax', -- use language syntax to generate folds
+    --foldmethod = 'expr', --  syntax nvim-treesitter implemention not good
+    --foldexpr = 'nvim_treesitter#foldexpr()',
     -- foldclose ='all',
     foldopen = 'hor,insert,percent,search',
-    foldcolumn = '8',
+    foldcolumn = 'auto:4',
     wrap = true,
     showbreak= '↪', -- character to show when line is broken
 
     -- Sidebar
 	number = true,-- line number on the left
-    numberwidth = 3, -- always reserve 3 spaces for line number
+    numberwidth = 4, -- always reserve 4 spaces for line number
 	relativenumber = true,
-    signcolumn = 'yes', -- keep 1 column for coc.nvim check
     showcmd = true, -- display command in bottom bar
     -- Search
     incsearch = true, -- starts searching as soon as typing, without enter needed
@@ -81,6 +80,9 @@ local settings = {
 for k,v in pairs(settings) do
 	vim.o[k] = v
 end
+
+
+vim.wo.signcolumn = 'yes' -- keep 1 column for coc.nvim check
 
 -- 其它定义
 --g:global_author` email: `!v g:global_email

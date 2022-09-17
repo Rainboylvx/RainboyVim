@@ -70,12 +70,7 @@ return require('packer').startup(function(use)
       disable = false
   }
   use {
-      'jbyuki/venn.nvim', -- Draw ASCII diagrams in Neovim
-      disable = false
-  }
-
-  use {
-      'anuvyklack/hydra.nvim', -- Create custom submodes and menus
+      'vim-scripts/DrawIt', -- Draw ASCII diagrams in Neovim
       disable = false
   }
 
@@ -83,6 +78,7 @@ return require('packer').startup(function(use)
   use {
       "nvim-treesitter/nvim-treesitter",
       run = ":TSUpdate",
+      disable = false
   }
   -- outline
   use {

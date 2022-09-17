@@ -4,3 +4,4 @@ fonts.scale
 tags
 *.cpp
 *bak*
+plugin/

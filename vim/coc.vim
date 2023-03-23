@@ -147,3 +147,5 @@ nmap <silent> b <Plug>(coc-ci-b)
 " - https://github.com/fannheyward/coc-pyright/issues/184
 " - https://stackoverflow.com/questions/68583492/pyright-report-missing-imports-error-in-neovim
 " call coc#config("python.pythonPath", "/home/martins3/.nix-profile/bin/python3")
+"
+au FileType html let b:coc_root_patterns = ['.git', '.env', 'tailwind.config.js', 'tailwind.config.cjs']

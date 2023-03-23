@@ -34,7 +34,6 @@
   "diagnostic.hintSign": "○",
   "diagnostic.checkCurrentLine": true,
 
-
   "git.enableGutters":true
 
 }

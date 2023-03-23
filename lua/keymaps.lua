@@ -18,6 +18,9 @@ keymap("n", "<C-j>", "<C-w>j")
 keymap("n", "<C-k>", "<C-w>k")
 keymap("n", "<C-l>", "<C-w>l")
 
+-- 保存
+keymap("n", "<C-s>", ":w<cr>")
+
 -- Better motion
 
 --

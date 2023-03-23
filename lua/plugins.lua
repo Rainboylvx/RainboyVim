@@ -54,6 +54,10 @@ return require('packer').startup(function(use)
       'chentoast/marks.nvim',      -- view mark
       disable = false
   }
+  use {
+      'norcalli/nvim-colorizer.lua',
+      disable = false
+  }
 
   -- adds indentation guides to all lines
   use {
@@ -62,6 +66,13 @@ return require('packer').startup(function(use)
   }
 
   -- tools
+  use {
+      'nvim-telescope/telescope.nvim', tag = '0.1.1',
+      -- or                            , branch = '0.1.x',
+      requires = { {'nvim-lua/plenary.nvim'} }
+  }
+  use 'fannheyward/telescope-coc.nvim'
+
   use {"akinsho/toggleterm.nvim", tag = 'v2.*',
       disable = false
   }
@@ -73,6 +84,8 @@ return require('packer').startup(function(use)
       'vim-scripts/DrawIt', -- Draw ASCII diagrams in Neovim
       disable = false
   }
+
+  use 'mattn/emmet-vim';
 
   -- Treesittetr
   use {
@@ -90,6 +103,8 @@ return require('packer').startup(function(use)
       'numToStr/Comment.nvim',
       disable = false
   }
+
+  use 'dhruvasagar/vim-table-mode'
 
   -- debugger
   -- use 'mfussenegger/nvim-dap'

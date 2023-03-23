@@ -14,10 +14,11 @@ local settings = {
 
     -- display
     -- background = "dark",
+    hlsearch = false,
     termguicolors = true,
     showmatch = false , -- briefly jump to the matching one bracket
     laststatus = 2,     -- always show status line
-    scrolloff = 3, -- always show 3 rows from edge of the screen
+    scrolloff = 1, -- always show 1 rows from edge of the screen
     synmaxcol = 300, -- stop syntax highlight after x lines for performance
     cursorline = true, -- highlight the text line of cursor
     colorcolumn= '80',         -- screen columns that are highlight
@@ -28,7 +29,7 @@ local settings = {
 --listchars='eol:¬,space:·,lead: ,trail:·,nbsp:◇,tab:→-,extends:▸,precedes:◂,multispace:···⬝,leadmultispace:│   ',
 --listchars='eol:¬,space:·,lead: ,trail:·,nbsp:◇,tab:→-,extends:▸,precedes:◂,multispace:···⬝,leadmultispace:│   ,',
 -- o.formatoptions = 'qrn1' -- help fo-table
-    foldenable = true,
+    foldenable = false,
     foldlevel = 0, -- limit folding to 4 levels
     -- foldmethod = 'syntax', -- use language syntax to generate folds
     foldmethod = 'expr', --  syntax nvim-treesitter implemention not good
@@ -104,3 +105,21 @@ if (not ok) then vim.cmd("colorscheme murphy") end
 -- autocmd! BufWinLeave * let b:winview = winsaveview()
 -- autocmd! BufWinEnter * if exists('b:winview') | call winrestview(b:winview) | unlet b:winview
 -- ]])
+--
+
+-- come from heres:
+--  1 https://superuser.com/a/271024 :set formatoptions-=cro
+--  2 https://www.reddit.com/r/neovim/comments/mmhwgc/comment/gtrjg6h/?utm_source=share&utm_medium=web2x&context=3
+--  3. https://github.com/dinhmai74/dotfile-lua/blob/95542e6cc418dd1d995a4d2b4cfb1a82dd1e6733/nvim/lua/init.lua#L37-L46
+-- Text behaviour
+-- o.formatoptions = o.formatoptions
+--                    + 't'    -- auto-wrap text using textwidth
+--                    + 'c'    -- auto-wrap comments using textwidth
+--                    + 'r'    -- auto insert comment leader on pressing enter
+--                    - 'o'    -- don't insert comment leader on pressing o
+--                    + 'q'    -- format comments with gq
+--                    - 'a'    -- don't autoformat the paragraphs (use some formatter instead)
+--                    + 'n'    -- autoformat numbered list
+--                    - '2'    -- I am a programmer and not a writer
+--                    + 'j'    -- Join comments smartly
+o.formatoptions = o.formatoptions .. 'tqnj'

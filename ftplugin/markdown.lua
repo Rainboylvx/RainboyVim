@@ -12,8 +12,11 @@ keymap('n','<leader>b','wbcw****<left><left><esc>p')
 -- 上标
 -- 下标
 -- 删除
--- underline
-keymap('i','_','__<Left>')
+
+
+-- underline 
+-- 不常用
+-- keymap('i','_','__<Left>')
 
 o.tabstop = 2
 o.shiftwidth = 2
